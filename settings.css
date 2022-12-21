@@ -1,0 +1,1567 @@
+/* ==============================
+        Primary Font
+============================== */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+
+/* ==============================
+        Global Variables
+============================== */
+:root {
+  /* Design colors */
+  --primary-design-color: #7F99FF;
+  /* Background colors */
+  --primary-bg-color: #fff;
+  --secondary-bg-color: #f8f8f8;
+  --tertiary-bg-color: #f2f2f2;
+  /* Text colors */
+  --primary-text-color: #303030;
+  --secondary-text-color: #fff;
+  --tertiary-text-color: #202f3f;
+  /* Border Colors */
+  --border-light: #E0E0E0;
+  /* General box-shadow */
+  --box-shadow-1: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  /* Fonts */
+  --primary-font: 'Lexend Deca', sans-serif;
+  --secondary-font: 'Nunito', sans-serif;
+
+  /* Special font sizes */
+  --font-size-sec-heading: 36px;
+  --font-size-page-heading: 24px;
+
+  /* General font sizes */
+  --font-size-xs: 14px;
+  --font-size-sm: 16px;
+  --font-size-md: 18px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+  /* General Transition */
+  --transition: all .5s ease;
+}
+
+/* ==============================
+        Basic styles
+=============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--primary-font);
+  font-size: var(--font-size-md);
+
+}
+
+.light-bg {
+  background-color: #FFE8D0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+button:active,
+input:active,
+textarea:active,
+input:focus,
+textarea:focus {
+  box-shadow: none !important;
+  background-color: transparent;
+  outline: none;
+}
+
+input,
+textarea,
+input::placeholder,
+textarea::placeholder {
+  font-size: var(--font-size-md);
+}
+
+button,
+button:focus,
+button:active {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  outline: none;
+}
+
+table,
+thead,
+tbody,
+th,
+tr,
+td {
+  border-color: #c6c6c6 !important;
+  font-weight: 400;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-design-color);
+  border: 0px none #ffffff;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-design-color);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--secondary-design-color);
+}
+
+::-webkit-scrollbar-track {
+  background: #d0d0d0;
+  border: 0px none #ffffff;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #d0d0d0;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #d0d0d0;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Sitetoolbar */
+.sitetoolbar {
+  padding: 10px 0;
+  height: 80px;
+  background-color: var(--primary-bg-color);
+}
+
+.sitetoolbar .logo {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.sitetoolbar .sitetoolbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.sitetoolbar-lang {
+  padding: 10px;
+}
+
+.sitetoolbar-lang .sitetoolbar-dropdown-btn {
+  color: var(--primary-design-color);
+}
+
+.sitetoolbar-lang .sitetoolbar-dropdown-btn img {
+  width: 25px;
+  height: 25px;
+}
+
+.sitetoolbar-lang:hover .sitetoolbar-dropdown-wrap .sitetoolbar-dropdown-body {
+  display: block;
+}
+
+.sitetoolbar-lang .sitetoolbar-dropdown-wrap {
+  position: relative;
+}
+
+.sitetoolbar-dropdown-wrap .sitetoolbar-dropdown-body {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  box-shadow: var(--box-shadow-1);
+  border-radius: 5px;
+  display: none;
+}
+
+.sitetoolbar-dropdown-wrap .langs-link {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 3px;
+}
+
+.sitetoolbar-login,
+.sitetoolbar-signup {
+  color: var(--primary-design-color);
+  text-transform: capitalize;
+  padding: 10px;
+}
+
+/* POPUP */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  display: none;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 450px;
+  margin: 0 auto;
+  background-color: #fff;
+  font-family: var(--secondary-font);
+  border-radius: 5px;
+  display: none;
+}
+
+.popup .popup-head {
+  background-color: #FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-light);
+  /* height: 57px; */
+}
+
+.popup .nav-pills .nav-link,
+.nav-pills .show>.nav-link {
+  background-color: transparent;
+  color: #333;
+  border-radius: 0;
+  font-size: 15px;
+  padding: 15px 20px;
+}
+
+.popup .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color: #fff;
+  border: 2px solid var(--border-light);
+  color: #0D99FF;
+  border-radius: 0;
+}
+
+.popup .popup-close {
+  background-color: transparent;
+  color: #333;
+  border-radius: 0;
+  cursor: pointer;
+  border-left: 2px solid var(--border-light);
+  padding: 15px 20px;
+}
+
+.popup .popup-close i {
+  font-size: 25px;
+}
+
+.popup .popup-body {
+  padding: 25px;
+  text-align: center;
+}
+
+.popup .popup-body .login-form .title {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.popup .popup-body .option-btn {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.popup .popup-body .option-btn button {
+  background-color: #FAFAFA;
+  padding: 12px 22px;
+  border-radius: 5px;
+  color: #9B9B9B;
+  margin-right: 10px;
+  transition: var(--transition);
+}
+
+.popup .popup-body .option-btn button.active,
+.popup .popup-body .option-btn button:hover {
+  background-color: #C9E9FF;
+
+  color: #0094FF;
+}
+
+.popup .input-group {
+  border: 1px solid var(--border-light);
+  height: 45px;
+  border-radius: 3px;
+}
+
+.popup .input-group .input-group-text {
+  background-color: #FAFAFA;
+  border: none;
+  height: 100%;
+  border-radius: none;
+}
+
+.popup .input-group .form-control {
+  background-color: transparent;
+  border: none;
+  color: #9B9B9B;
+  font-size: 16px;
+  border-left: 1px solid var(--border-light);
+}
+
+.popup .input-group .form-control::placeholder {
+  color: #9B9B9B;
+  font-size: 17px;
+}
+
+.popup .input-group:last-child {
+  border: none;
+}
+
+.popup .input-group .form-control[type=button] {
+  background-color: #4DB4FF;
+  color: #fff;
+  transition: var(--transition);
+}
+
+.popup .input-group .form-control[type=button]:hover {
+  background-color: #0094FF;
+}
+
+/****************************
+        BANNER
+***************************/
+.banner {
+  padding: 80px 0;
+  background-image: linear-gradient(98.19deg, #FFE8D0 30.65%, #7F99FF 70.49%);
+  border-radius: 0px;
+}
+
+.banner .counter {
+  display: flex;
+  align-items: center;
+
+}
+
+.banner .count-item {
+  margin-right: 30px;
+}
+
+.banner .count-item span {
+  color: #C0AF9D;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.banner .right .text {
+  padding-right: 10px;
+}
+
+
+.banner .right .main-text {
+  background-color: #FFE8D0;
+  padding: 10px;
+  padding-right: 40px;
+  border-radius: 20px;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.banner .right .main-text:after {
+  position: absolute;
+  content: "";
+  width: 58px;
+  height: 55px;
+  bottom: -21px;
+  right: -25px;
+  background-repeat: no-repeat;
+  background-image: url('../images/icon/Polygon\ 1.png');
+}
+
+.banner .right .join-btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.banner .right .join-btn-group div {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.banner .right .join-btn-group a {
+  background-color: #FFE8D0;
+  border-radius: 40px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #0D99FF;
+  padding: 6px 10px;
+}
+
+/*****************************
+        ADVANTAGES SECTION
+******************************/
+.advantages {
+  padding-top: 90px;
+}
+
+.advantages .col-lg-4 .single-item {
+  text-align: center;
+  padding: 40px 10px;
+  border-radius: 30px;
+}
+
+.advantages .col-lg-4:nth-child(1) .single-item {
+  background-color: #FFE8D0;
+}
+
+.advantages .col-lg-4:nth-child(2) .single-item {
+  background-image: linear-gradient(270deg, #809AFF 0%, #FFE9D1 100%);
+}
+
+.advantages .col-lg-4:nth-child(3) .single-item {
+  background-color: #809AFF;
+}
+
+.advantages .col-lg-4 .single-item .image {
+  margin: 0 auto 10px;
+  height: 170px;
+}
+
+.advantages .col-lg-4 .single-item .text-content {
+  height: 130px;
+}
+
+.advantages .single-item .text-content .title {
+  font-family: var(--primary-font);
+}
+
+.advantages .single-item .text-content p {
+  font-family: 'Space Grotesk';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: #494949;
+}
+
+/*******************************
+          ABOUT US SECTION
+ ******************************/
+.about-us {
+  padding-top: 90px;
+}
+
+.about-us .top-text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  width: 500px;
+  line-height: 47px;
+  color: #000000;
+}
+
+.about-us .bottom-text h4 {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 115px;
+  line-height: 166px;
+  color: #7F99FF;
+  text-transform: uppercase;
+  position: relative;
+
+}
+
+.about-us .bottom-text h4 span {
+  position: relative;
+}
+
+.about-us .bottom-text h4 span:after {
+  position: absolute;
+  content: "";
+  left: 0px;
+  bottom: -10px;
+  width: 100%;
+  height: 30px;
+  background-image: url('../images/element/Vector.png');
+  background-repeat: no-repeat;
+}
+
+.about-us .bottom-text h4:after {
+  position: absolute;
+  content: "";
+  right: 50px;
+  top: 0;
+  width: 190px;
+  height: 190px;
+  background-image: url('../images/icon/Group.png');
+  background-repeat: no-repeat;
+}
+
+.about-us .explore-btn {
+  text-align: right;
+  text-transform: uppercase;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+}
+
+.about-us .explore-btn a {
+
+  color: #3F51B5;
+}
+
+/************************
+     FOOTER
+*************************/
+.footer {
+  background-color: #7F99FF;
+  padding-bottom: 30px;
+}
+
+.footer .footer-social-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+
+.footer .footer-social-list i {
+  color: #FFE8D0;
+  margin: 10px 10px;
+}
+
+.footer .footer-social-list li:first-child {
+  border-left: 2px solid #FFE8D0;
+}
+
+.footer .footer-social-list li:last-child {
+  border-right: 2px solid #FFE8D0;
+}
+
+.footer .footer-bottom {
+  padding: 30px 0;
+  border-top: 2px solid #FFE8D0;
+  border-bottom: 2px solid #FFE8D0;
+
+}
+
+.footer .footer-bottom .footer-list-title {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.footer .footer-bottom .footer-list li a {
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.global-header {
+  position: absolute;
+  height: 82px;
+  left: -0.06%;
+  right: 0.06%;
+  top: 1px;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.12);
+}
+
+.global-header .nav {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.global-header .nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.global-header .nav-link {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.global-header .nav-link.active {
+  color: #666666;
+}
+
+.global-header .lang-list {
+  position: relative;
+  border-right: 1px solid #D1D1D1;
+  ;
+}
+
+.global-header .lang-list ul {
+  /* display: none; */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  padding: 10px 15px;
+  display: none;
+}
+
+.global-header .header-tool-list {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.global-header .header-tool-list li {
+  margin-right: 10px;
+  position: relative;
+}
+
+.global-header .header-tool-list li::after {
+  position: absolute;
+  content: "";
+  right: -1px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  top: 3px;
+  background-color: #FF6359;
+}
+
+.global-header .profile-item {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+
+
+
+
+
+/*********************************
+         SETTINGS
+**********************************/
+
+.settings {
+  font-family: var(--secondary-font) !important;
+  margin: 50px 0;
+  padding: 40px 0;
+}
+
+.settings>* {
+  font-family: var(--secondary-font) !important;
+}
+
+.settings .my-account,
+.my-profile,
+.password-security {
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 30px 0 20px;
+}
+
+
+.settings .column-heading {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings .column-heading .right {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #6D6D6D;
+}
+
+.settings .column-heading .left .sub-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #333333;
+}
+
+.settings .column-body {
+  padding: 10px 0;
+}
+
+.settings .column-body .profile-img {
+  width: 140px;
+  height: 140px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.settings .column-body .profile-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* .settings .column-body .form-field {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+} */
+
+.settings .column-body .form-group {
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+
+.settings .column-body .form-group label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 7px;
+  letter-spacing: 0.15px;
+  color: #333333;
+}
+
+.settings .column-body .form-group .form-control {
+  background: #FFFFFF;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  height: 48px;
+  width: 100%;
+
+}
+
+.settings .column-body .form-group .form-control::placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.38);
+
+}
+
+.settings .my-profile-body .add-skills {
+  position: relative;
+
+}
+
+.settings .my-profile-body .skills-field {
+  margin-top: 20px;
+
+}
+
+.settings .my-profile-body .skills-field ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.settings .my-profile-body .skills-field ul .skill-name {
+  margin-bottom: 10px;
+  padding: 4px 8px;
+  height: 32px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #7F99FF;
+  background: rgba(42, 65, 232, 0.07);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.settings .my-profile-body .skills-field ul li i.delete-btn {
+  cursor: pointer;
+  margin-right: 10px;
+
+}
+
+.settings .my-profile-body .add-skills .add-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #7F99FF;
+  color: #fff;
+  border-radius: 3px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings .upload-items ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.settings .upload-items ul .upload-item {
+  background-image: url('../images/icon/Attachments.png');
+  text-transform: capitalize;
+  padding: 15px;
+  position: relative;
+  width: 180px;
+  border-radius: 10px;
+}
+
+.settings .upload-items .upload-item-name {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #666666;
+}
+
+.settings .upload-items .upload-item-type {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #999999;
+}
+
+.settings .upload-btn {
+  border: 1px solid #7F99FF;
+  color: #7F99FF;
+  text-transform: capitalize;
+  padding: 12px 37px;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  margin-right: 15px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.settings .upload-btn input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  font-size: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.settings .file-size-info {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.settings .item-title {
+  margin-bottom: 10px;
+}
+
+.settings .submit-btn {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  text-align: center;
+  letter-spacing: 0.5px;
+  width: 180px;
+  height: 48px;
+  left: calc(50% - 180px/2 - 518px);
+  top: 1300px;
+
+  background: #7F99FF;
+  border-radius: 4px;
+
+  color: #D1D1D1;
+
+}
+
+.package-wrap {
+  height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  align-items: center;
+  font-family: 'Lexend Deca';
+  justify-content: center;
+}
+
+.package-wrap .item {
+  position: relative;
+  background: #7F99FF;
+  border-radius: 20px;
+  height: 480px;
+}
+
+.package-wrap .item .item-header {
+  padding: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 4px solid #fff;
+}
+
+.package-wrap .item .item-content {
+  padding: 10px;
+}
+
+.package-wrap .item .item-content li {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  text-transform: uppercase;
+  line-height: 30px;
+  margin-bottom: 24px;
+  color: #FFFFFF;
+  margin-left: 20px;
+  list-style: disc;
+}
+
+.package-wrap .item .item-bottom {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 180px;
+  width: 190px;
+  right: 0;
+  border-radius: 150% 0 20px 0;
+  text-align: center;
+}
+
+.package-wrap .item .item-bottom .price {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+  display: flex;
+  align-items: center;
+padding-left: 30px;
+  color: #7F99FF;
+}
+
+.package-wrap .item .item-bottom .price span {
+  color: #fff;
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 28px;
+  font-weight: 400;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background-color: #7F99FF;
+}
+
+.package-wrap .item .item-bottom .choose-btn {
+  width: 143px;
+  height: 32px;
+  border: 1px solid #7F99FF;
+  font-size: 13px;
+  color: #7F99FF;
+  text-transform: capitalize;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.package-wrap .item .preview-btn {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+@extends('layouts.design')
+@section('content')
+    <main>
+        <!-- MAIN SLIDER -->
+        <div class="main-slider">
+            <div class="container-fluid px-5">
+                <div id="main-slider-wrap" class="main-slider-wrap">
+                    @foreach ($sliders as $slider)
+                        <div class="slide">
+                            <img src="{{ asset('storage/sliders/' . $slider->img) }}" alt="">
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+            <div class="arrows">
+                <div class="arrow prev"><i class="fas fa-chevron-left"></i></div>
+                <div class="arrow next"><i class="fas fa-chevron-right"></i></div>
+            </div>
+        </div>
+        <!-- CATEGORY -->
+        <div class="category" id="category">
+            <div class="container">
+                <div id="category-slider" class="category-slider">
+                    <div class="slide">
+                        <a href="" class="item">
+                            <div class="image-container">
+                                <img src="{{ asset('front/images/home/Path 7043.png') }}" alt="category-bg-img">
+                            </div>
+                            <div class="text-content"> <span>
+                                    1-2
+                                </span>
+                                <span>ay</span>
+                            </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="item">
+                            <div class="image-container">
+                                <img src="{{ asset('front/images/home/Path 7043.png') }}" alt="category-bg-img">
+                            </div>
+                            <div class="text-content"> <span>
+                                    2-3
+                                </span>
+                                <span>ay</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <a href="" class="item">
+                            <div class="image-container">
+                                <img src="{{ asset('front/images/home/Path 7043.png') }}" alt="category-bg-img">
+                            </div>
+                            <div class="text-content"> <span>
+                                    4-5
+                                </span>
+                                <span>ay</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="" class="item">
+                            <div class="image-container">
+                                <img src="{{ asset('front/images/home/Path 7043.png') }}" alt="category-bg-img">
+                            </div>
+                            <div class="text-content"> <span>
+                                    7-8
+                                </span>
+                                <span>ay</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="" class="item">
+                            <div class="image-container">
+                                <img src="{{ asset('front/images/home/Path 7043.png') }}" alt="category-bg-img">
+                            </div>
+                            <div class="text-content"> <span>
+                                    10-12
+                                </span>
+                                <span>ay</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="" class="item">
+                            <div class="image-container">
+                                <img src="{{ asset('front/images/home/Path 7043.png') }}" alt="category-bg-img">
+                            </div>
+                            <div class="text-content"> <span>
+                                    1-2
+                                </span>
+                                <span>yaş</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="" class="item">
+                            <div class="image-container">
+                                <img src="{{ asset('front/images/home/Path 7043.png') }}" alt="category-bg-img">
+                            </div>
+                            <div class="text-content"> <span>
+                                    1-2
+                                </span>
+                                <span>ay</span>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- NEW PRODUCTS -->
+        @if(count($newProducts))
+        <div class="new-products">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="section-title">
+                            <h3>Yeni məhsullar</h3>
+                            <div>
+                                <img src="{{ asset('front/images//icon/logo (4).png') }}" alt="logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products-wrapper" id="products-wrapper">
+                    @foreach ($newProducts->chunk(2)  as $chunkNewProduct)
+                        <div class="slide">
+                            @foreach ($chunkNewProduct as $newProduct)
+                            @include('front.components.product',['product'=>$newProduct])
+                            @endforeach
+                        </div>
+                    @endforeach
+
+
+                </div>
+            </div>
+        </div>
+        @endif
+
+        <!-- SPECIAL OFFER -->
+        <div class="special-offer">
+            <div class="content">
+                <h2>Sizə uyğun təkliflər</h2>
+                <h5>Uyğun qiymətli məhsul axtarırsan?</h5>
+                <p><span class="text-danger"><span class="value">20</span>₼</span>-a qədər məhsullar burada</p>
+                <a class="lnk" href="./allproduct.html">İndi al</a>
+            </div>
+        </div>
+        <!-- SEASONAL PRODUCTS -->
+        @if(count($seasonalProducts))
+        <div class="seasonal-products">
+            <div class="container-fluid px-5">
+                <div class="row">
+
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="section-title dark">
+                            <h3>Sezon məhsulları</h3>
+                            <div>
+                                <img src="{{ asset('front/images/icon/logo (4).png') }}" alt="logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-5">
+                        <div class="left-single-product">
+                            @foreach ($seasonalProducts->take(1) as $mainSeasonal)
+                                @include('front.components.product',['product'=>$mainSeasonal])
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="col-xl-9  col-md-7">
+                        <div id="seasonal-products" class="seasonal-product">
+                            @foreach ($seasonalProducts->skip(1)->chunk(2)  as $chunkSeasonalProduct)
+                                <div class="slide">
+                                    @foreach ($chunkSeasonalProduct as $seasonalProduct)
+                                    @include('front.components.product',['product'=>$seasonalProduct])
+                                    @endforeach
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
+
+        <!-- SPECIAL OFFER PRODUCTS -->
+        @if(count($specialProducts))
+        <div class="special-offer-products">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="section-title dark">
+                            <h3>Xüsusi təkliflər</h3>
+                            <div>
+                                <img src="{{ asset('front/images/icon/logo (4).png') }}" alt="logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 mb-5">
+                        <div class="row box-content">
+                            <div class="col-md-5">
+                                <a href="./product_detail.html" class="img-container">
+                                    <img class="img-fluid" src="{{ asset('front/images/product/3product.png') }}"
+                                        alt="product">
+                                </a>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="text-content">
+                                    <div class="name"><a href="./product_detail.html">Oyuncaq</a></div>
+                                    <div class="price">
+                                        <span class="old-price">320 AZN</span>
+                                        <span class="sale-price">280 AZN</span>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"> </i>
+                                    </div>
+                                    <p class="info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
+                                        labore.
+                                    </p>
+                                    <div id="countdown">
+                                        <ul>
+                                            <li><span id="days"></span><span>Gün</span></li>
+                                            <li><span id="hours"></span><span>Saat</span></li>
+                                            <li><span id="minutes"></span><span>Dəq</span></li>
+                                            <li><span id="seconds"></span><span>San</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="controls">
+                            <div class="arrow_product">
+                                <div class="arrow prev slick-arrow"><i class="fas fa-chevron-left"></i></div>
+                                <div class="arrow next slick-arrow"><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="special-offer-wrapper">
+                            @foreach ($specialProducts as $specialProduct)
+                            <div class="slide">
+                                <div class="box">
+                                    <a href="{{route('product_detail_'.Session('lang'),['slug'=>$specialProduct->productTranslations->where('locale',Session('lang'))->first()->slug])}}" class="img-container">
+                                        <img class="img-fluid" src="{{ asset('storage/products/resized/' . $specialProduct->explode_main_img) }}"
+                                            alt="product">
+                                    </a>
+                                    <div class="text-content">
+                                        <div class="name">
+                                            <a href="{{route('product_detail_'.Session('lang'),['slug'=>$specialProduct->productTranslations->where('locale',Session('lang'))->first()->slug])}}">
+                                                {{ $specialProduct->productTranslations->where('locale',Session('lang'))->first()->name ?? '' }}
+                                            </a>
+                                        </div>
+                                        <div class="price">
+                                            @if($specialProduct->new_price > 0 && $specialProduct->discount_price > 0)
+                                                <span class="old-price">{{$specialProduct->old_price}} AZN</span>
+                                                <span class="sale-price">{{ $specialProduct->new_price }} AZN</span>
+                                            @else
+                                                <span class="sale-price">{{ $specialProduct->old_price }} AZN</span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
+
+        <!-- CAMPAIGN PRODUCTS -->
+        @if(count($campaignProducts))
+        <div class="discounted-products">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="section-title">
+                            <h3>Kompaniya məhsulları</h3>
+                            <div>
+                                <img src="{{ asset('front/images/icon/logo (4).png') }}" alt="logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+
+                <div class="products-wrapper" id="products-wrapper">
+                    @foreach ($campaignProducts->chunk(2)  as $campaignProduct)
+                        <div class="slide">
+                            @foreach ($campaignProduct as $product)
+                            @include('front.components.product',['product'=>$product])
+                            @endforeach
+                        </div>
+                    @endforeach
+
+
+                </div>
+            </div>
+        </div>
+        @endif
+        <!-- call -->
+        <div class="call-section">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md-8 mb-3">
+                        <div class="left">
+                            <img src="{{ asset('front/images/icon/Group 942.png') }}" alt="icon">
+                            <div class="ms-4">Bizə sualınız var ?</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 d-flex justify-content-lg-end align-items-center justify-content-center">
+                        <a href="tel:{{ $globalSettings->hotline }}" class="call-btn">Zəng edin <i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- single product -->
+        @if(count($lastNumbersProducts))
+        <div class="last-products">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="section-title dark">
+                            <h3>Son ədədlər</h3>
+                            <div>
+                                <img src="{{ asset('front/images/icon/logo (4).png') }}" alt="logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-3">
+                        <div class="single-product-wrapper">
+                            <a href="#">
+                                <img src="{{ asset('front/images/product/307405815_5561986547170783_3281541782021800080_n.png') }}"
+                                    alt="product-img">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-sm-12 mb-3">
+                        <div class="wrapper-1">
+                            <div class="controls">
+                                <div class="arrow_product">
+                                    <div class="arrow prev slick-arrow"><i class="fas fa-chevron-left"></i></div>
+                                    <div class="arrow next slick-arrow"><i class="fas fa-chevron-right"></i></div>
+                                </div>
+                            </div>
+                            <div class="last-products-wrapper">
+                                @foreach ($lastNumbersProducts->chunk(5)  as $chunkLastNumbersProduct)
+                                    <div class="slide">
+                                        @foreach ($chunkLastNumbersProduct as $lastNumbersProduct)
+                                        <div class="item">
+                                            <a href="{{ route('product_detail_' . Session('lang'), ['slug' => $lastNumbersProduct->productTranslations->where('locale', Session('lang'))->first()->slug]) }}">
+                                                <img src="{{ asset('storage/products/resized/' . $lastNumbersProduct->explode_main_img) }}"
+                                                    alt="product-image">
+                                                <img src="{{ asset('storage/products/resized/' . $lastNumbersProduct->explode_hover_img) }}"
+                                                    alt="product-image">
+                                            </a>
+                                            <div class="product-info">
+                                                <div class="product-name">
+                                                    <a href="{{ route('product_detail_' . Session('lang'), ['slug' => $lastNumbersProduct->productTranslations->where('locale', Session('lang'))->first()->slug]) }}">
+                                                        {{ $lastNumbersProduct->productTranslations->where('locale',Session('lang'))->first()->name ?? '' }}
+                                                    </a>
+                                                </div>
+                                                <div class="product-price">
+                                                    @if($lastNumbersProduct->new_price > 0 && $lastNumbersProduct->discount_price > 0)
+                                                        <span class="price-old">{{ @$lastNumbersProduct->old_price }} AZN</span>
+                                                        <span class="price-sale">{{ $lastNumbersProduct->new_price }} AZN</span>
+                                                    @else
+                                                        <span class="price-sale">{{ $lastNumbersProduct->old_price }} AZN</span>
+                                                    @endif
+                                                </div>
+                                                <div class="rating">
+                                                    @include('front.components.product_stars', ['stars' => $lastNumbersProduct->rating])
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                @endforeach
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        @endif
+        <!-- BRANDS -->
+        @if(count($brands))
+        <div class="brands">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="section-title dark">
+                            <h3>Brendlər</h3>
+                            <div>
+                                <img src="{{ asset('front/images/icon/logo (4).png') }}" alt="logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item-wrapper2">
+                        @foreach ($brands as $brand)
+                            <div class="slide">
+                                <a href="{{ $brand->brandTranslations->where('locale', Session('lang'))->first()->link }}"
+                                    class="item">
+                                    <img src="{{ asset('storage/brands/' . $brand->img) }}" alt="brand-logo">
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
+        <!-- INSTAGRAM GALLERY -->
+        <div class="instagram-gallery">
+            <div class="title">
+                <i class="fa-brands fa-instagram gallery-icon"></i>
+                <h4>Bizi instagramda izləyin</h4>
+            </div>
+            <div class="instagram-gallery-slider">
+                <div id="instagram-gallery-wrapper" class="carousel-item-wrapper-instagram">
+                    <div class="slide">
+                        <a href="" class="item">
+                            <i class="fa-brands fa-instagram gallery-icon"></i>
+                            <div class="image-wrapper">
+                                <img src="{{ asset('front/images/instagram/instagram-1.jpg') }}"
+                                    alt="instagram-photo">
+                                <div class="overlay"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="" class="item">
+                            <i class="fa-brands fa-instagram gallery-icon"></i>
+                            <div class="image-wrapper">
+                                <img src="{{ asset('front/images/instagram/instagram-1.jpg') }}"
+                                    alt="instagram-photo">
+                                <div class="overlay"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="" class="item">
+                            <i class="fa-brands fa-instagram gallery-icon"></i>
+                            <div class="image-wrapper">
+                                <img src="{{ asset('front/images/instagram/instagram-1.jpg') }}"
+                                    alt="instagram-photo">
+                                <div class="overlay"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="" class="item">
+                            <i class="fa-brands fa-instagram gallery-icon"></i>
+                            <div class="image-wrapper">
+                                <img src="{{ asset('front/images/instagram/instagram-1.jpg') }}"
+                                    alt="instagram-photo">
+                                <div class="overlay"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="" class="item">
+                            <i class="fa-brands fa-instagram gallery-icon"></i>
+                            <div class="image-wrapper">
+                                <img src="{{ asset('front/images/instagram/instagram-1.jpg') }}"
+                                    alt="instagram-photo">
+                                <div class="overlay"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="" class="item">
+                            <i class="fa-brands fa-instagram gallery-icon"></i>
+                            <div class="image-wrapper">
+                                <img src="{{ asset('front/images/instagram/instagram-1.jpg') }}"
+                                    alt="instagram-photo">
+                                <div class="overlay"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+@endsection
+.lang-dropdown-btn {
+  color: $dark-color-3;
+  font-size: $fs-xs;background-color: red;
+}
+
+.lang-dropdown-wrap {
+
+  .lang-dropdown-body {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    box-shadow: $box-shadow-1;
+    background-color: green;
+    width: 100%;
+    display: none;
+    text-align: center;
+    background-color: $light-color;
+    &.show{
+      display: block;
+    }
+  }
+}
