@@ -276,17 +276,55 @@ button {
 .btn-xl {
 	width: 330px;
 	font-size: var(--font-size-lg);
-}
+ }
 
+// .sitetoolbar-lang {
+// 	padding: 10px;
+
+// 	.sitetoolbar-dropdown-btn {
+// 		color: $secondary-design-color;
+// 		font-weight: 700;
+// 		display: flex;
+// 		align-items: center;
+
+// 		img {
+// 			width: 22px;
+// 			height: 22px;
+// 			margin-right: 10px;
+// 		}
+// 	}
+
+
+
+// 	.sitetoolbar-dropdown-wrap {
+// 		position: relative;
+// 	}
+// }
+
+// .sitetoolbar-dropdown-wrap {
+// 	.sitetoolbar-dropdown-body {
+// 		position: absolute;
+// 		left: 0;
+// 		top: 0;
+// 		box-shadow: $box-shadow-1;
+// 		width: 100%;
+// 		display: none;
+// 		text-align: center;
+// 		background-color: $light-color;
+// 	}
+
+// 	.langs-link {
+// 		display: block;
+// 		padding: 8px 10px;
+// 		border-radius: 3px;
+// 	}
+// }
 li.has-child {
-	font-style: normal;
-	font-weight: 400;
 	font-size: $fs-sm;
 	line-height: $fs-xl;
 	letter-spacing: 0.15px;
 	color: $dark-color-3;
 	cursor: pointer;
-
 	span {
 		color: rgba(0, 0, 0, 0.87);
 		font-weight: 500;
@@ -306,7 +344,7 @@ li.has-child {
 .drop-menu {
 	position: absolute;
 	top: 70%;
-box-shadow: $box-shadow-1;
+    box-shadow: $box-shadow-1;
 	right: 0;
 	border-radius: 3px;
 	width: 100%;
@@ -2318,51 +2356,17 @@ box-shadow: $box-shadow-1;
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
-	}
-}
-
-.sitetoolbar-lang {
-	padding: 10px;
-
-	.sitetoolbar-dropdown-btn {
-		color: $secondary-design-color;
-		font-weight: 700;
-		display: flex;
-		align-items: center;
-
-		img {
-			width: 22px;
-			height: 22px;
-			margin-right: 10px;
+		li.has-child {
+			color: $secondary-design-color;
+			font-weight: 700;
+			display: flex;
+			align-items: center;
+			img{
+				margin-right: 4px;
+			}
 		}
 	}
-
-
-
-	.sitetoolbar-dropdown-wrap {
-		position: relative;
-	}
 }
-
-.sitetoolbar-dropdown-wrap {
-	.sitetoolbar-dropdown-body {
-		position: absolute;
-		left: 0;
-		top: 0;
-		box-shadow: $box-shadow-1;
-		width: 100%;
-		display: none;
-		text-align: center;
-		background-color: $light-color;
-	}
-
-	.langs-link {
-		display: block;
-		padding: 8px 10px;
-		border-radius: 3px;
-	}
-}
-
 .sitetoolbar-login {
 	font-weight: 700;
 	color: $secondary-design-color;
@@ -3447,10 +3451,6 @@ box-shadow: $box-shadow-1;
 				flex-direction: column;
 				top: auto;
 				box-shadow: $box-shadow-1;
-
-				.sitetoolbar-lang {
-					display: none;
-				}
 			}
 		}
 	}

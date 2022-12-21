@@ -250,8 +250,6 @@ button:focus {
 }
 
 li.has-child {
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.15px;
@@ -2029,39 +2027,14 @@ li.has-child .fa-chevron-down.up {
   align-items: center;
   justify-content: flex-end;
 }
-
-.sitetoolbar-lang {
-  padding: 10px;
-}
-.sitetoolbar-lang .sitetoolbar-dropdown-btn {
+.sitetoolbar .sitetoolbar-actions li.has-child {
   color: #7F99FF;
   font-weight: 700;
   display: flex;
   align-items: center;
 }
-.sitetoolbar-lang .sitetoolbar-dropdown-btn img {
-  width: 22px;
-  height: 22px;
-  margin-right: 10px;
-}
-.sitetoolbar-lang .sitetoolbar-dropdown-wrap {
-  position: relative;
-}
-
-.sitetoolbar-dropdown-wrap .sitetoolbar-dropdown-body {
-  position: absolute;
-  left: 0;
-  top: 0;
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.09);
-  width: 100%;
-  display: none;
-  text-align: center;
-  background-color: #FFFFFF;
-}
-.sitetoolbar-dropdown-wrap .langs-link {
-  display: block;
-  padding: 8px 10px;
-  border-radius: 3px;
+.sitetoolbar .sitetoolbar-actions li.has-child img {
+  margin-right: 4px;
 }
 
 .sitetoolbar-login {
@@ -2958,9 +2931,6 @@ li.has-child .fa-chevron-down.up {
     flex-direction: column;
     top: auto;
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.09);
-  }
-  .sitetoolbar .sitetoolbar-actions-content .sitetoolbar-actions .sitetoolbar-lang {
-    display: none;
   }
   .freelancer-profile .behance-account-link {
     margin-bottom: 30px;
