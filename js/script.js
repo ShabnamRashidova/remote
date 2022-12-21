@@ -199,15 +199,15 @@ $(function(){
 
 
 
-let chooseBtn=document.querySelectorAll(".choose-btn")
-chooseBtn.forEach((btn)=>{
-    btn.addEventListener("click",()=>{
-        document.querySelector(".package-wrap-bottom").classList.add("show")
+// let chooseBtn=document.querySelectorAll(".choose-btn")
+// chooseBtn.forEach((btn)=>{
+//     btn.addEventListener("click",()=>{
+//         document.querySelector(".package-wrap-bottom").classList.add("show")
         
-        btn.parentElement.parentElement.parentElement.classList.add("active")
+//         btn.parentElement.parentElement.parentElement.classList.add("active")
      
-    })
-})
+//     })
+// })
 $(function () {
     var parent = document.querySelector(".range-slider");
     if (!parent) return;
