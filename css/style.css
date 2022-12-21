@@ -673,7 +673,21 @@ li.has-child .fa-chevron-down.up {
   color: #000000;
 }
 .about-us .bottom-text {
-  text-align: right;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  position: relative;
+}
+.about-us .bottom-text:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../images/icon/Group.png");
+  content: "";
 }
 .about-us .bottom-text h4 {
   font-family: "Space Grotesk";
@@ -3003,6 +3017,12 @@ li.has-child .fa-chevron-down.up {
     width: 100%;
     text-align: center;
   }
+  .about-us .bottom-text {
+    align-items: center;
+  }
+  .about-us .bottom-text:after {
+    display: none;
+  }
   .about-us .bottom-text h4 {
     font-size: 50px;
     line-height: 90px;
@@ -3941,4 +3961,11 @@ li.has-child .fa-chevron-down.up {
 }
 .applied-jobs .applied-jobs-container .applied-jobs-table tbody td .status.status-closed {
   color: #E43122;
+}
+
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }/*# sourceMappingURL=style.css.map */

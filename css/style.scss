@@ -835,7 +835,22 @@ li.has-child {
 	}
 
 	.bottom-text {
-		text-align: right;
+		display: flex;
+		align-items: flex-end;
+		flex-direction: column;
+		position: relative;
+
+		&:after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 150px;
+			height: 150px;
+			background-size: cover;
+			background-position: center;
+			background-image: url('../images/icon/Group.png');
+			content: "";
+		}
 
 		h4 {
 			font-family: $tertiary-font;
@@ -3193,9 +3208,11 @@ li.has-child {
 			top: 40px;
 			padding: 15px 20px;
 			display: none;
-&.show{
-	display: block;
-}
+
+			&.show {
+				display: block;
+			}
+
 			.comment-input {
 				resize: none;
 				background: #F0F0F0;
@@ -3555,13 +3572,15 @@ li.has-child {
 			justify-content: flex-end;
 		}
 	}
+
 	.applied-jobs {
-	.applied-jobs-container {
-		width: 100%;
-		overflow-y: auto;
-		.applied-jobs-table {
-			min-width: 700px;
-		}
+		.applied-jobs-container {
+			width: 100%;
+			overflow-y: auto;
+
+			.applied-jobs-table {
+				min-width: 700px;
+			}
 		}
 	}
 
@@ -3573,10 +3592,15 @@ li.has-child {
 		}
 
 		.bottom-text {
+			align-items: center;
+			&:after {
+				display: none;
+
+			}
+
 			h4 {
 				font-size: 50px;
 				line-height: 90px;
-
 			}
 		}
 
@@ -4219,7 +4243,8 @@ li.has-child {
 		border-radius: 4px;
 		color: #D1D1D1;
 		transition: var(--transition);
-		&:hover{
+
+		&:hover {
 			color: $light-color;
 		}
 	}
@@ -4687,7 +4712,7 @@ li.has-child {
 	padding: 50px 0;
 
 	.applied-jobs-container {
-		
+
 		background-color: $light-color;
 		border-radius: 40px;
 		box-shadow: $box-shadow-1;
@@ -4760,4 +4785,10 @@ li.has-child {
 			}
 		}
 	}
+}
+.modal-dialog{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+height: 100vh;
 }
