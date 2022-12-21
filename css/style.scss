@@ -2350,7 +2350,21 @@ li.has-child {
 			color: $secondary-design-color;
 		}
 	}
-
+	.lang{
+		display: flex;
+		align-items: center;
+		li.has-child {
+			color: $secondary-design-color;
+			font-weight: 700;
+			display: flex;
+			align-items: center;
+			img{
+				margin-right: 4px;
+				width: 23px ;
+				height: 23px;
+			}
+		}
+	}
 
 	.sitetoolbar-actions {
 		display: flex;
@@ -2363,6 +2377,8 @@ li.has-child {
 			align-items: center;
 			img{
 				margin-right: 4px;
+				width: 23px ;
+				height: 23px;
 			}
 		}
 	}
@@ -3400,6 +3416,13 @@ li.has-child {
 }
 
 @media screen and (max-width:992px) {
+	.sitetoolbar{
+		.sitetoolbar-actions {
+			.lang{
+				display: none;
+			}
+		}
+	}
 	#header-global {
 		.header-logo{
 			a{
