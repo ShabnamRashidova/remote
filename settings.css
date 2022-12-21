@@ -1543,6 +1543,21 @@ padding-left: 30px;
         </div>
     </main>
 @endsection
+.popup-package {
+	width: 590px;
+	position: absolute;
+	box-shadow: $box-shadow-1;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+	padding: 10px;
+	transform: translate(-50%, -50%);
+    display: none;
+	.single-item {
+		border-radius: 3px;
+		padding: 10px;
+	}
+}
 .lang-dropdown-btn {
   color: $dark-color-3;
   font-size: $fs-xs;background-color: red;
@@ -1565,3 +1580,13 @@ padding-left: 30px;
     }
   }
 }
+$(function(){
+  $(".preview-btn").click(()=>{
+      $(".popup-package").show()
+      $(".bg-overlay").addClass("show")
+      $(".bg-overlay").click(()=>{
+          $(".bg-overlay").removeClass("show")
+          $(".popup-package").hide()
+      })
+  })
+})

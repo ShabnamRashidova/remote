@@ -7,16 +7,7 @@ $("#header-global .open-menu").click(function(){
         $(".bg-overlay").removeClass("show");
     })
 })
-$(function(){
-    $(".preview-btn").click(()=>{
-        $(".popup-package").show()
-        $(".bg-overlay").addClass("show")
-        $(".bg-overlay").click(()=>{
-            $(".bg-overlay").removeClass("show")
-            $(".popup-package").hide()
-        })
-    })
-})
+
 $(function(){
     $(".lang-dropdown-btn").click(()=>{
         $(".lang-dropdown-body").toggleClass("show")
@@ -196,6 +187,11 @@ $(function(){
             })
         })
     })
+    $(function(){
+        $(".confirm-btn").click(()=>{
+            $(".success-form-popup").addClass("show")
+        })
+    })
 })
 
 
@@ -203,8 +199,9 @@ $(function(){
 let chooseBtn=document.querySelectorAll(".choose-btn")
 chooseBtn.forEach((btn)=>{
     btn.addEventListener("click",()=>{
-        document.querySelector(".payment-btn").classList.add("show")
+        document.querySelector(".package-wrap-bottom").classList.add("show")
+        
         btn.parentElement.parentElement.parentElement.classList.add("active")
-        btn.parentElement.parentElement.parentElement.siblings().classList.remove("active")
+     
     })
 })
