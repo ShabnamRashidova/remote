@@ -228,50 +228,14 @@
 <div class="bg-overlay"></div>
 
     <div class="jobs bg-pink">
-        <div class="container-fluid p-5">
-            <div class="heading">
-                <div class="row">
-                    <div class="col-lg-3">
-                    </div>
-                    <div class="col-lg-9">
-
-                        <h5 class="sub-title">
-                            Active jobs
-                        </h5>
-                        <form action="" class="form-field">
-                            <div class="bar">
-                                <div class="turn-field">
-                                    <label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label>
-                                    <span>Turn on email alerts for this search</span>
-                                </div>
-
-                                <ul class="sort-field">
-                                    <li class="has-child">Sort by: <span>Newest <i
-                                                class="fas fa-chevron-down"></i></span>
-                                    </li>
-                                    <ul class="drop-menu">
-                                        <li><a href="">Newest</a></li>
-                                        <li><a href="">Earliest</a></li>
-                                    </ul>
-
-                                </ul>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="col-lg-3">
+        <div class="container-fluid">
+             <div class="row"> 
+                <div class="col-xl-3 col-lg-4 mt-45 d-none d-lg-block">
                     <form action="" class="form-field">
-                        <div class="form-group add-skills">
+                        <div class="form-group add-skills ">
                             <div class="sub-title">Keywords</div>
-                            <input type="text" placeholder="e.g.job, skills" class="form-control skills-input">
-                            <button class="btn-xs btn-general"><i class="fas fa-plus"></i></button>
+                            <!-- <input type="text" placeholder="e.g.job, skills" class="round-20 form-control skills-input">
+                            <button class="btn-xs btn-general"><i class="fas fa-plus"></i></button> -->
                         </div>
                         <div class="form-group">
                             <div class="sub-title">Job category</div>
@@ -317,16 +281,14 @@
                         <div class="form-group">
                             <div class="sub-title">Budget /Salary</div>
                             <div class="range-slider">
-
+                                           
                                 <div class="result-container">
                                     <div class="min-num">
-                                        <span>$</span>
-                                        <input type="number" value="0" min="0" max="115" id="result-min" name="min">
 
+                                        <input type="number" readonly value="0" min="0" max="115" id="result-min" name="min">
+                                      
                                     </div>
-
-                                    <div class="max-num"><span>$</span><input type="number" value="115" min="0"
-                                            max="115" id="result-max" name="max"></div>
+                                    <div class="max-num"><input readonly type="number" value="115" min="0" max="115" id="result-max" name="max"> </div>
                                 </div>
                                 <div class="range-container">
                                     <input max="115" type="range" value="0">
@@ -336,14 +298,44 @@
                             </div>
                         </div>
                         <div class="form-group mt-5">
-                            <button class="btn-lg btn-general">Search</button>
+                            <button class="btn-lg btn-general round-20">Search</button>
                         </div>
                     </form>
                 </div>
-                <div class="col-lg-9">
+                <div class="col-xl-9 col-lg-8">
+                    <div class="heading">
+                        <h5 class="sub-title">
+                            Active jobs
+                        </h5>
+                        <button class="sidebar-btn">
+                            <span>  <i class="fa-solid fa-bars-staggered"></i>Filter</span>
+                      </button>
+                        <form action="" class="form-field">
+                            <div class="bar">
+                                <div class="turn-field">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <span>Turn on email alerts for this search</span>
+                                </div>
+
+                                <ul class="sort-field">
+                                    <li class="has-child">Sort by: <span>Newest <i
+                                                class="fas fa-chevron-down"></i></span>
+                                    </li>
+                                    <ul class="drop-menu">
+                                        <li><a href="">Newest</a></li>
+                                        <li><a href="">Earliest</a></li>
+                                    </ul>
+
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
                     <div class="job-list">
 <div class="row">
-<div class="col-lg-4">
+<div class="col-xl-4 col-sm-6">
     <div class="job-single mb-30">
         <div class="job-single-header">
             <div class="company-image"><img src="./images/c-img.png" alt=""></div>
@@ -364,7 +356,7 @@
         </div>
     </div>
 </div>
-<div class="col-lg-4">
+<div class="col-xl-4 col-sm-6">
     <div class="job-single mb-30">
         <div class="job-single-header">
             <div class="company-image"><img src="./images/c-img.png" alt=""></div>
@@ -385,7 +377,7 @@
         </div>
     </div>
 </div>
-<div class="col-lg-4">
+<div class="col-xl-4 col-sm-6">
     <div class="job-single mb-30">
         <div class="job-single-header">
             <div class="company-image"><img src="./images/c-img.png" alt=""></div>
@@ -406,7 +398,7 @@
         </div>
     </div>
 </div>
-<div class="col-lg-4">
+<div class="col-xl-4 col-sm-6">
     <div class="job-single mb-30">
         <div class="job-single-header">
             <div class="company-image"><img src="./images/c-img.png" alt=""></div>
@@ -427,7 +419,7 @@
         </div>
     </div>
 </div>
-<div class="col-lg-4">
+<div class="col-xl-4 col-sm-6">
     <div class="job-single mb-30">
         <div class="job-single-header">
             <div class="company-image"><img src="./images/c-img.png" alt=""></div>
@@ -448,7 +440,7 @@
         </div>
     </div>
 </div>
-<div class="col-lg-4">
+<div class="col-xl-4 col-sm-6">
     <div class="job-single mb-30">
         <div class="job-single-header">
             <div class="company-image"><img src="./images/c-img.png" alt=""></div>
@@ -469,7 +461,7 @@
         </div>
     </div>
 </div>
-<div class="col-lg-4">
+<div class="col-xl-4 col-sm-6">
     <div class="job-single mb-30">
         <div class="job-single-header">
             <div class="company-image"><img src="./images/c-img.png" alt=""></div>
@@ -490,7 +482,7 @@
         </div>
     </div>
 </div>
-<div class="col-lg-4">
+<div class="col-xl-4 col-sm-6">
     <div class="job-single mb-30">
         <div class="job-single-header">
             <div class="company-image"><img src="./images/c-img.png" alt=""></div>
@@ -511,7 +503,7 @@
         </div>
     </div>
 </div>
-<div class="col-lg-4">
+<div class="col-xl-4 col-sm-6">
     <div class="job-single mb-30">
         <div class="job-single-header">
             <div class="company-image"><img src="./images/c-img.png" alt=""></div>
@@ -537,16 +529,16 @@
     <nav>
         <ul class="pagination">
             <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
+                <a class="page-link round-50" href="#" aria-label="Previous">
                     <i class="fas fa-arrow-left-long"></i>
                 </a>
             </li>
             <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item active" aria-current="page"><a class="page-link"
+            <li class="page-item active round-50" aria-current="page"><a class="page-link round-50"
                     href="#">2</a></li>
             <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
+                <a class="page-link round-50" href="#" aria-label="Next">
                     <i class="fas fa-arrow-right-long"></i>
                 </a>
             </li>
@@ -557,30 +549,113 @@
                     </div>
                 </div>
             </div>
+            <div class="copyright-wrap mt-45">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="text">© 2022 Remotique. All Rights Reserved.</div>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="social-links">
+                            <li><a href="" target="_blank" class="social-link"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li><a href="" target="_blank" class="social-link"><i
+                                        class="fa-brands fa-linkedin-in"></i></a>
+                            </li>
+                            <li><a href="" target="_blank" class="social-link"><i
+                                        class="fa-brands fa-facebook-messenger"></i></a></li>
+                            <li><a href="" target="_blank" class="social-link"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
-    <div class="copyright-wrap mt-45">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="text">© 2022 Remotique. All Rights Reserved.</div>
-            </div>
-            <div class="col-sm-6">
-                <ul class="social-links">
-                    <li><a href="" target="_blank" class="social-link"><i
-                                class="fa-brands fa-facebook-f"></i></a>
-                    </li>
-                    <li><a href="" target="_blank" class="social-link"><i
-                                class="fa-brands fa-linkedin-in"></i></a>
-                    </li>
-                    <li><a href="" target="_blank" class="social-link"><i
-                                class="fa-brands fa-facebook-messenger"></i></a></li>
-                    <li><a href="" target="_blank" class="social-link"><i
-                                class="fa-brands fa-twitter"></i></a>
-                    </li>
-                </ul>
+    <div class="overlay-sidebar"></div>
+    <div class="filter-sidebar sidebar ">
+<div class="sidebar-body bg-pink">
+    <form action="" class="form-field">
+        <div class="form-group add-skills ">
+            <div class="sub-title">Keywords</div>
+            <input type="text" placeholder="e.g.job, skills" class="round-20 form-control skills-input">
+            <button class="btn-xs btn-general"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="form-group">
+            <div class="sub-title">Job category</div>
+          <div class="job-category-dropdown">
+           <button class="job-category-dropdown-btn"> Job category <i class="fas fa-chevron-down"></i></button>
+<div class="job-category-dropdown-menu">
+
+<div class="sub-title">Job category</div>
+
+<div class="form-group">
+<label class="switch">
+<input type="checkbox">
+<span class="slider"></span>
+</label>
+<span>
+Freelance
+</span>
+</div>
+<div class="form-group">
+<label class="switch">
+<input type="checkbox">
+<span class="slider"></span>
+</label>
+<span>
+Full time
+</span>
+</div>
+<div class="form-group">
+<label class="switch">
+<input type="checkbox">
+<span class="slider"></span>
+</label>
+<span>
+internship
+</span>
+<div class="form-group">
+<label class="switch">
+<input type="checkbox">
+<span class="slider"></span>
+</label>
+<span>
+part time
+</span>
+</div>
+
+</div>
+</div>
+          </div>
+       
+      
+        <div class="form-group">
+            <div class="sub-title">Budget /Salary</div>
+            <div class="range-slider">
+                           
+                <div class="result-container">
+                    <div class="min-num">
+
+                        <input type="number" readonly value="0" min="0" max="115" id="result-min" name="min">
+                      
+                    </div>
+                    <div class="max-num"><input readonly type="number" value="115" min="0" max="115" id="result-max" name="max"> </div>
+                </div>
+                <div class="range-container">
+                    <input max="115" type="range" value="0">
+
+                    <input type="range" min="0" max="115" value="115">
+                </div>
             </div>
         </div>
+        <div class="form-group mt-5">
+            <button class="btn-lg btn-general round-20">Search</button>
+        </div>
+    </form>
+</div>
     </div>
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
