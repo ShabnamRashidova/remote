@@ -3574,6 +3574,7 @@ li.has-child {
 	}
 
 	.applied-jobs {
+	
 		.applied-jobs-container {
 			width: 100%;
 			overflow-y: auto;
@@ -4709,7 +4710,7 @@ li.has-child {
 }
 
 .applied-jobs {
-	padding: 50px 0;
+	padding: 50px 0;	height: 100vh;
 
 	.applied-jobs-container {
 
