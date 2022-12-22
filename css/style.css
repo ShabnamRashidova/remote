@@ -35,15 +35,6 @@
   --transition: all .5s ease;
 }
 
-/* General font sizes */
-.round-20 {
-  border-radius: 20px !important;
-}
-
-.round-50 {
-  border-radius: 50% !important;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -64,6 +55,15 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+/* General font sizes */
+.round-20 {
+  border-radius: 20px !important;
+}
+
+.round-50 {
+  border-radius: 50% !important;
 }
 
 .mb-50 {
@@ -240,9 +240,12 @@ button:focus {
   border-radius: 4px;
   color: var(--text-light-1);
   font-size: 16px;
+  transition: var(--transition);
 }
 .btn-general:hover {
   color: #FFFFFF;
+  background-color: rgba(36, 111, 178, 0.9);
+  transform: scale(1.01);
 }
 
 .btn-outline {
@@ -632,13 +635,24 @@ li.has-child .fa-chevron-down.up {
   text-transform: uppercase;
   color: #7F99FF;
   padding: 6px 10px;
+  transition: var(--transition);
+}
+.banner .right .join-btn-group a:hover {
+  background-color: #7F99FF;
+  color: #FFE8D0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .advantages .col-lg-4 .single-item {
+  transition: var(--transition);
   text-align: center;
   padding: 40px 15px;
   border-radius: 30px;
   height: 100%;
+}
+.advantages .col-lg-4 .single-item:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transform: translateY(-10px);
 }
 .advantages .col-lg-4 .single-item .title {
   color: #494949;
@@ -719,14 +733,18 @@ li.has-child .fa-chevron-down.up {
   text-align: right;
   text-transform: uppercase;
   font-family: "Space Grotesk";
-  font-style: normal;
   font-weight: 500;
   font-size: 32px;
   line-height: 41px;
   margin-bottom: 30px;
+  transition: var(--transition);
 }
 .about-us .explore-btn a {
   color: #3F51B5;
+  transition: var(--transition);
+}
+.about-us .explore-btn a:hover {
+  transform: translateX(-20px);
 }
 
 .browse-employees-wrap {
@@ -3262,7 +3280,7 @@ li.has-child .fa-chevron-down.up {
   border-radius: 3px;
   font-weight: 700;
 }
-.modal-content .modal-body .nav .nav-link.active {
+.modal-content .modal-body .nav .nav-link.active, .modal-content .modal-body .nav .nav-link:hover {
   color: #0094FF;
   border-color: transparent;
   background-color: rgba(137, 205, 255, 0.46);
