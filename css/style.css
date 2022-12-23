@@ -196,10 +196,6 @@ a {
   transition: var(--transition);
 }
 
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -1901,7 +1897,6 @@ li.has-child .fa-chevron-down.up {
 }
 
 .range-container input[type=range] {
-  -webkit-appearance: none;
   width: 100%;
 }
 
@@ -3552,29 +3547,141 @@ li.has-child .fa-chevron-down.up {
 }
 
 .package-wrap {
-  padding: 80px 0;
+  height: 100vh;
+  font-family: "Lexend Deca";
+}
+.package-wrap .package .stepform-wrapper {
+  overflow-x: hidden;
+  display: flex;
+}
+.package-wrap .package .stepform-wrapper .step {
+  min-width: 100%;
+  height: 140%;
+  padding-top: 100px;
+  position: relative;
+}
+.package-wrap .package .stepform-wrapper .step .item {
+  position: relative;
+  background: #7F99FF;
+  border-radius: 20px;
+  height: 480px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  transition: var(--transition);
+}
+.package-wrap .package .stepform-wrapper .step .item.active {
+  transform: scale(1.05);
+}
+.package-wrap .package .stepform-wrapper .step .item .item-header {
+  padding: 10px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 4px solid #fff;
+}
+.package-wrap .package .stepform-wrapper .step .item .item-content {
+  padding: 10px;
+}
+.package-wrap .package .stepform-wrapper .step .item .item-content .preview-btn {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.package-wrap .package .stepform-wrapper .step .item .item-content li {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 30px;
+  margin-bottom: 24px;
+  color: #FFFFFF;
+  margin-left: 20px;
+  list-style: disc;
+}
+.package-wrap .package .stepform-wrapper .step .item .item-content .item-bottom {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
   display: flex;
   align-items: center;
-  font-family: "Lexend Deca";
   justify-content: center;
+  flex-direction: column;
+  height: 180px;
+  width: 190px;
+  right: 0;
+  border-radius: 150% 0 20px 0;
+  text-align: center;
 }
-.package-wrap .package-wrap-bottom {
+.package-wrap .package .stepform-wrapper .step .item .item-content .item-bottom .price {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: #7F99FF;
+}
+.package-wrap .package .stepform-wrapper .step .item .item-content .item-bottom .price span {
+  color: #fff;
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 28px;
+  font-weight: 400;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background-color: #7F99FF;
+}
+.package-wrap .package .stepform-wrapper .step .item .item-content .item-bottom .choose-btn {
+  width: 143px;
+  height: 32px;
+  border: 1px solid #7F99FF;
+  font-size: 13px;
+  color: #7F99FF;
+  text-transform: capitalize;
+  border-radius: 20px;
+  margin-top: 20px;
+  transition: var(--transition);
+}
+.package-wrap .package .stepform-wrapper .step .item .item-content .item-bottom .choose-btn:hover {
+  background-color: #7F99FF;
+  color: #FFFFFF;
+}
+.package-wrap .package .stepform-wrapper .step .text {
+  margin-bottom: 10px;
+}
+.package-wrap .package .stepform-wrapper .step .text h6 {
+  font-size: 20px;
+  color: #7F99FF;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.package-wrap .package .stepform-wrapper .step .package-wrap-bottom {
   display: none;
 }
-.package-wrap .package-wrap-bottom.show {
+.package-wrap .package .stepform-wrapper .step .package-wrap-bottom.show {
   display: flex;
 }
-.package-wrap .package-wrap-bottom .form-group {
+.package-wrap .package .stepform-wrapper .step .package-wrap-bottom .form-group {
   display: flex;
   align-items: center;
 }
-.package-wrap .package-wrap-bottom .form-group span {
+.package-wrap .package .stepform-wrapper .step .package-wrap-bottom .form-group span {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.15px;
   color: #000000;
 }
-.package-wrap .package-wrap-bottom .form-group label {
+.package-wrap .package .stepform-wrapper .step .package-wrap-bottom .form-group label {
   font-weight: 600;
   font-size: 15px;
   line-height: 24px;
@@ -3584,10 +3691,10 @@ li.has-child .fa-chevron-down.up {
   align-items: center;
   cursor: pointer;
 }
-.package-wrap .package-wrap-bottom .form-group label.active span {
+.package-wrap .package .stepform-wrapper .step .package-wrap-bottom .form-group label.active span {
   background-color: #7F99FF;
 }
-.package-wrap .package-wrap-bottom .form-group label span {
+.package-wrap .package .stepform-wrapper .step .package-wrap-bottom .form-group label span {
   display: flex;
   width: 17px;
   height: 15px;
@@ -3596,12 +3703,12 @@ li.has-child .fa-chevron-down.up {
   border: 2px solid #7F99FF;
   border-radius: 6px;
 }
-.package-wrap .package-wrap-bottom .form-group input[type=radio] {
+.package-wrap .package .stepform-wrapper .step .package-wrap-bottom .form-group input[type=radio] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
-.package-wrap .form-confirm-area {
+.package-wrap .package .stepform-wrapper .step .form-confirm-area {
   background-color: #FFFFFF;
   border-radius: 30px;
   height: 480px;
@@ -3609,34 +3716,34 @@ li.has-child .fa-chevron-down.up {
   position: relative;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.09);
 }
-.package-wrap .form-confirm-area .form-content {
+.package-wrap .package .stepform-wrapper .step .form-confirm-area .form-content {
   display: flex;
   flex-direction: column;
   height: 480px;
   align-items: center;
   justify-content: center;
 }
-.package-wrap .form-confirm-area .form-content .title {
+.package-wrap .package .stepform-wrapper .step .form-confirm-area .form-content .title {
   font-size: 16px;
   color: #404040;
   font-weight: 500;
   margin-bottom: 30px;
 }
-.package-wrap .form-confirm-area .form-content .form-group {
+.package-wrap .package .stepform-wrapper .step .form-confirm-area .form-content .form-group {
   margin-bottom: 20px;
   width: 100%;
 }
-.package-wrap .form-confirm-area .form-content .form-group .form-control {
-  width: 60%;
+.package-wrap .package .stepform-wrapper .step .form-confirm-area .form-content .form-group .form-control {
+  width: 75%;
   margin: 0 auto;
   height: 48px;
   border-radius: 3px;
   border-color: #ddd;
 }
-.package-wrap .form-confirm-area .form-content .form-group button {
+.package-wrap .package .stepform-wrapper .step .form-confirm-area .form-content .form-group button {
   margin: auto;
 }
-.package-wrap .form-confirm-area .success-form-popup {
+.package-wrap .package .stepform-wrapper .step .form-confirm-area .success-form-popup {
   position: absolute;
   top: 0;
   width: 100%;
@@ -3651,10 +3758,10 @@ li.has-child .fa-chevron-down.up {
   display: none;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.09);
 }
-.package-wrap .form-confirm-area .success-form-popup.show {
+.package-wrap .package .stepform-wrapper .step .form-confirm-area .success-form-popup.show {
   display: flex;
 }
-.package-wrap .form-confirm-area .success-form-popup .success-img {
+.package-wrap .package .stepform-wrapper .step .form-confirm-area .success-form-popup .success-img {
   margin: 0 auto;
   display: flex;
   width: 240px;
@@ -3662,126 +3769,14 @@ li.has-child .fa-chevron-down.up {
   align-items: center;
   justify-content: center;
 }
-.package-wrap .form-confirm-area .success-form-popup .success-img img {
+.package-wrap .package .stepform-wrapper .step .form-confirm-area .success-form-popup .success-img img {
   margin: 0 auto;
   width: 60%;
 }
-.package-wrap .form-confirm-area .success-form-popup .success-img .text {
+.package-wrap .package .stepform-wrapper .step .form-confirm-area .success-form-popup .success-img .text {
   color: #767575;
-}
-
-.package-wrap .item {
-  position: relative;
-  background: #7F99FF;
-  border-radius: 20px;
-  height: 480px;
-  margin-bottom: 30px;
-}
-.package-wrap .item.active {
-  transform: scale(1.1);
-  border: 8px solid #FFFFFF;
-}
-
-.package-wrap .item .item-header {
-  padding: 10px;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 30px;
-  color: #FFFFFF;
-  text-transform: uppercase;
   text-align: center;
-  border-bottom: 4px solid #fff;
-}
-
-.package-wrap .item .item-content {
   padding: 10px;
-}
-
-.package-wrap .text {
-  margin-bottom: 10px;
-}
-.package-wrap .text h6 {
-  font-size: 20px;
-  color: #7F99FF;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.package-wrap .item .item-content li {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  text-transform: uppercase;
-  line-height: 30px;
-  margin-bottom: 24px;
-  color: #FFFFFF;
-  margin-left: 20px;
-  list-style: disc;
-}
-
-.package-wrap .item .item-bottom {
-  background-color: #fff;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 180px;
-  width: 190px;
-  right: 0;
-  border-radius: 150% 0 20px 0;
-  text-align: center;
-}
-
-.package-wrap .item .item-bottom .price {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 45px;
-  display: flex;
-  align-items: center;
-  padding-left: 30px;
-  color: #7F99FF;
-}
-
-.package-wrap .item .item-bottom .price span {
-  color: #fff;
-  margin-left: 10px;
-  border-radius: 50%;
-  width: 28px;
-  font-weight: 400;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  background-color: #7F99FF;
-}
-
-.package-wrap .item .item-bottom .choose-btn {
-  width: 143px;
-  height: 32px;
-  border: 1px solid #7F99FF;
-  font-size: 13px;
-  color: #7F99FF;
-  text-transform: capitalize;
-  border-radius: 20px;
-  margin-top: 20px;
-  transition: var(--transition);
-}
-.package-wrap .item .item-bottom .choose-btn:hover {
-  background-color: #7F99FF;
-  color: #FFFFFF;
-}
-
-.package-wrap .item .preview-btn {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-  text-transform: uppercase;
-  color: #FFFFFF;
 }
 
 #profileModal .single-item {

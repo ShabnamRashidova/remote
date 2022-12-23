@@ -18,6 +18,22 @@ $(function(){
         // })
     })
 })
+// choose package
+$(".choose-btn").on("click",function(){
+    var t=$(this)
+   t.parents('.item-wrap').find('.item').removeClass('active')
+   t.parentsUntil('.item-wrap','.item').addClass('active')
+   $(".package-wrap-bottom").addClass('show')
+})
+$(".next-btn").click(()=>{
+    console.log("WEe")
+    var scrollWidth=$(".step").width()
+    var wrapperPos=$(".stepform-wrapper").scrollLeft()
+    console.log(wrapperPos)
+    $(".stepform-wrapper").animate({
+        scrollLeft:wrapperPos+scrollWidth
+    })
+})
     // rate
     $(".rate-label").click(function () {
         $(".rate-label").stop(true, false).removeClass('active');
@@ -199,15 +215,7 @@ $(function(){
 
 
 
-// let chooseBtn=document.querySelectorAll(".choose-btn")
-// chooseBtn.forEach((btn)=>{
-//     btn.addEventListener("click",()=>{
-//         document.querySelector(".package-wrap-bottom").classList.add("show")
-        
-//         btn.parentElement.parentElement.parentElement.classList.add("active")
-     
-//     })
-// })
+
 $(function () {
     var parent = document.querySelector(".range-slider");
     if (!parent) return;
