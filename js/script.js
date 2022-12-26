@@ -173,18 +173,6 @@ $(".next-btn").click(()=>{
             });
         });
     })
-    //    POPUP
-    $(function () {
-        $(".sitetoolbar-login").click(() => {
-            $(".popup.login").show();
-            $(".overlay").show();
-        })
-        $(".overlay,.popup-close").click(() => {
-            $(".popup.login").hide();
-            $(".overlay").hide();
-            $(".popup").hide()
-        });
-    })
     $(function(){
         $(".review-btn").click(()=>{
             $(".success-popup").addClass("show")

@@ -37,6 +37,7 @@
 
 body {
   overflow-x: hidden;
+  background-color: #FFE8D0;
 }
 
 ul {
@@ -101,31 +102,27 @@ a {
   padding: 20px;
 }
 
-.bg-pink {
-  background-color: #FFE8D0;
-}
-
 /* SCROLLBAR */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #FFFFFF;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: #808080;
+  background: #FFE8D0;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #FFFFFF;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: #808080;
+  background: #FFE8D0;
 }
 
 .copy-link {
@@ -2971,6 +2968,43 @@ button:focus {
   top: 10% !important;
 }
 
+/************************************
+            Keyframes
+************************************/
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #7F99FF;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #7F99FF;
+  }
+}
 /*==============================
         Sitetoolbar
 ===============================*/
@@ -3035,6 +3069,11 @@ button:focus {
   color: #7F99FF;
   text-transform: capitalize;
   font-size: 20px;
+  transition: all 0.4s ease;
+}
+.sitetoolbar .sitetoolbar-actions .sitetoolbar-login:hover,
+.sitetoolbar .sitetoolbar-actions .sitetoolbar-signup:hover {
+  color: #3F51B5;
 }
 .sitetoolbar .sitetoolbar-actions .sitetoolbar-login {
   padding: 0 20px 0;
@@ -3055,10 +3094,15 @@ button:focus {
   color: rgba(0, 0, 0, 0.87);
   font-size: 30px;
 }
-.banner .left p {
-  font-size: 24px;
-  line-height: 40px;
+.banner .left .typewriter p {
+  font-size: 20px;
+  line-height: 30px;
   color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  border-right: 1px solid #7F99FF;
+  white-space: nowrap;
+  -webkit-animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+          animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 .banner .right {
   font-family: "Lexend Deca";
@@ -3173,12 +3217,21 @@ button:focus {
 .advantages .col-md-4:nth-child(1) .single-item {
   background-color: #FFE8D0;
 }
+.advantages .col-md-4:nth-child(1) .single-item:hover {
+  transform: translateY(20px);
+}
 .advantages .col-md-4:nth-child(2) .single-item {
   background-image: linear-gradient(270deg, #809AFF 0%, #FFE9D1 100%);
   transform: translateY(130px);
 }
+.advantages .col-md-4:nth-child(2) .single-item:hover {
+  transform: translateY(140px);
+}
 .advantages .col-md-4:nth-child(3) .single-item {
   background-color: #809AFF;
+}
+.advantages .col-md-4:nth-child(3) .single-item:hover {
+  transform: translateY(20px);
 }
 
 /*==============================
@@ -3256,7 +3309,7 @@ button:focus {
        Footer
 ===============================*/
 .footer {
-  background-color: #7F99FF;
+  background: linear-gradient(270.1deg, #809AFF 37.32%, #FFE8D0 50.38%);
   padding-bottom: 30px;
 }
 .footer .footer-social-list {
@@ -3265,23 +3318,15 @@ button:focus {
   justify-content: flex-end;
 }
 .footer .footer-social-list i {
-  color: #FFE8D0;
+  color: #FFFFFF;
   margin: 10px 10px;
   transition: all 0.4s ease;
 }
 .footer .footer-social-list i:hover {
-  color: #FFFFFF;
-}
-.footer .footer-social-list li:first-child {
-  border-left: 2px solid #FFE8D0;
-}
-.footer .footer-social-list li:last-child {
-  border-right: 2px solid #FFE8D0;
+  transform: scale(1.07);
 }
 .footer .footer-bottom {
   padding: 30px 0;
-  border-top: 3px solid #FFE8D0;
-  border-bottom: 3px solid #FFE8D0;
 }
 .footer .footer-bottom .footer-list-title {
   font-family: "Space Grotesk";
@@ -3289,7 +3334,7 @@ button:focus {
   margin-bottom: 15px;
   font-size: 24px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: #665D54;
 }
 .footer .footer-bottom .footer-list li {
   margin-bottom: 10px;
@@ -3297,17 +3342,20 @@ button:focus {
 .footer .footer-bottom .footer-list li a {
   font-weight: 300;
   font-family: "Lexend Deca";
-  font-size: 18px;
-  color: #FFFFFF;
+  font-size: 16px;
+  color: #000000;
   transition: all 0.4s ease;
   position: relative;
+}
+.footer .footer-bottom .footer-list li a:hover {
+  color: #7F99FF;
 }
 .footer .footer-bottom .footer-list li a:after {
   position: absolute;
   bottom: -3px;
   left: 0;
-  height: 1.5px;
-  background-color: #FFFFFF;
+  height: 1px;
+  background-color: #7F99FF;
   width: 0;
   transition: all 0.4s ease;
   content: "";
