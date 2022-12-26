@@ -1752,8 +1752,6 @@ button:focus {
 .filter-sidebar .sidebar-body .btn-xs {
   position: absolute;
   right: 3px;
-  top: 56%;
-  border-radius: 50%;
 }
 .filter-sidebar .sidebar-body .skills .skills-name-list {
   display: flex;
@@ -4133,7 +4131,6 @@ button:focus {
 }
 
 .package-wrap {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
