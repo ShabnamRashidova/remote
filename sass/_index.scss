@@ -1,0 +1,556 @@
+/*==============================
+        Sitetoolbar
+===============================*/
+.sitetoolbar {
+    @include flex-align;
+    height: 80px;
+    background-color: $light-color;
+    box-shadow: $box-shadow-1;
+    font-family: $secondary-font;
+
+    .logo {
+        display: block;
+        width: 50px;
+        height: 50px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .open-menu {
+        @include flex-align-center;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: none;
+        transition: $transition;
+
+        &:hover {
+            color: $light-color-2;
+        }
+
+        i {
+            color: $secondary-design-color;
+        }
+    }
+
+    .lang {
+        @include flex-align;
+
+        .preview-lang {
+            color: $secondary-design-color;
+            font-weight: 500;
+            font-size: $fs-lg;
+            @include flex-align;
+            cursor: pointer;
+
+            img {
+                margin-right: 4px;
+                width: 23px;
+                height: 23px;
+            }
+        }
+    }
+
+    .sitetoolbar-actions {
+        @include flex-align-end;
+
+        .sitetoolbar-login,
+        .sitetoolbar-signup {
+            font-weight: 500;
+            color: $secondary-design-color;
+            text-transform: capitalize;
+
+            font-size: $fs-lg;
+        }
+
+        .sitetoolbar-login {
+            padding: 0 20px 0;
+        }
+    }
+}
+
+/*==============================
+        Banner
+===============================*/
+.banner {
+    background-color: $light-color;
+    background-image: linear-gradient(98.19deg, #FFE8D0 30.65%, #7F99FF 70.49%);
+
+    .left {
+        font-family: $primary-font;
+
+        .title {
+            font-weight: 600;
+            color: $dark-color-4;
+            font-size: $fs-xxl;
+        }
+
+        p {
+            font-size: $fs-xl;
+            line-height: 40px;
+            color: $dark-color-3
+        }
+    }
+
+    .right {
+        font-family: $secondary-font;
+
+        .image {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .text {
+            position: relative;
+
+            .main-text {
+                background-color: $primary-design-color;
+                box-shadow: $box-shadow-1;
+                padding: 14px 40px 14px 30px;
+                position: relative;
+                line-height: 24px;
+                text-transform: uppercase;
+                font-size: $fs-md;
+                &::after{
+                    position: absolute;
+                    content: '';  
+                    width: 55px;
+                    height: 55px;
+                    right: -25px;
+                    background-size: cover;
+                    background-position: right;
+                    background-repeat: no-repeat;
+                    background-image: url('../images/icon/after.png');
+                }
+            }
+
+            // .after-img {
+            //     position: absolute;  
+            //     right: -30px;
+            //     bottom: 40px;
+            // }
+        }
+
+        .join-btn-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            div {
+                color: #fff;
+                text-transform: uppercase;
+                font-size: $fs-xs;
+                font-family: $secondary-font;
+            }
+
+            a {
+                background-color: $primary-design-color;
+                border-radius: 40px;
+                font-size: 13px;
+                font-family: $secondary-font;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $secondary-design-color;
+                padding: 6px 10px;
+                transition: $transition;
+                box-shadow: $box-shadow-1;
+
+                &:hover {
+                    background-color: $secondary-design-color;
+                    color: $primary-design-color;
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                }
+            }
+        }
+    }
+
+    .counter {
+        margin-top: -20px;
+        @include flex-align;
+
+        .count-item {
+            margin-right: 30px;
+
+            .counter-count {
+                font-size: $fs-xxl;
+                line-height: 40px;
+                color: $dark-color-4;
+            }
+
+            span {
+                color: #C0AF9D;
+                font-size: $fs-xs;
+            }
+        }
+    }
+}
+
+/*==============================
+        Advantages
+===============================*/
+.advantages {
+    .col-md-4 {
+        @include flex-align-center;
+
+        .single-item {
+            box-shadow: $box-shadow-2;
+            transition: $transition;
+            text-align: center;
+            padding: 40px 15px;
+            border-radius: 30px;
+            max-width: 400px;
+            height: 440px;
+
+            .title {
+                color: $dark-color-2;
+                font-family: $secondary-font;
+                font-size: $fs-xxl;
+                font-weight: 500;
+            }
+
+            p {
+                font-family: $tertiary-font;
+                font-weight: 700;
+                font-size: $fs-lg;
+                text-align: center;
+                color: $dark-color-2;
+            }
+
+            .image {
+                margin: 0 auto 20px;
+            }
+        }
+
+        &:nth-child(1) {
+            .single-item {
+                background-color: $primary-design-color;
+
+            }
+        }
+
+        &:nth-child(2) {
+            .single-item {
+                background-image: linear-gradient(270deg, #809AFF 0%, #FFE9D1 100%);
+                transform: translateY(130px);
+            }
+        }
+
+        &:nth-child(3) {
+            .single-item {
+                background-color: #809AFF;
+            }
+        }
+    }
+}
+
+/*==============================
+        About us
+===============================*/
+.about-us {
+    .top-text {
+        p {
+            font-family: $roboto;
+            font-weight: 500;
+            font-size: $fs-2xl;
+            line-height: 47px;
+            color: $dark-color;
+        }
+    }
+
+    .bottom-text {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            background-image: url('../images/icon/Group.png');
+            content: "";
+        }
+
+        h4 {
+            font-family: $tertiary-font;
+            font-weight: 500;
+            font-size: 115px;
+            line-height: 166px;
+            color: $secondary-design-color;
+            text-transform: uppercase;
+            position: relative;
+
+            span {
+                position: relative;
+                font-family: inherit;
+                font-weight: inherit;
+                font-size: inherit;
+                line-height: inherit;
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    left: 0px;
+                    bottom: -20px;
+                    width: 100%;
+                    height: 30px;
+                    background-image: url('../images/element.png');
+                    background-repeat: no-repeat;
+                }
+            }
+
+        }
+    }
+
+    .explore-btn {
+        text-align: right;
+        text-transform: uppercase;
+        font-family: $tertiary-font;
+        font-weight: 500;
+        font-size: $fs-xxl;
+        line-height: 41px;
+        margin-bottom: 30px;
+        transition: $transition;
+
+        a {
+
+            color: #3F51B5;
+            transition: $transition;
+
+            &:hover {
+                transform: translateX(-20px);
+            }
+        }
+    }
+}
+/*==============================
+       Footer
+===============================*/
+.footer {
+	background-color: $secondary-design-color;
+	padding-bottom: 30px;
+
+	.footer-social-list {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		i {
+			color: $primary-design-color;
+			margin: 10px 10px;
+			transition:$transition;
+
+			&:hover {
+				color: $light-color;
+			}
+		}
+
+		li {
+			&:first-child {
+				border-left: 2px solid $primary-design-color;
+			}
+
+			&:last-child {
+				border-right: 2px solid $primary-design-color;
+			}
+		}
+	}
+
+	.footer-bottom {
+		padding: 30px 0;
+		border-top: 3px solid $primary-design-color;
+		border-bottom: 3px solid $primary-design-color;
+
+		.footer-list-title {
+			font-family: $tertiary-font;
+			font-weight: 700;
+			margin-bottom: 15px;
+			font-size: $fs-xl;
+			line-height: $fs-xl;
+			color: $light-color;
+		}
+
+		.footer-list {
+			li {
+				margin-bottom: 10px;
+
+				a {
+					font-weight: 300;
+					font-family: $secondary-font;
+					font-size: $fs-md;
+					color: $light-color;
+					transition:$transition;
+					position: relative;
+
+					&:after {
+						position: absolute;
+						bottom: -3px;
+						left: 0;
+						height: 1.5px;
+						background-color: $light-color;
+						width: 0;
+						transition:$transition;
+						content: "";
+					}
+
+					&:hover:after {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.modal-content {
+    font-family: $primary-font;
+    border-radius: 0;
+
+    .modal-header {
+        background-color: #FAFAFA;
+        border-bottom: 2px solid $gray-color-1;
+        display: flex;
+        align-items: center;
+        height: 72px;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        justify-content: space-between;
+
+        .btn-group {
+            display: flex;
+
+            align-items: center;
+            height: 100%;
+
+            button {
+                height: 100%;
+                font-size: $fs-xs;
+                padding: 0 15px;
+                text-transform: capitalize;
+                background-color: transparent;
+                border: 2px solid transparent;
+
+                &.active {
+                    border-color: $gray-color-1;
+                    border-bottom: 0;
+                    border-top: 0;
+                    background: $light-color;
+                    color: #0D99FF;
+
+                }
+            }
+        }
+    }
+
+    .modal-body {
+        padding: 30px;
+position: relative;
+.forgot-password{
+    display: block;
+    font-size: 13px;
+    text-align: right;
+    color: #E43122;
+    margin-bottom: 10px;
+    transition: $transition;
+    &:hover{
+        text-decoration: underline;
+    }
+ 
+}
+        .form-title {
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 20px;
+            font-size: $fs-md;
+        }
+
+        .nav {
+            margin-bottom: 10px;
+            border: none;
+
+            .nav-link {
+                color: rgba(0, 0, 0, 0.38);
+                background-color: #FAFAFA;
+                margin-right: 30px;
+                width: 144px;
+                height: 44px;
+                border-radius: 3px;
+                font-weight: 700;
+
+                &.active,
+                &:hover {
+                    color: #0094FF;
+                    border-color: transparent;
+                    background-color: rgba(137, 205, 255, 0.46);
+                }
+            }
+        }
+
+        .input-group-text {
+            background-color: #FAFAFA;
+            border-radius: 2px;
+        }
+
+        .form-control {
+            border-radius: 2px;
+            font-size: $fs-xs;
+            height: 48px;
+
+            color: #494949;
+
+            &:focus {
+                outline: none;
+                border-color: #ddd;
+            }
+        }
+
+        .register-btn {
+            color: $light-color;
+            padding: 10px;
+            border-radius: 3px;
+            background-color: #4DB4FF;
+            transition:$transition;
+position: relative;
+&:after{
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+    width: 40%;
+    height: 1px;
+    background-color: $gray-color-1;
+
+}
+&:before{
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 40%;
+    height: 1px;
+    background-color: $gray-color-1;
+
+}
+            &:hover {
+                background-color: $secondary-design-color;
+            }
+        }
+    }
+}

@@ -12,16 +12,16 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <!-- custom css -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./sass/main.css">
     <!-- favicon -->
     <link rel="icon" type="image/png" sizes="144x144" href="./images/favicon/android-icon-144x144.png">
 </head>
 
-<body>
-      <!----------------------
-        HEADER GLOBAL 
-  ----------------------->
-  <header id="header-global">
+<body class="bg-pink">
+    <!----------------------
+       HEADER GLOBAL 
+ ----------------------->
+ <header id="header-global">
     <div class="container-fluid px-4">
         <div class="row justify-content-between">
             <div class="col-md-2 col-6">
@@ -32,22 +32,22 @@
                     <div class="header-middle-left">
                         <nav class="nav">
                             <ul class="nav-list">
-                                
+                                <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
                                 <li class="nav-item"><a href="./find-job.html" class="nav-link">Find work</a></li>
-                                <li class="nav-item"><a href="./employees.html" class="nav-link">browse emplyees</a></li>
+                               
                             </ul>
                         </nav>
                     </div>
                     <div class="header-middle-right">
-                        <button class="post-job-btn btn-general btn-md ms-2 mt-2">Post a job</button>
-
+                       
+                       
                         <ul class="lang position-relative">
-                            <li class="has-child">AZ <i class="fas fa-chevron-down"></i>
-
+                            <li class="preview-lang">EN <i class="fas fa-chevron-down"></i>
+ 
                             </li>
                             <ul class="drop-menu">
-                                <li><a href="">EN</a></li>
-                                <li><a href="">FR</a></li>
+                                <li><a href="">Azerbaijan</a></li>
+                                <li><a href=" " class="active">English</a></li>
                             </ul>
                         </ul>
                     </div>
@@ -60,7 +60,7 @@
                             <button class="msg">
                                 <img src="./images/msg.png" alt="">
                             </button>
-
+ 
                             <div class="drop-message">
                                 <div class="drop-header">
                                     <div class="title">
@@ -73,7 +73,7 @@
                                 <div class="drop-body">
                                     <ul class="message-list">
                                         <li>
-                                            <a href="./message.html">
+                                            <a href="">
                                                 <div class="img"><img src="./images/Rectangle 65.png" alt=""></div>
                                                 <div class="inf">
                                                     <strong class="name">Nigar Huseynova</strong>
@@ -87,7 +87,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="./message.html" class="new-message">
+                                            <a href="" class="new-message">
                                                 <div class="img"><img src="./images/Rectangle 65.png" alt=""></div>
                                                 <div class="inf">
                                                     <strong class="name">Nigar Huseynova</strong>
@@ -105,7 +105,7 @@
                             </div>
                         </div>
                         <div class="notification-content">
-                            <button class="ring">
+                            <button ton class="ring">
                                 <img src="./images/Shape.png" alt="">
                             </button>
                             <div class="drop-notification">
@@ -120,7 +120,7 @@
                                 <div class="drop-body">
                                     <ul class="notification-list">
                                         <li>
-                                            <a href="./job-page.html">
+                                            <a href="">
                                                 <div class="img"><img src="./images/users.png" alt=""></div>
                                                 <div class="inf">
                                                     <strong class="name">Fuad Huseynov</strong>
@@ -130,7 +130,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="./job-page.html" class="new-notification">
+                                            <a href="" class="new-notification">
                                                 <div class="img"><img src="./images/users.png" alt=""></div>
                                                 <div class="inf">
                                                     <strong class="name">Fuad Huseynov</strong>
@@ -140,7 +140,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="./job-page.html" class="new-notification">
+                                            <a href="" class="new-notification">
                                                 <div class="img"><img src="./images/users.png" alt=""></div>
                                                 <div class="inf">
                                                     <strong class="name">Fuad Huseynov</strong>
@@ -152,20 +152,20 @@
                                     </ul>
                                 </div>
                             </div>
-
-
+ 
+ 
                         </div>
                     </div>
                     <div class="profile-content">
                         <div class="profile-image  toggle-profile-content"
                             style="background-image: url('./images/Ellipse\ 1.png');">
-
+ 
                         </div>
-
-
+ 
+ 
                         <div class="sidebar profile-sidebar">
                             <div class="sidebar-header">
-                                <a href="./recruiter-profile.html">
+                                <a href="">
                                     <div class="profile-image"
                                         style="background-image: url('./images/Ellipse\ 1.png');"> <span
                                             class="persent"> 25%</span>
@@ -179,19 +179,16 @@
                             </div>
                             <div class="sidebar-body">
                                 <ul>
-                                    <li><a href="./recruiter-profile.html"><img src="./images/airplay.png" alt="">
-                                            my profile</a></li>
-                                    <li><a href="./post-job.html"> <img src="./images/airplay.png" alt="">post a
-                                            job</a></li>
+                                    <li><a href=""><img src="./images/airplay.png" alt=""> my profile</a></li>
+                                    <li><a href=""> <img src="./images/airplay.png" alt="">post a job</a></li>
                                     <li><a href=""><img src="./images/airplay.png" alt=""> reviews</a></li>
-                                    <li><a href="./my-subscription.html"><img src="./images/airplay.png" alt=""> my
-                                            subscription</a>
+                                    <li><a href=""><img src="./images/airplay.png" alt=""> my subscription</a>
                                     </li>
                                     <li><a href=""><img src="./images/airplay.png" alt=""> logout</a></li>
                                 </ul>
                             </div>
                         </div>
-
+ 
                     </div>
                 </div>
             </div>
@@ -202,27 +199,27 @@
             </div>
         </div>
     </div>
-</header>
-<header id="header-mobile">
+ </header>
+ <header id="header-mobile">
     <div class="header-top">
         <div class="logo">
             <a href="./index.html"><img src="./images/logo.png" alt=""></a>
         </div>
-
+ 
     </div>
     <div class="header-nav">
         <nav class="nav">
-            <ul class="nav-list">   
-               
-                                <li class="nav-item"><a href="./find-job.html" class="nav-link">Find work</a></li>
-                                <li class="nav-item"><a href="./employees.html" class="nav-link">browse emplyees</a></li>
-
+            <ul class="nav-list">
+                <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="./index.html" class="nav-link">Find work</a></li>
+                <li class="nav-item"><a href="./index.html" class="nav-link">Browsee employees</a></li>
             </ul>
         </nav>
-        <button class="post-job-btn btn-general btn-md ms-2 mt-2">Post a job</button>
+        <a href="" class="post-job-btn btn-general btn-md ms-2 mt-2">Post a job</a>
     </div>
-</header>
-<div class="bg-overlay"></div>
+ </header>
+ 
+ <div class="overlay"></div>
     <div class="conversation-content-wrap bg-pink">
         <div class="container">
             <div class="conversation-content">
@@ -435,13 +432,13 @@
             <div class="sub-title mt-4">messages</div>
             <div class="copyright">
                 <div class="row">
-                   <div class="col-lg-6">
+                   <div class="col-md-6 mb-3">
                     <div class="copyright-text">
                         © 2022 Remotique. All Rights Reserved
                     </div>
                    </div>
-                   <div class="col-lg-6 ">
-                    <ul class="social-links justify-content-end">
+                   <div class="col-md-6 mb-3 ">
+                    <ul class="social-links justify-content-md-end justify-content-start">
                         <li><a href="" target="_blank" class="social-link"><i
                                     class="fa-brands fa-facebook-f"></i></a>
                         </li>

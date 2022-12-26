@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>REMOTIQUE job page</title>
+    <title>REMOTIQUE settings</title>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- slick slider -->
@@ -19,11 +19,10 @@
 
 
 <body>
-    <body class="bg-pink">
-        <!----------------------
-           HEADER GLOBAL 
-     ----------------------->
-     <header id="header-global">
+    <!----------------------
+        HEADER GLOBAL 
+  ----------------------->
+    <header id="header-global">
         <div class="container-fluid px-4">
             <div class="row justify-content-between">
                 <div class="col-md-2 col-6">
@@ -36,16 +35,16 @@
                                 <ul class="nav-list">
                                     <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
                                     <li class="nav-item"><a href="./find-job.html" class="nav-link">Find work</a></li>
-                                   
+                                    <li class="nav-item"><a href="./employees.html" class="nav-link">Browsee employees</a></li>
                                 </ul>
                             </nav>
                         </div>
                         <div class="header-middle-right">
                            
-                           
+                            <a href="" class="post-job-btn btn-general btn-md ms-2 mt-2">Post a job</a> 
                             <ul class="lang position-relative">
                                 <li class="preview-lang">EN <i class="fas fa-chevron-down"></i>
-     
+
                                 </li>
                                 <ul class="drop-menu">
                                     <li><a href="">Azerbaijan</a></li>
@@ -62,7 +61,7 @@
                                 <button class="msg">
                                     <img src="./images/msg.png" alt="">
                                 </button>
-     
+
                                 <div class="drop-message">
                                     <div class="drop-header">
                                         <div class="title">
@@ -154,17 +153,17 @@
                                         </ul>
                                     </div>
                                 </div>
-     
-     
+
+
                             </div>
                         </div>
                         <div class="profile-content">
                             <div class="profile-image  toggle-profile-content"
                                 style="background-image: url('./images/Ellipse\ 1.png');">
-     
+
                             </div>
-     
-     
+
+
                             <div class="sidebar profile-sidebar">
                                 <div class="sidebar-header">
                                     <a href="">
@@ -190,7 +189,7 @@
                                     </ul>
                                 </div>
                             </div>
-     
+
                         </div>
                     </div>
                 </div>
@@ -201,13 +200,13 @@
                 </div>
             </div>
         </div>
-     </header>
-     <header id="header-mobile">
+    </header>
+    <header id="header-mobile">
         <div class="header-top">
             <div class="logo">
                 <a href="./index.html"><img src="./images/logo.png" alt=""></a>
             </div>
-     
+
         </div>
         <div class="header-nav">
             <nav class="nav">
@@ -219,98 +218,120 @@
             </nav>
             <a href="" class="post-job-btn btn-general btn-md ms-2 mt-2">Post a job</a>
         </div>
-     </header>
-     
-     <div class="overlay"></div>
-    <div class="job-page bg-pink">
+    </header>
+
+    <div class="overlay"></div>
+    <div class="settings bg-pink">
         <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-lg-8 col-md-7 col-sm-12">
-                    <div class="job card-item">
-                        <a href="">
-                            <div class="img" style="background-image:url('') ;">
+            <form action="" class="form-settings form-field">
+                <div class="sub-title">Settings</div>
+
+                <div class="my-account">
+                    <div class="my-account-heading column-heading">
+                        <div class="left">
+                            <div class="sub-title mb-0">My account</div>
+                        </div>
+                        <div class="right">
+                            <label for="radio-btn">
+                                <input type="radio" name="radio-btn" id="radio-btn">
+                                <span></span> Sign uo us company
+                            </label>
+                            <label for="radio-btn1">
+                                <input type="radio" name="radio-btn" id="radio-btn1">
+                                <span></span>Sign uo us human</label>
+                        </div>
+                    </div>
+                    <div class="my-account-body column-body">
+                        <div class="row align-items-center">
+                            <div class="col-xl-2 col-md-3 d-flex justify-content-center mb-4">
+                                <div class="profile-img"></div>
                             </div>
-                        </a>
-                        <div class="info">
-                            <div class="title">job title</div>
-                            <div class="about">
-                                about the employeer
+                            <div class="col-xl-10 col-md-9">
+                                <div class="row form-row">
+                                    <div class="form-group col-xl-4 col-sm-6">
+                                        <label for="">First Name *</label>
+                                        <input class="form-control form-col" type="text" placeholder="Job category">
+                                    </div>
+                                    <div class="form-group col-xl-4 col-sm-6 form-col">
+                                        <label for="">Last Name *</label>
+                                        <input class="form-control" type="text" placeholder="Job category">
+                                    </div>
+                                    <div class="form-group col-xl-4 col-sm-6 form-col">
+                                        <label for="">E-mail *</label>
+                                        <input class="form-control" type="text" placeholder="Job category">
+                                    </div>
+                                    <div class="form-group col-xl-4 col-sm-6 form-col">
+                                        <label for="">VOEN *</label>
+                                        <input class="form-control" type="text" placeholder="Job category">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="location"><img src="./images/airplay.png" alt="">Azerbaijan</div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="my-profile">
+                    <div class="my-profile-heading column-heading">
+                        <div class="sub-title mb-0">
+                            My Profile
+                        </div>
+                    </div>
+                    <div class="column-body my-profile-body">
+                        <div class="row form-row">
+                            <div class="form-group col-xl-4 col-sm-6">
+                                <label for="">Company Name</label>
+                                <input class="form-control form-col" type="text" placeholder="Job category">
+                            </div>
+                            <div class="form-group col-xl-4 col-sm-6">
+                                <label for="">Position</label>
+                                <input class="form-control form-col" type="text" placeholder="Job category">
+                            </div>
+                            </div>
+                    </div>
+                    <div class="column-footer my-profile-footer pb-50">
+                        <div class="row form-row">
+                            <div class="form-group col-xl-4 col-sm-6">
+                                <label for="">Mobile Phone</label>
+                                <input class="form-control form-col" type="text" placeholder="Job category">
+                            </div>
+                            <div class="form-group col-xl-4 col-sm-6 form-col">
+                                <label for="">Birthday</label>
+                                <input class="form-control" type="text" placeholder="Job category">
+                            </div>
+                            <div class="form-group col-12 form-col">
+                                <label for="">Introduce Yourself</label>
+                                <textarea name="" id="" cols="30" rows="3" placeholder="add category"></textarea>
+                            </div>
+                            <div class="form-group col-xl-4 col-sm-6 form-col">
+                                <label for="">Linkedin Profile (URL)</label>
+                                <input class="form-control" type="text" placeholder="Job category">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-5 col-sm-12">
-                    <div class="job-salary card-item">
-                        <div class="salary">salary/budget</div>
-                        <div class="amount">
-                            3000 azn
-                        </div>
-                    </div>
+              
+                <div class="col-12">
+                    <button class="submit-btn">Save changes</button>
                 </div>
-            </div>
-            <div class="row justify-content-between">
-                <div class="col-lg-8 col-md-7 col-sm-12">
-                    <div class="job-desc card-item">
-                        <div class="title">job Description</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptate a nihil?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptate a nihil?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptate a nihil?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptate a nihil?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptate a nihil?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptate a nihil?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptate a nihil?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptate a nihil?</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-5 col-sm-10">
-                    <div class="job-summary ">
-                        <button class="btn-general w-100 round-20"><a href="./applicants.html" class="text-white">apply now</a></button>
-                        <div class="content">
-                            <div class="title">job summary</div>
-                            <ul>
-                                <li class="location">
-                                    <div class="img"><img src="./images/airplay2.png" alt=""></div>
-                                    <div class="locatoin-info">
-                                        <span>location</span>
-                                        <a href="">baku ,azerbaijan</a>
-                                    </div>
-                                </li>
-                                <li class="job-type">
-                                    <div class="img"><img src="./images/airplay2.png" alt=""></div>
-                                    <div class="job-type">
-                                        <span>job type</span>
-                                        <a href="">freelance</a>
-                                    </div>
-                                </li>
-                                <li class="deadline">
-                                    <div class="img"><img src="./images/airplay2.png" alt=""></div>
-                                    <div class="deadline-info">
-                                        <span>deadline</span>
-                                        <a href="">December 12th (12 days left)</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="copy-link mt-45 mb-30">
-                            <input type="text" class="copy-link-input form-control" value="https://www.youtube.com/" readonly="">
-                            <button class="btn-general btn-xs round-50"><img src="./images/copy.png" alt=""></button>
-                        </div>
-                        <a href="./bookmarks.html" class="btn-general round-20 btn-md bookmark-btn mt-45 "><img src="./images/icon/star.png" alt="" class="me-3">bookmark</a>
-                    </div>
-                </div>
-            </div>
+            </form>
+
         </div>
     </div>
-  
-     <!-- jquery -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-     <!-- bootstrap -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-     <!-- slick slider -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-     <!-- custom js -->
-     <script src="./js/script.js"></script>
- </body>
- 
- </html>
+
+
+
+
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- custom js -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
