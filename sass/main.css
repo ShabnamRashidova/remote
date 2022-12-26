@@ -4157,7 +4157,8 @@ button:focus {
   transition: all 0.4s ease;
 }
 .package-wrap .package .stepform-wrapper .step .item.active {
-  transform: scale(1.05);
+  border: 5px solid #fff;
+  transform: scale(1.01);
 }
 .package-wrap .package .stepform-wrapper .step .item .item-header {
   padding: 10px;

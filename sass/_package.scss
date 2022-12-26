@@ -25,7 +25,8 @@
 					transition: $transition;
 				
 					&.active {
-						transform: scale(1.05);
+						border:5px solid #fff;
+						transform: scale(1.01);
 						
 					}
 
