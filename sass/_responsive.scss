@@ -506,8 +506,19 @@
           width: 270px;
         }
     }
+    .copyright-wrap.mt-45{
+        margin-top: 0;
+    }
+    
+.error-page {
+	img {
+		max-width: 250px;
+	}
+	strong {
+		font-size: $fs-xl;
+	}
 }
-
+}
 @media screen and (max-width:992px) {
 
 	.applied-jobs {

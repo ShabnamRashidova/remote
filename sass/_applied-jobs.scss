@@ -1,0 +1,76 @@
+
+.applied-jobs {
+	padding: 50px 0;
+	height: 100vh;
+
+	.applied-jobs-container {
+		background-color: $light-color;
+		box-shadow: $box-shadow-1;
+		.applied-jobs-table {
+
+			thead {
+				th {
+					font-weight: 600;
+					font-size: $fs-lg;
+				}
+			}
+
+			tbody {
+				td {
+					vertical-align: middle;
+					border-bottom: none;
+
+					.applied-job {
+						padding: 10px 15px;
+						display: flex;
+						align-items: center;
+
+						.image {
+							margin-right: 25px;
+
+						}
+
+						.job-info {
+							.job-name {
+								font-size: $fs-lg;
+								font-weight: 600;
+								margin-bottom: 5px;
+							}
+
+							ul {
+								display: flex;
+
+								li {
+									color: rgba(0, 0, 0, 0.6);
+									font-size: $fs-sm;
+									margin-right: 15px;
+
+									img {
+										margin-right: 10px;
+									}
+								}
+							}
+
+						}
+					}
+
+					.status {
+						font-size: $fs-xs;
+
+						&.status-not-review {
+							color: #BDBDBD;
+						}
+
+						&.status-interested {
+							color: #3FB559;
+						}
+
+						&.status-closed {
+							color: #E43122;
+						}
+					}
+				}
+			}
+		}
+	}
+}

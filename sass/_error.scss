@@ -1,0 +1,19 @@
+
+.error-page {
+	@include flex-align-center;
+	flex-direction: column;
+	text-align: center;
+	height: 100vh;
+	font-family: $primary-font;
+	img {
+		width: 100%;
+		max-width: 350px;
+	}
+	strong {
+		margin: 20px 0 10px;
+		font-weight: 900;
+		font-size: $fs-xxl;
+		line-height: 40px;
+		color: $dark-color;
+	}
+}

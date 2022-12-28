@@ -1,0 +1,67 @@
+.job-single {
+font-family: $primary-font;
+transition: $transition;
+
+border-radius: 20px;
+overflow: hidden;
+&:hover{
+    box-shadow: $box-shadow-3;
+    transform: translateY(-5px);
+}
+    .job-single-header {
+        padding: 20px;
+        background-color: $light-color;
+        display: flex;
+        align-items: center;
+
+        .company-image {
+            width: 56px;
+            height: 56px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .company-info {
+            margin-left: 15px;
+
+            .company-name {
+                color: #808080;
+                letter-spacing: .7px;
+                text-transform: capitalize;
+            }
+
+            .job-title {
+                color: rgba(0, 0, 0, 0.87);
+                font-size: $fs-xl;
+                text-transform: capitalize;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .job-single-footer {
+        background-color: #F9F9F9;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        text-transform: capitalize;
+
+        div {
+            width: 50%;
+            margin-bottom: 7px;
+            font-size: $fs-md;
+            color: $dark-color-3;
+          img {
+                margin-right: 10px;
+            }
+
+            span {
+                color: $dark-color-3;
+                font-weight: 500;
+            }
+        }
+    }
+}
