@@ -97,21 +97,10 @@
             }
 
         }
-
-        // .right {
-        //     .text {
-        //         .after-img{
-        //             right: -18px;
-        //             width: 38px;
-        //             bottom: 48px;
-        //             height: auto;
-        //         }
-        //     }
-        // }
     }
 
     .advantages {
-        .col-md-4 {
+        .col-lg-4 {
             @include flex-align-center;
 
             &:nth-child(2) {
@@ -144,6 +133,9 @@
 
         }
     }
+    .sidebar-btn {
+		display: block;
+	}
 }
 
 @media screen and (max-width:992px) {
@@ -320,6 +312,17 @@
         }
     }
 }
+.popup {
+    width: 500px;
+
+    .popup-title {
+        font-size: 27px;
+        margin-bottom: 15px;
+    }
+    .btn-xl{
+        font-size: 16px;
+    }
+}
 }
 @media screen and (max-width:575px) {
 
@@ -492,4 +495,193 @@
     
         }
     }
+    .popup {
+        width: 350px;
+      text-align: center;
+        .popup-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .btn-xl{
+          width: 270px;
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+
+	.applied-jobs {
+
+		.applied-jobs-container {
+			width: 100%;
+			overflow-y: auto;
+
+			.applied-jobs-table {
+				min-width: 700px;
+			}
+		}
+	}
+
+	.freelancer-profile {
+		.behance-account-link {
+			margin-bottom: 30px;
+		}
+
+		.copy-link {
+			margin: 20px 0;
+		}
+	}
+
+	.conversation-content-wrap {
+		.chat-wrapper {
+			padding: 10px;
+			display: none;
+			overflow-x: hidden;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			left: 0;
+			background-color: $light-color;
+			z-index: 999;
+		}
+	}
+
+}
+
+@media screen and (max-width:768px) {
+	.applied-jobs {
+		.applied-jobs-container {
+			border-radius: 5px !important;
+		}
+
+		.heading {
+			.bar {
+				height: auto !important;
+			}
+		}
+	}
+
+
+
+
+	.recruiter-profile {
+		.recruiter-main-info {
+			.edit-content {
+				margin: 30px 0 30px;
+			}
+		}
+
+		.active-jobs-content {
+			.active-job-single {
+				.active-job-single-header {
+					.company-info {
+						.job-title {
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.profile-section {
+		.profile-info {
+			padding: 30px 0 0 30px;
+			height: auto;
+		}
+	}
+
+	.conversation-content-wrap {
+		.chat-wrapper {
+			.chat-header {
+				flex-direction: column;
+
+				.chat-header-title {
+					margin-bottom: 10px;
+				}
+			}
+
+			.read-msg-area {
+
+				.read-msg-controls {
+					flex-direction: column;
+
+					.send-file {
+						margin: 0;
+						margin-bottom: 15px;
+
+					}
+
+					button {
+						width: 65px;
+						height: 40px;
+					}
+				}
+			}
+		}
+	}
+
+	.employees {
+		.pagination {
+			.page-item {
+				.page-link {
+					width: 35px;
+					font-size: 14px;
+					height: 35px;
+				}
+			}
+		}
+	}
+
+	.job-page {
+		padding: 20px 0;
+
+		.card-item {
+			margin-bottom: 50px;
+		}
+	}
+
+}
+
+@media screen and (max-width:576px) {
+	.profile-section {
+		.profile-info {
+			.column {
+				flex-direction: column;
+			}
+		}
+
+		.feedback-content {
+			.speeker-job {
+				font-size: 20px;
+			}
+
+			.date {
+				span {
+					right: 0;
+				}
+			}
+		}
+	}
+
+	.copyright-wrap {
+		text-align: center;
+
+		.text {
+			font-size: $fs-sm;
+			color: $dark-color-3;
+		}
+
+		.social-links {
+			margin-top: 20px;
+			justify-content: center;
+		}
+	}
+
+	.heading {
+		.bar {
+			flex-direction: column;
+			height: auto;
+		}
+	}
 }

@@ -1,89 +1,102 @@
 $(function () {
+    $(window).on("scroll", () => {
+        if ($(this).scrollTop() >= 120) {
+            $(".sitetoolbar").addClass("fixed")
+        } else {
+            $(".sitetoolbar").removeClass("fixed")
+        }
+    })
     $(".preview-lang").click(function () {
         $(this).next().addClass("show")
         $('.overlay').addClass("show")
         $('.lang').find(".fa-chevron-down").addClass("up")
-        $("body").click((e)=>{
-        if(!$(e.target).closest(".lang").length&& !$(e.target).is(".preview-lang")){
-        $(".preview-lang").next().removeClass("show")
-        $('.overlay').removeClass("show")
-        $(".lang").find(".fa-chevron-down").removeClass("up")
-       }
+        $('.overlay').click(() => {
+            $(".preview-lang").next().removeClass("show")
+            $('.overlay').removeClass("show")
+            $(".lang").find(".fa-chevron-down").removeClass("up")
         })
     })
-       // open menu
-       $(function(){
-        $(".open-menu").click(()=>{
+   
+    // open menu
+    $(function () {
+        $(".open-menu").click(() => {
             $(".sitetoolbar-actions").addClass('show');
             $('.overlay').addClass("show")
-              $('.overlay').click(()=>{
+            $('.overlay').click(() => {
                 $(".sitetoolbar-actions").removeClass('show');
                 $('.overlay').removeClass("show")
-              })
+            })
         })
-       
+
     })
-$("#header-global .open-menu").click(function(){
-    $("#header-mobile").addClass("show");
-    $(".overlay").addClass("show");
-    $(".overlay").click(function(){
-        $("#header-mobile").removeClass("show");
-        $(".overlay").removeClass("show");
+    $("#header-global .open-menu").click(function () {
+        $("#header-mobile").addClass("show");
+        $(".overlay").addClass("show");
+        $(".overlay").click(function () {
+            $("#header-mobile").removeClass("show");
+            $(".overlay").removeClass("show");
+        })
     })
-})
-$(".input-toggler").click(() => {
-    if ($(".password").attr("type") === "password") {
-        $(".password").attr("type", "text");
-        $(".show-password-input").hide();
-        $(".hide-password-input").show();
-    } else {
-        $(".password").attr("type", "password");
-        $(".show-password-input").show();
-        $(".hide-password-input").hide();
-    }
-});
-$(function(){
-    $(".lang-dropdown-btn").click(()=>{
-        $(".lang-dropdown-body").toggleClass("show")
-        // $("body").click(function (e) {
-        //     if (!$(e.target).closest('.lang-dropdown-wrap').length && !$(e.target).is(".lang-dropdown-body")) {
-        //         $(".lang-dropdown-body").hide()
-        //     }
-        // })
+    $(".input-toggler").click(() => {
+        if ($(".password").attr("type") === "password") {
+            $(".password").attr("type", "text");
+            $(".show-password-input").hide();
+            $(".hide-password-input").show();
+        } else {
+            $(".password").attr("type", "password");
+            $(".show-password-input").show();
+            $(".hide-password-input").hide();
+        }
+    });
+    $(function () {
+        $(".lang-dropdown-btn").click(() => {
+            $(".lang-dropdown-body").toggleClass("show")
+            // $("body").click(function (e) {
+            //     if (!$(e.target).closest('.lang-dropdown-wrap').length && !$(e.target).is(".lang-dropdown-body")) {
+            //         $(".lang-dropdown-body").hide()
+            //     }
+            // })
+        })
     })
-})
-// choose package
-$(".choose-btn").on("click",function(){
-    var t=$(this)
-   t.parents('.item-wrap').find('.item').removeClass('active')
-   t.parentsUntil('.item-wrap','.item').addClass('active')
-   $(".package-wrap-bottom").addClass('show')
-})
-$(".next-btn").click(()=>{
-    console.log("WEe")
-    var scrollWidth=$(".step").width()
-    var wrapperPos=$(".stepform-wrapper").scrollLeft()
-    console.log(wrapperPos)
-    $(".stepform-wrapper").animate({
-        scrollLeft:wrapperPos+scrollWidth
+    // choose package
+    $(".choose-btn").on("click", function () {
+        var t = $(this)
+        t.parents('.item-wrap').find('.item').removeClass('active')
+        t.parentsUntil('.item-wrap', '.item').addClass('active')
+        $(".package-wrap-bottom").addClass('show')
     })
-})
+    $(".next-btn").click(() => {
+        console.log("WEe")
+        var scrollWidth = $(".step").width()
+        var wrapperPos = $(".stepform-wrapper").scrollLeft()
+        console.log(wrapperPos)
+        $(".stepform-wrapper").animate({
+            scrollLeft: wrapperPos + scrollWidth
+        })
+    })
     // rate
     $(".rate-label").click(function () {
         $(".rate-label").stop(true, false).removeClass('active');
         $(this).stop(true, false).addClass('active')
     })
-    $(".has-child").hover(function () {
+    $(".has-child").click(function () {
         $(this).next().addClass("show")
         $(this).find(".fa-chevron-down").addClass("up")
-        $("body").click((e)=>{
-       if(!$(e.target).closest(".sort-field").length&& !$(e.target).is(".has-child")){
-        $(".has-child").next().removeClass("show")
-        $(".has-child").find(".fa-chevron-down").removeClass("up")
-       }
+        $('.overlay').addClass('show')
+        $('.overlay').click(() => {
+            $('.has-child').next().removeClass("show")
+            $('.has-child').find(".fa-chevron-down").removeClass("up")
+            $('.overlay').removeClass('show')
         })
+
+        // $("body").click((e) => {
+        //     if (!$(e.target).closest(".sort-field").length && !$(e.target).is(".has-child")) {
+        //         $(".has-child").next().removeClass("show")
+        //         $(".has-child").find(".fa-chevron-down").removeClass("up")
+        //     }
+        // })
     })
-    
+
     $(".toggle-profile-content").click(function () {
         $(this).next().addClass('show')
         $("body").click(function (e) {
@@ -109,19 +122,19 @@ $(".next-btn").click(()=>{
         })
     })
     $(".popup-btn").click(function () {
-   $('.comment-popup').addClass('show');
+        $('.comment-popup').addClass('show');
         $("body").click(function (e) {
             if (!$(e.target).closest('.review-content').length && !$(e.target).is(".comment-popup")) {
                 $(".comment-popup").removeClass('show')
             }
         })
-       
+
     })
-    $('label input[type=radio]').click(function() {
+    $('label input[type=radio]').click(function () {
         $('label:has(input:checked)').addClass('active');
         $('label:has(input:not(:checked))').removeClass('active');
-      });
-    
+    });
+
     //   copy value clipboard
     $(".copy-link-input").focus(function () {
         $(this).select()
@@ -136,29 +149,29 @@ $(".next-btn").click(()=>{
         }, 3000)
     })
     $(function () {
-        $(".last-conversation-list").on('click','.conversation-list-item',function(){
+        $(".last-conversation-list").on('click', '.conversation-list-item', function () {
             $(this).addClass('active').siblings().removeClass('active')
             $(".chat-wrapper").show();
-            let $fullname= $(this).find(".fullname").text()
+            let $fullname = $(this).find(".fullname").text()
             $(".chat-header-title").text($fullname)
         })
-        $(".last-conversation-list").on('click','.unread-msg',function(){
+        $(".last-conversation-list").on('click', '.unread-msg', function () {
             $(this).removeClass('unread-msg');
-           
+
         })
     });
- 
+
     // open lang dropdown
-    $(function(){
-        $(".sitetoolbar-dropdown-btn").click(()=>{
+    $(function () {
+        $(".sitetoolbar-dropdown-btn").click(() => {
             $(".sitetoolbar-dropdown-body").show();
-            $("body").click((e)=>{
-                if(!$(e.target).closest(".sitetoolbar-lang").length && !$(e.target).is(".sitetoolbar-dropdown-body")){
-                 $(".sitetoolbar-dropdown-body").hide()
+            $("body").click((e) => {
+                if (!$(e.target).closest(".sitetoolbar-lang").length && !$(e.target).is(".sitetoolbar-dropdown-body")) {
+                    $(".sitetoolbar-dropdown-body").hide()
                 }
-                 })
+            })
         })
-       
+
     })
     $(function () {
         $('.counter-count').each(function () {
@@ -173,12 +186,12 @@ $(".next-btn").click(()=>{
             });
         });
     })
-    $(function(){
-        $(".review-btn").click(()=>{
+    $(function () {
+        $(".review-btn").click(() => {
             $(".success-popup").addClass("show")
-          setTimeout(() => {
-            $(".success-popup").removeClass("show")
-          }, 2000);
+            setTimeout(() => {
+                $(".success-popup").removeClass("show")
+            }, 2000);
             $(".comment-popup").removeClass("show")
         })
     })
@@ -208,18 +221,18 @@ $(".next-btn").click(()=>{
 
         })
     })
-    $(function(){
-        $(".sidebar-btn").click(()=>{
+    $(function () {
+        $(".sidebar-btn").click(() => {
             $(".filter-sidebar").addClass("show");
-            $(".overlay-sidebar").addClass("show");
-            $(".close,.overlay-sidebar").click(()=>{
+            $(".overlay").addClass("show");
+            $(".overlay").click(() => {
                 $(".filter-sidebar").removeClass("show");
-                $(".overlay-sidebar").removeClass("show");
+                $(".overlay").removeClass("show");
             })
         })
     })
-    $(function(){
-        $(".confirm-btn").click(()=>{
+    $(function () {
+        $(".confirm-btn").click(() => {
             $(".success-form-popup").addClass("show")
         })
     })
@@ -233,7 +246,7 @@ $(".next-btn").click(()=>{
 //     opacity: 0,
 //     distance: "50%",
 //     origin: "top",
- 
+
 //   });
 // ScrollReveal().reveal('#s_left',{
 //     delay: 75,
@@ -241,9 +254,9 @@ $(".next-btn").click(()=>{
 //     opacity: 0,
 //     distance: "50%",
 //     origin: "left",
-   
+
 //   });
-  
+
 //   ScrollReveal().reveal('#s2',{
 //     delay: 125,
 //     duration: 1500,
@@ -252,7 +265,7 @@ $(".next-btn").click(()=>{
 //     origin: "right",
 //     reset: true
 //   });
-  
+
 //   ScrollReveal().reveal('#s3',{
 //     delay: 175,
 //     duration: 1500,
@@ -264,38 +277,38 @@ $(".next-btn").click(()=>{
 $(function () {
     var parent = document.querySelector(".range-slider");
     if (!parent) return;
-  
+
     var rangeS = parent.querySelectorAll("input[type=range]"),
-      numberS = parent.querySelectorAll("input[type=number]");
-  
+        numberS = parent.querySelectorAll("input[type=number]");
+
     rangeS.forEach(function (el) {
-      el.oninput = function () {
-        var slide1 = parseFloat(rangeS[0].value),
-          slide2 = parseFloat(rangeS[1].value);
-  
-        if (slide1 > slide2) {
-          [slide1, slide2] = [slide2, slide1];
-          
-        }
-  
-        numberS[0].value = slide1;
-        numberS[1].value = slide2;
-      };
+        el.oninput = function () {
+            var slide1 = parseFloat(rangeS[0].value),
+                slide2 = parseFloat(rangeS[1].value);
+
+            if (slide1 > slide2) {
+                [slide1, slide2] = [slide2, slide1];
+
+            }
+
+            numberS[0].value = slide1;
+            numberS[1].value = slide2;
+        };
     });
-  
+
     numberS.forEach(function (el) {
-      el.oninput = function () {
-        var number1 = parseFloat(numberS[0].value),
-          number2 = parseFloat(numberS[1].value);
-  
-        if (number1 > number2) {
-          var tmp = number1;
-          numberS[0].value = number2;
-          numberS[1].value = tmp;
-        }
-  
-        rangeS[0].value = number1;
-        rangeS[1].value = number2;
-      };
+        el.oninput = function () {
+            var number1 = parseFloat(numberS[0].value),
+                number2 = parseFloat(numberS[1].value);
+
+            if (number1 > number2) {
+                var tmp = number1;
+                numberS[0].value = number2;
+                numberS[1].value = tmp;
+            }
+
+            rangeS[0].value = number1;
+            rangeS[1].value = number2;
+        };
     });
-  })
+})

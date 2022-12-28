@@ -61,7 +61,10 @@
 					font-size: $fs-sm;
 					color: $dark-color-3;
 					cursor: pointer;
-
+transition: $transition;
+&:hover{
+	color: $secondary-design-color;
+}
 					i {
 						font-size: $fs-xs;
 					}

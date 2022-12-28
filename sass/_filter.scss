@@ -1,0 +1,47 @@
+.filter-section {
+	padding: 50px 0 20px;
+	font-family: $primary-font;
+	.left {
+		padding: 40px 20px;
+		.skills {
+			.skills-name-list {
+				@include flex-align;
+				flex-wrap: wrap;
+			}
+
+			.skill {
+				background: rgba(42, 65, 232, 0.07);
+				color: $secondary-design-color;
+				border-radius: 4px;
+				display: flex;
+				margin-right: 4px;
+				margin-bottom: 4px;
+				padding: 5px 10px;
+				font-weight: 500;
+			}
+		}
+
+		.add-skill-input {
+			height: 48px;
+			padding-right: 44px;
+			background-color: $light-color;
+			border: 1px solid #E1E1E1;
+
+			&::placeholder {
+				font-size: $fs-sm;
+				line-height: $fs-xl;
+				letter-spacing: 0.15px;
+				color: $dark-color-5;
+			}
+		}
+
+		.form-group {
+			margin-top: 40px;
+			position: relative;
+		}
+	}
+
+	.right {
+		padding: 0 20px;
+	}
+}

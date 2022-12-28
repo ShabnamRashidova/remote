@@ -1,0 +1,128 @@
+.modal-dialog {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+.modal-content {
+	font-family: $primary-font;
+	border-radius: 0;
+
+	.modal-header {
+		background-color: $light-color-3;
+		border-bottom: 2px solid $gray-color-1;
+		display: flex;
+		align-items: center;
+		height: 72px;
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-left: 0;
+		justify-content: space-between;
+
+		.btn-group {
+			display: flex;
+
+			align-items: center;
+			height: 100%;
+
+			button {
+				height: 100%;
+				font-size: $fs-xs;
+				padding: 0 15px;
+				text-transform: capitalize;
+				background-color: transparent;
+				border: 2px solid transparent;
+
+				&.active {
+					border-color: $gray-color-1;
+					border-bottom: 0;
+					border-top: 0;
+					background: $light-color;
+					color: #0D99FF;
+
+				}
+			}
+		}
+	}
+
+	.modal-body {
+		padding: 30px;
+
+		.form-title {
+			text-align: center;
+			font-weight: 500;
+			margin-bottom: 20px;
+			font-size: $fs-md;
+		}
+
+		.nav {
+			margin-bottom: 10px;
+			border: none;
+
+			.nav-link {
+				color: rgba(0, 0, 0, 0.38);
+				background-color: $light-color-3;
+				margin-right: 30px;
+				width: 144px;
+				height: 44px;
+				border-radius: 3px;
+				font-weight: 700;
+
+				&.active,
+				&:hover {
+					color: #0094FF;
+					border-color: transparent;
+					background-color: rgba(137, 205, 255, 0.46);
+				}
+			}
+		}
+
+		.input-group-text {
+			background-color: $light-color-3;
+			border-radius: 2px;
+		}
+
+		.form-control {
+			border-radius: 2px;
+			font-size: $fs-xs;
+			height: 48px;
+
+			color: #494949;
+
+			&:focus {
+				outline: none;
+				border-color: #ddd;
+			}
+		}
+
+		.register-btn {
+			color: $light-color;
+			padding: 10px;
+			border-radius: 3px;
+			background-color: #4DB4FF;
+			transition: var(--transition);
+
+			&:hover {
+				background-color: $secondary-design-color;
+			}
+		}
+	}
+}
+.popup {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: $light-color;
+	width: 735px;
+	height: 270px;
+	z-index: 10;
+	@include flex-align-center;
+	flex-direction: column;
+	.popup-title {
+		font-weight: 600;
+		font-size: 35px;
+		color: $secondary-design-color;
+		margin-bottom: 30px;
+	}
+}

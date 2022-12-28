@@ -7,7 +7,14 @@
     background-color: $light-color;
     box-shadow: $box-shadow-1;
     font-family: $secondary-font;
-
+&.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transition: $transition;
+    width: 100%;
+}
     .logo {
         display: block;
         width: 50px;
@@ -45,6 +52,7 @@
             font-size: $fs-lg;
             @include flex-align;
             cursor: pointer;
+transition: $transition;
 
             img {
                 margin-right: 4px;
@@ -98,7 +106,7 @@
                 line-height: 30px;
                 color: $dark-color-3;
                 overflow: hidden;
-                border-right:1px solid $secondary-design-color;
+                border-right: 1px solid $secondary-design-color;
                 white-space: nowrap;
                 animation:
                     typing 3.5s steps(30, end),
@@ -210,7 +218,7 @@
         Advantages
 ===============================*/
 .advantages {
-    .col-md-4 {
+    .col-lg-4 {
         @include flex-align-center;
 
         .single-item {
@@ -221,6 +229,10 @@
             border-radius: 30px;
             max-width: 400px;
             height: 440px;
+
+            &:hover {
+                box-shadow: $box-shadow-3;
+            }
 
             .title {
                 color: $dark-color-2;
@@ -245,26 +257,21 @@
         &:nth-child(1) {
             .single-item {
                 background-color: $primary-design-color;
-&:hover{
-    transform: translateY(20px);
-}
+
             }
         }
 
         &:nth-child(2) {
             .single-item {
                 background-image: linear-gradient(270deg, #809AFF 0%, #FFE9D1 100%);
-                transform: translateY(130px);&:hover{
-                    transform: translateY(140px);
-                }
+                transform: translateY(130px);
             }
         }
 
         &:nth-child(3) {
             .single-item {
-                background-color: #809AFF;&:hover{
-                    transform: translateY(20px);
-                }
+                background-color: #809AFF;
+
             }
         }
     }
@@ -349,7 +356,7 @@
             transition: $transition;
 
             &:hover {
-                transform: translateX(-20px);
+                color: $secondary-design-color;
             }
         }
     }

@@ -1,0 +1,178 @@
+.employees {
+	&.browse-employees {
+		position: relative;
+		&.hide-popup {
+			&:after {
+				display: none;
+			}
+			.popup {
+				display: none;
+			}
+		}
+
+		&:after {
+			background: rgba(255, 255, 255, 0.01);
+			backdrop-filter: blur(2px);
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			content: '';
+			bottom: 0;
+			width: 100%;
+			z-index: 9;
+			height: 100%;
+		}
+	}
+
+	.single-item {
+		background: $light-color;
+		text-align: center;
+		box-shadow: $box-shadow-1;
+		border-radius: 20px;
+		overflow: hidden;
+		transition: $transition;
+
+		&:hover {
+			box-shadow: $box-shadow-2;
+		}
+
+		&.premium-single-item {
+			border: 6px solid $secondary-design-color;
+
+			.single-item-header {
+				.profile-image {
+					&:after {
+						content: "";
+						position: absolute;
+						width: 53px;
+						top: -23px;
+						height: 43px;
+						right: -2px;
+						background-image: url("../images/game-icons_crown.png");
+					}
+				}
+			}
+
+			.button-group {
+				background-color: $light-color;
+			}
+		}
+
+		.single-item-header {
+			position: relative;
+			width: 100%;
+
+			span.pr {
+				position: absolute;
+				height: $fs-xl;
+				right: 10px;
+				top: 0;
+				font-weight: 400;
+				font-size: $fs-sm;
+				line-height: $fs-xl;
+				text-align: center;
+				letter-spacing: 0.15px;
+				color: $dark-color-3;
+			}
+		}
+
+		.profile-info {
+			.fullname {
+				font-weight: 600;
+				font-size: $fs-lg;
+				text-align: center;
+				color: rgba(0, 0, 0, 0.87);
+			}
+
+			.job {
+				font-weight: 400;
+				font-size: $fs-sm;
+				line-height: $fs-xl;
+				text-align: center;
+				letter-spacing: 0.15px;
+				color: $dark-color-3;
+			}
+
+			.badges {
+				font-weight: 400;
+				font-size: $fs-sm;
+				line-height: $fs-xl;
+				text-align: center;
+				letter-spacing: 0.15px;
+				color: $dark-color-3;
+				margin: 20px 0;
+				display: inline-block;
+			}
+		}
+
+		.button-group {
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 10px 0;
+			background-color: $light-color-3;
+
+			button {
+				width: 90%;
+
+				&:first-child {
+					margin-bottom: 6px;
+				}
+			}
+		}
+	}
+
+
+
+	.pagination {
+		margin-top: 12px;
+		display: flex;
+		justify-content: center;
+
+		.page-item {
+			.page-link {
+				color: $dark-color-3;
+				width: 48px;
+				height: 48px;
+				border-radius: 3px;
+				background-color: transparent;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: none;
+				border-radius: 5px;
+				box-shadow: none;
+				transition: var(--transition);
+
+				&:hover {
+					color: $secondary-design-color;
+				}
+			}
+
+			&:first-child {
+				.page-link {
+					background: $light-color-4;
+					color: #909090;
+				}
+			}
+
+			&:last-child {
+				.page-link {
+					background: $light-color-4;
+					color: #909090;
+				}
+			}
+		}
+
+		.page-item.active {
+			border-radius: 5px;
+			background-color: $secondary-design-color;
+
+			.page-link {
+				color: var(--text-light-1);
+			}
+		}
+	}
+}

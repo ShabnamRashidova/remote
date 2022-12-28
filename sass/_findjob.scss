@@ -83,6 +83,20 @@
 
 		.sort-field {
 			position: relative;
+			.has-child{
+				cursor: pointer;
+				transition: $transition;
+				span{
+					&:hover{
+						color: $secondary-design-color;
+					}
+				}
+				i{
+					&.up{
+						transform: rotate(180deg);
+					}
+				}
+			}
 		}
 	}
 }
