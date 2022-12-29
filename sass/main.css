@@ -2882,6 +2882,7 @@ input::-webkit-inner-spin-button {
 }
 .package-wrap .package .stepform-wrapper .step .text {
   margin-bottom: 10px;
+  text-align: center;
 }
 .package-wrap .package .stepform-wrapper .step .text h6 {
   font-size: 20px;
