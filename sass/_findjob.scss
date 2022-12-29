@@ -1,23 +1,16 @@
-
-
 .heading {
 	margin: 0 0 40px;
 
 	.bar {
-		display: flex;
-		align-items: center;
+		@include flex-align-between;
 		padding: 16px 15px;
-	
-		justify-content: space-between;
 		border-radius: 3px;
 		background-color: #F2F2F2;
 
 		.turn-field {
-			display: flex;
-			align-items: center;
+			@include flex-align;
 
 			span {
-				letter-spacing: 0.15px;
 				font-size: $fs-sm;
 				color: $dark-color-3;
 			}
@@ -25,16 +18,19 @@
 
 		.sort-field {
 			position: relative;
-			.has-child{
+
+			.has-child {
 				cursor: pointer;
 				transition: $transition;
-				span{
-					&:hover{
+
+				span {
+					&:hover {
 						color: $secondary-design-color;
 					}
 				}
-				i{
-					&.up{
+
+				i {
+					&.up {
 						transform: rotate(180deg);
 					}
 				}
@@ -46,23 +42,20 @@
 .jobs {
 	padding: 30px 0;
 	font-family: $primary-font;
-	.add-skills {
 
+	.add-skills {
 		position: relative;
-       margin-bottom: 50px;
+
 		.skills-input {
 			width: 272px;
 			height: 48px;
-			background: #FFFFFF;
-			border: 1px solid #E1E1E1;
-			border-radius: 20px;
+			background: $light-color;
+			border: $border-light;
 			padding-right: 50px;
 
 			&::placeholder {
 				font-size: $fs-sm;
-				line-height: $fs-xl;
-				letter-spacing: 0.15px;
-				color: rgba(0, 0, 0, 0.38);
+				color: $dark-color-5;
 			}
 		}
 
@@ -70,47 +63,53 @@
 			position: absolute;
 			top: 55px;
 			border-radius: 50%;
-			right: 45px;
+			right: 42px;
 		}
 	}
+
 	.job-category-dropdown {
 		position: relative;
-  margin-bottom: 40px ;
+
 		.job-category-dropdown-btn {
-			width: 272px;
+			width: 270px;
 			height: 48px;
 			background: #FFFFFF;
-			border: 1px solid #E1E1E1;
-			border-radius: 20px;
-			display: flex;
-			align-items: center;font-weight: 400;
+			border: $border-light;
+			@include flex-align-between;
 			font-size: $fs-sm;
-			line-height: $fs-xl;
-			letter-spacing: 0.15px;
-			color: rgba(0, 0, 0, 0.38);
+			color: $dark-color-5;
 			padding: 0 20px;
-			justify-content: space-between;
+		}
+
+		.drop-down {
+			max-height: 250px;
+			border: $border-light;
+			margin-top: 10px;
+			overflow-y: auto;
+			background-color: $light-color;
+			box-shadow: $box-shadow-1;
+			border-radius: 5px;
+			width: 270px;
+			display: none;
+
+			ul {
+				li {
+					font-size: $fs-md;
+					padding: 10px;
+				}
+			}
 		}
 
 	}
-	
-	.job-category-dropdown-menu {
-		margin-bottom: 30px;
-		.form-group {
-			margin-bottom: 15px;
 
+	.job-category-dropdown-menu {
+		.form-group {
 			span {
 				font-size: $fs-md;
-				
-				color: rgba(0, 0, 0, 0.87);
+				color: $dark-color-4;
 			}
 		}
 	}
-	.sub-title {
-		margin-bottom: 15px;
-	}
-
-	
 
 	.switch {
 		input {
@@ -120,9 +119,10 @@
 		}
 	}
 
-	
+
 }
 
+/* Range slider */
 .range-container {
 	position: relative;
 	height: 12px;
@@ -139,54 +139,53 @@
 	display: flex;
 	text-align: center;
 	justify-content: space-around;
-	border-radius: 10px;
-	background: #000;
-	width: 133px;
 	margin: 15px auto;
-
-	span {
-		color: $light-color;
-	}
+	max-width: 150px;
+	border-radius: 10px;
+	background-color: $dark-color;
+	position: relative;
 }
 
 .result-container input[type="number"] {
-	background-color: transparent;
-	border: none;
-	outline: none;
-	height: $fs-xl;
-	color: $light-color;
-	text-align: center;
-	font-size: $fs-sm;
-	font-weight: 500;
-	margin-right: 3px;
-	position: relative;
-
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 24px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 3px;
+    position: relative;
 
 }
-
-.min-num,
-.max-num {
-	width: 100%;
+.min-num:after, .max-num{
 	position: relative;
-
-	&:after {
-		position: absolute;
-		content: "$";
-		width: 20px;
-		height: 20px;
-		color: $light-color;
-		top: 0;
-		left: 0;
-	}
 }
+.min-num:after, .max-num:after {
+	position: absolute;
+    content: "$";
+    width: 20px;
+    height: 20px;
+    color: #FFFFFF;
+    top: 0;
+    left: 0;
+}
+
 
 .result-container input[type="number"]::-webkit-outer-spin-button,
 .result-container input[type="number"]::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 }
 
+.result-container input[type="number"]:invalid,
+.result-container input[type="number"]:out-of-range {
+	border: 2px solid #c82323;
+	background: $secondary-design-color;
+}
+
 .range-container input[type="range"] {
-	// -webkit-appearance: none;
+	-webkit-appearance: none;
 	width: 100%;
 }
 
@@ -200,61 +199,63 @@
 
 .range-container input[type="range"]::-webkit-slider-runnable-track {
 	width: 100%;
-	height: 2px;
+	height: 1.5px;
 	cursor: pointer;
 	background: $secondary-design-color;
 	box-shadow: none;
 	border: 0;
 	border-radius: 5px;
+
 }
 
 .range-container input[type="range"]::-webkit-slider-thumb {
 	position: relative;
 	z-index: 2;
-	height: 20px;
-	width: 20px;
-	background: url('../images/airplay.png');
+	height: 23px;
+	width: 23px;
+	background: url('../images/Ellipse5.png');
+	background-size: cover;
+	border: 2px solid $light-color;
+	background-repeat: no-repeat;
 	cursor: pointer;
 	-webkit-appearance: none;
-	margin-top: -8px;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-
+	margin-top: -12px;
 	border-radius: 50%;
-	position: relative;
 }
-
 
 .range-container input[type="range"]::-moz-range-track {
 	width: 100%;
-	height: 2px;
+	height: 5px;
 	cursor: pointer;
 	transition: all 0.2s;
-	background: #fff;
+	background: $secondary-design-color;
 	border-radius: 1px;
 	box-shadow: none;
 	border: 0;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
 }
 
 .range-container input[type="range"]::-moz-range-thumb {
 	z-index: 2;
 	position: relative;
 	box-shadow: 0px 0px 0px #000;
-	border: 1px solid $primary-design-color;
-	height: 13px;
-	width: 13px;
+	border: 1px solid $secondary-design-color;
+	height: 18px;
+	width: 18px;
 	border-radius: 25px;
-	background: $primary-design-color;
+	background: $secondary-design-color;
 	cursor: pointer;
 }
 
 .range-container input[type="range"]:focus::-ms-fill-lower {
-	background: $primary-design-color;
+	background: $secondary-design-color;
 }
 
 .range-container input[type="range"]:focus::-ms-fill-upper {
-	background: $primary-design-color;
+	background: $secondary-design-color;
 }
 
 .result-container input[type="range"]::-ms-track {
@@ -265,12 +266,15 @@
 	background: transparent;
 	border-color: transparent;
 	color: transparent;
-
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
 }
 
 .result-container input[type="range"]::-ms-fill-lower,
 .result-container input[type="range"]::-ms-fill-upper {
-	background: $primary-design-color;
+	background: $secondary-design-color;
 	border-radius: 1px;
 	box-shadow: none;
 	border: 0;
@@ -280,10 +284,10 @@
 	z-index: 2;
 	position: relative;
 	box-shadow: 0px 0px 0px #000;
-	border: 1px solid $primary-design-color;
-	height: 13px;
-	width: 13px;
+	border: 1px solid $secondary-design-color;
+	height: 18px;
+	width: 18px;
 	border-radius: 25px;
-	background: $primary-design-color;
+	background: $secondary-design-color;
 	cursor: pointer;
 }

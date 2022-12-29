@@ -1,13 +1,30 @@
 .job-single {
-font-family: $primary-font;
-transition: $transition;
-
-border-radius: 20px;
-overflow: hidden;
-&:hover{
-    box-shadow: $box-shadow-3;
-    transform: translateY(-5px);
+    font-family: $primary-font;
+    transition: $transition;
+    border-radius: 20px;
+    overflow: hidden;
+&.premium{
+    border:4px solid $secondary-design-color;
+    .company-image{
+        position: relative;
+        &:after{
+            position: absolute;
+            content: '';
+            top: -25px;
+            right: -20px;
+            width: 45px;
+            height: 45px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('../images/game-icons_crown.png');
+        }
+    }
 }
+    &:hover {
+        box-shadow: $box-shadow-3;
+        transform: translateY(-5px);
+    }
+
     .job-single-header {
         padding: 20px;
         background-color: $light-color;
@@ -54,7 +71,8 @@ overflow: hidden;
             margin-bottom: 7px;
             font-size: $fs-md;
             color: $dark-color-3;
-          img {
+
+            img {
                 margin-right: 10px;
             }
 

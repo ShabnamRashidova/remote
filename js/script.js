@@ -16,7 +16,9 @@ $(function () {
             $(".lang").find(".fa-chevron-down").removeClass("up")
         })
     })
-   
+   $(".job-category-dropdown-btn").click(()=>{
+    $(".drop-down").slideToggle()
+   })
     // open menu
     $(function () {
         $(".open-menu").click(() => {
