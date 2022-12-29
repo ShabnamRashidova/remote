@@ -90,13 +90,6 @@ $(function () {
             $('.has-child').find(".fa-chevron-down").removeClass("up")
             $('.overlay').removeClass('show')
         })
-
-        // $("body").click((e) => {
-        //     if (!$(e.target).closest(".sort-field").length && !$(e.target).is(".has-child")) {
-        //         $(".has-child").next().removeClass("show")
-        //         $(".has-child").find(".fa-chevron-down").removeClass("up")
-        //     }
-        // })
     })
 
     $(".toggle-profile-content").click(function () {
@@ -225,10 +218,10 @@ $(function () {
     })
     $(function () {
         $(".sidebar-btn").click(() => {
-            $(".filter-sidebar").addClass("show");
+            $(".sidebar").addClass("show");
             $(".overlay").addClass("show");
             $(".overlay").click(() => {
-                $(".filter-sidebar").removeClass("show");
+                $(".sidebar").removeClass("show");
                 $(".overlay").removeClass("show");
             })
         })

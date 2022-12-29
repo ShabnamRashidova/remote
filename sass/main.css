@@ -51,7 +51,7 @@ a {
 }
 
 .round-20 {
-  border-radius: 20px;
+  border-radius: 20px !important;
 }
 
 .round-40 {
@@ -1371,6 +1371,7 @@ input::-webkit-inner-spin-button {
 
 .job-page {
   padding: 30px 0 140px;
+  font-family: "Nunito";
 }
 .job-page .card-item {
   background: #FFFFFF;
@@ -1393,7 +1394,6 @@ input::-webkit-inner-spin-button {
   margin-right: 30px;
 }
 .job-page .card-item.job .info .title {
-  font-weight: 400;
   font-size: 24px;
   line-height: 32px;
   letter-spacing: 0.18px;
@@ -3043,11 +3043,13 @@ input::-webkit-inner-spin-button {
   padding: 30px 0;
   font-family: "Nunito";
 }
+.jobs .btn-lg {
+  width: 100%;
+}
 .jobs .add-skills {
   position: relative;
 }
 .jobs .add-skills .skills-input {
-  width: 272px;
   height: 48px;
   background: #FFFFFF;
   border: 1px solid #E1E1E1;
@@ -3068,15 +3070,14 @@ input::-webkit-inner-spin-button {
 .jobs .add-skills .btn-xs {
   position: absolute;
   top: 55px;
-  border-radius: 50%;
-  right: 42px;
+  right: 3px;
 }
 .jobs .job-category-dropdown {
   position: relative;
 }
 .jobs .job-category-dropdown .job-category-dropdown-btn {
-  width: 270px;
   height: 48px;
+  width: 100%;
   background: #FFFFFF;
   border: 1px solid #E1E1E1;
   display: flex;
@@ -3088,13 +3089,11 @@ input::-webkit-inner-spin-button {
 }
 .jobs .job-category-dropdown .drop-down {
   max-height: 250px;
-  border: 1px solid #E1E1E1;
   margin-top: 10px;
   overflow-y: auto;
-  background-color: #FFFFFF;
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.09);
   border-radius: 5px;
-  width: 270px;
+  width: 100%;
+  padding: 10px;
   display: none;
 }
 .jobs .job-category-dropdown .drop-down ul li {
@@ -3206,7 +3205,13 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -12px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   border-radius: 50%;
+}
+
+.range-container input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
 }
 
 .range-container input[type=range]::-moz-range-track {
@@ -3737,25 +3742,120 @@ button {
   text-transform: capitalize;
 }
 
-.overlay-sidebar {
+.filter-sidebar2 {
+  width: 300px;
   position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
-  z-index: 2;
-  right: 0;
-  width: 100%;
+  padding: 10px;
+  background-color: #FFE8D0;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  visibility: hidden;
-  transition: var(--transition);
+  overflow-y: scroll;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.09);
+  transition: all 0.4s ease;
+  z-index: 999;
   transform: translateX(-30000px);
 }
-.overlay-sidebar.show {
+.filter-sidebar2.show {
   transform: none;
-  opacity: 1;
-  visibility: visible;
+}
+.filter-sidebar2 .form-control {
+  height: 48px;
+}
+.filter-sidebar2 .btn-xs {
+  position: absolute;
+  right: 3px;
+  top: 55px;
+}
+.filter-sidebar2 .job-category-dropdown {
+  position: relative;
+}
+.filter-sidebar2 .job-category-dropdown .job-category-dropdown-btn {
+  width: 272px;
+  height: 48px;
+  background: #FFFFFF;
+  border: 1px solid #E1E1E1;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+.filter-sidebar2 .job-category-dropdown .job-category-dropdown-menu .form-group {
+  margin-bottom: 10px;
+}
+.filter-sidebar2 .job-category-dropdown .job-category-dropdown-menu .form-group span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.87);
+}
+.filter-sidebar2 .sidebar-header {
+  padding: 10px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.105);
+}
+.filter-sidebar2 .sidebar-header .close {
+  cursor: pointer;
+}
+.filter-sidebar2 .sidebar-body {
+  padding: 10px;
+}
+.filter-sidebar2 .sidebar-body .btn-xs {
+  position: absolute;
+  right: 3px;
+}
+.filter-sidebar2 .sidebar-body .skills .skills-name-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.filter-sidebar2 .sidebar-body .skills .skill {
+  background: rgba(42, 65, 232, 0.07);
+  color: #7F99FF;
+  border-radius: 4px;
+  display: flex;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 5px 10px;
+  font-weight: 500;
+}
+.filter-sidebar2 .sidebar-body .add-skill-input {
+  height: 48px;
+  padding-right: 44px;
+  background-color: #FFFFFF;
+  border: 1px solid #E1E1E1;
+}
+.filter-sidebar2 .sidebar-body .add-skill-input::-moz-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.38);
+}
+.filter-sidebar2 .sidebar-body .add-skill-input:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.38);
+}
+.filter-sidebar2 .sidebar-body .add-skill-input::placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.38);
+}
+.filter-sidebar2 .sidebar-body .form-group {
+  margin-top: 20px;
+  position: relative;
+}
+.filter-sidebar2 .sidebar-body .form-group span {
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
 .general-footer {
@@ -4629,6 +4729,12 @@ button {
     font-size: 90px;
     line-height: 130px;
   }
+  .job-single .job-single-footer div {
+    font-size: 15px;
+  }
+  .job-single .job-single-footer div img {
+    margin-right: 5px;
+  }
 }
 @media screen and (max-width: 1200px) {
   .sitetoolbar .lang .preview-lang {
@@ -4673,6 +4779,9 @@ button {
   }
   .sidebar-btn {
     display: block;
+  }
+  .jobs .sidebar-btn {
+    display: none;
   }
 }
 @media screen and (max-width: 992px) {
@@ -4743,6 +4852,9 @@ button {
   #header-global .header-actions {
     justify-content: flex-end;
   }
+  .jobs .sidebar-btn {
+    display: block;
+  }
 }
 @media screen and (max-width: 767px) {
   .banner .left {
@@ -4802,6 +4914,12 @@ button {
   }
   .popup .btn-xl {
     font-size: 16px;
+  }
+  .job-single .job-single-header .company-info .job-title {
+    font-size: 20px;
+  }
+  .job-single .job-single-footer {
+    padding: 15px;
   }
 }
 @media screen and (max-width: 575px) {

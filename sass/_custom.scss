@@ -50,7 +50,7 @@ a {
 }
 
 .round-20 {
-	border-radius: 20px;
+	border-radius: 20px !important; 
 }
 
 .round-40 {
@@ -1586,7 +1586,7 @@ input::-webkit-inner-spin-button {
 
 .job-page {
 	padding: 30px 0 140px;
-
+font-family: $primary-font;
 	.card-item {
 		background: $light-color;
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -1611,7 +1611,6 @@ input::-webkit-inner-spin-button {
 
 		.info {
 			.title {
-				font-weight: 400;
 				font-size: $fs-xl;
 				line-height: 32px;
 				letter-spacing: 0.18px;

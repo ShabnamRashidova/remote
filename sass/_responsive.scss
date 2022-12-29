@@ -65,6 +65,18 @@
             }
         }
     }
+    .job-single {
+        .job-single-footer {
+           
+            div {
+                font-size: $fs-xs;
+    
+                img {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width:1200px) {
@@ -136,6 +148,11 @@
     .sidebar-btn {
 		display: block;
 	}
+    .jobs{
+        .sidebar-btn{
+            display: none;
+        }
+    }
 }
 
 @media screen and (max-width:992px) {
@@ -231,6 +248,11 @@
             justify-content: flex-end;
         }
     }
+    .jobs{
+        .sidebar-btn{
+            display: block;
+        }
+    }
 }
 
 @media screen and (max-width:767px) {
@@ -322,6 +344,19 @@
     .btn-xl{
         font-size: 16px;
     }
+}
+.job-single{
+    .job-single-header {
+        .company-info {
+            .job-title{
+                font-size: 20px;
+            }
+        }
+    }
+    .job-single-footer{
+        padding:15px;
+    }
+
 }
 }
 @media screen and (max-width:575px) {

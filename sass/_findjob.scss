@@ -42,12 +42,13 @@
 .jobs {
 	padding: 30px 0;
 	font-family: $primary-font;
-
+.btn-lg{
+	width: 100%;
+}
 	.add-skills {
 		position: relative;
 
 		.skills-input {
-			width: 272px;
 			height: 48px;
 			background: $light-color;
 			border: $border-light;
@@ -62,8 +63,7 @@
 		.btn-xs {
 			position: absolute;
 			top: 55px;
-			border-radius: 50%;
-			right: 42px;
+			right: 3px;
 		}
 	}
 
@@ -71,9 +71,9 @@
 		position: relative;
 
 		.job-category-dropdown-btn {
-			width: 270px;
 			height: 48px;
-			background: #FFFFFF;
+			width: 100%;
+			background: $light-color;
 			border: $border-light;
 			@include flex-align-between;
 			font-size: $fs-sm;
@@ -83,13 +83,11 @@
 
 		.drop-down {
 			max-height: 250px;
-			border: $border-light;
 			margin-top: 10px;
 			overflow-y: auto;
-			background-color: $light-color;
-			box-shadow: $box-shadow-1;
 			border-radius: 5px;
-			width: 270px;
+			width: 100%;
+			padding: 10px;
 			display: none;
 
 			ul {
@@ -220,7 +218,11 @@
 	cursor: pointer;
 	-webkit-appearance: none;
 	margin-top: -12px;
+	transition: $transition;
 	border-radius: 50%;
+}
+.range-container input[type="range"]::-webkit-slider-thumb:hover {
+	transform: scale(1.1);
 }
 
 .range-container input[type="range"]::-moz-range-track {
