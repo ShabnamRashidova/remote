@@ -302,7 +302,6 @@ input::-webkit-inner-spin-button {
 	top: 30px;
 	box-shadow: $box-shadow-1;
 	right: 0;
-	padding-left: 10px;
 	border-radius: 3px;
 	width: 135px;
 	background-color: $light-color;
@@ -338,18 +337,17 @@ input::-webkit-inner-spin-button {
 		line-height: $fs-xl;
 		letter-spacing: 0.15px;
 		color: $dark-color-3;
-		padding: 5px 0 5px 5px;
-		display: inline-block;
+		padding: 5px 10px ;
+		margin-top: 5px;
+		display: block;
 		transition: $transition;
 
-		&:hover {
-			padding-left: 6px;
+		&:hover ,&.active	{
+			background-color: $gray-color-3;
+			
 		}
 
-		&:hover,
-		&.active {
-			color: $secondary-design-color;
-		}
+		
 	}
 }
 

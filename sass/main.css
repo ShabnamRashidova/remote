@@ -284,7 +284,6 @@ input::-webkit-inner-spin-button {
   top: 30px;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.09);
   right: 0;
-  padding-left: 10px;
   border-radius: 3px;
   width: 135px;
   background-color: #FFFFFF;
@@ -318,15 +317,13 @@ input::-webkit-inner-spin-button {
   line-height: 24px;
   letter-spacing: 0.15px;
   color: rgba(0, 0, 0, 0.6);
-  padding: 5px 0 5px 5px;
-  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 5px;
+  display: block;
   transition: all 0.4s ease;
 }
-.drop-menu a:hover {
-  padding-left: 6px;
-}
 .drop-menu a:hover, .drop-menu a.active {
-  color: #7F99FF;
+  background-color: #F4F4F4;
 }
 
 .profile-image {
