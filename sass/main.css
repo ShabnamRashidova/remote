@@ -3127,7 +3127,7 @@ input::-webkit-inner-spin-button {
   text-align: center;
   justify-content: space-around;
   margin: 15px auto;
-  max-width: 150px;
+  max-width: 165px;
   border-radius: 10px;
   background-color: #000000;
   position: relative;
@@ -3146,7 +3146,7 @@ input::-webkit-inner-spin-button {
   position: relative;
 }
 
-.min-num:after, .max-num {
+.min-num, .max-num {
   position: relative;
 }
 
@@ -3157,7 +3157,7 @@ input::-webkit-inner-spin-button {
   height: 20px;
   color: #FFFFFF;
   top: 0;
-  left: 0;
+  left: -10px;
 }
 
 .result-container input[type=number]::-webkit-outer-spin-button,
