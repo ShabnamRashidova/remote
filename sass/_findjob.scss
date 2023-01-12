@@ -24,12 +24,14 @@
 				transition: $transition;
 
 				span {
+					font-weight: bold;
 					&:hover {
 						color: $secondary-design-color;
 					}
 				}
 
 				i {
+					font-size: 13px;
 					&.up {
 						transform: rotate(180deg);
 					}

@@ -358,6 +358,39 @@
     }
 
 }
+.profile-image{
+    width: 80px;
+    height: 80px;
+}
+.employees {
+    .single-item {
+        .profile-info {
+           .fullname{
+                font-size: 18px;
+            }
+            .job{
+                font-size: 15px;
+            }
+        }
+        .single-item-header {
+            span{
+                &.pr{
+                    font-size: 15px;
+                }
+            }
+        }
+        &.premium-single-item{
+            .single-item-header {
+                .profile-image{
+                    &:after{
+                        width: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 }
 @media screen and (max-width:575px) {
 

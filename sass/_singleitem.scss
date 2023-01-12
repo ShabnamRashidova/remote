@@ -1,10 +1,12 @@
 .employees {
 	&.browse-employees {
 		position: relative;
+
 		&.hide-popup {
 			&:after {
 				display: none;
 			}
+
 			.popup {
 				display: none;
 			}
@@ -32,7 +34,9 @@
 		border-radius: 20px;
 		overflow: hidden;
 		transition: $transition;
-
+.btn-lg{
+	width: 90%;
+}
 		&:hover {
 			box-shadow: $box-shadow-2;
 		}
@@ -46,9 +50,10 @@
 						content: "";
 						position: absolute;
 						width: 53px;
-						top: -23px;
+						top: -19px;
 						height: 43px;
-						right: -2px;
+						background-repeat: no-repeat;
+						right: -15px;
 						background-image: url("../images/game-icons_crown.png");
 					}
 				}
@@ -128,10 +133,12 @@
 
 	.pagination {
 		margin-top: 12px;
+		margin-bottom: 12px;
 		display: flex;
 		justify-content: center;
 
 		.page-item {
+			
 			.page-link {
 				color: $dark-color-3;
 				width: 48px;

@@ -33,6 +33,9 @@
 				letter-spacing: 0.15px;
 				color: $dark-color-5;
 			}
+			&:focus{
+				border-color: $secondary-design-color;
+			}
 		}
 
 		.form-group {
