@@ -28,7 +28,9 @@
 				background: $light-color;
 				border: 1px solid #E1E1E1;
 				border-radius: 4px;
-
+&:focus{
+	border-color: $secondary-design-color;
+}
 				&::placeholder {
 					font-size: $fs-xs;
 					letter-spacing: 0.15px;
@@ -436,7 +438,7 @@
 
 			.form-bottom {
 				span {
-					font-size: $fs-xs;
+					font-size: 14px;
 					line-height: $fs-xl;
 					letter-spacing: 0.15px;
 					color: #000000;

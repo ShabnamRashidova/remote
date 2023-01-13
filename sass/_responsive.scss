@@ -65,12 +65,13 @@
             }
         }
     }
+
     .job-single {
         .job-single-footer {
-           
+
             div {
                 font-size: $fs-xs;
-    
+
                 img {
                     margin-right: 5px;
                 }
@@ -145,11 +146,13 @@
 
         }
     }
+
     .sidebar-btn {
-		display: block;
-	}
-    .jobs{
-        .sidebar-btn{
+        display: block;
+    }
+
+    .jobs {
+        .sidebar-btn {
             display: none;
         }
     }
@@ -248,8 +251,9 @@
             justify-content: flex-end;
         }
     }
-    .jobs{
-        .sidebar-btn{
+
+    .jobs {
+        .sidebar-btn {
             display: block;
         }
     }
@@ -315,95 +319,109 @@
             font-size: $fs-xl;
         }
     }
+
     #header-global {
         .header-logo {
             justify-content: flex-start;
-            a{
+
+            a {
                 width: 42px;
                 height: 42px;
             }
         }
-        .header-actions{
-            .profile-content{
-                .profile-image{
-                  
-                            width: 40px;
-                            height: 40px;
-                        
-            }
-        }
-    }
-}
-.popup {
-    width: 500px;
 
-    .popup-title {
-        font-size: 27px;
-        margin-bottom: 15px;
-    }
-    .btn-xl{
-        font-size: 16px;
-    }
-}
-.job-single{
-    .job-single-header {
-        .company-info {
-            .job-title{
-                font-size: 20px;
-            }
-        }
-    }
-    .job-single-footer{
-        padding:15px;
-    }
+        .header-actions {
+            .profile-content {
+                .profile-image {
 
-}
-.profile-image{
-    width: 80px;
-    height: 80px;
-}
-.employees {
-    .single-item {
-        .profile-info {
-           .fullname{
-                font-size: 18px;
-            }
-            .job{
-                font-size: 15px;
-            }
-        }
-        .single-item-header {
-            span{
-                &.pr{
-                    font-size: 15px;
+                    width: 40px;
+                    height: 40px;
+
                 }
             }
         }
-        &.premium-single-item{
+    }
+
+    .popup {
+        width: 500px;
+
+        .popup-title {
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        .btn-xl {
+            font-size: 16px;
+        }
+    }
+
+    .job-single {
+        .job-single-header {
+            .company-info {
+                .job-title {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .job-single-footer {
+            padding: 15px;
+        }
+
+    }
+
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .employees {
+        .single-item {
+            .profile-info {
+                .fullname {
+                    font-size: 18px;
+                }
+
+                .job {
+                    font-size: 15px;
+                }
+            }
+
             .single-item-header {
-                .profile-image{
-                    &:after{
-                        width: 45px;
+                span {
+                    &.pr {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            &.premium-single-item {
+                .single-item-header {
+                    .profile-image {
+                        &:after {
+                            width: 45px;
+                        }
                     }
                 }
             }
         }
     }
-}
 
 }
+
 @media screen and (max-width:575px) {
 
     .banner {
 
         .right {
-            .text{
-                .main-text{
-                    &:after{
-                        content:none;
+            .text {
+                .main-text {
+                    &:after {
+                        content: none;
                     }
                 }
             }
+
             .join-btn-group {
                 a {
                     font-size: 12px;
@@ -444,27 +462,28 @@
             font-size: $fs-xl;
         }
     }
+
     #header-global {
-    
+
         .header-actions {
-         
+
             .notification-btn-group {
-               .message-content {
+                .message-content {
                     .drop-message {
                         right: -135px;
-    
+
                     }
                 }
-    
+
                 .notification-content {
                     .drop-notification {
                         right: -90px;
                     }
-    
-    
+
+
                 }
             }
-    
+
             .profile-content {
                 .profile-image {
                     width: 48px;
@@ -477,7 +496,7 @@
                     background-position: center;
                     position: relative;
                 }
-    
+
                 .profile-sidebar {
                     background-color: $light-color;
                     width: 320px;
@@ -491,23 +510,23 @@
                     opacity: 0;
                     visibility: hidden;
                     transition: $transition;
-    
+
                     &.show {
                         opacity: 1;
                         visibility: visible;
                         transform: translateY(0);
                     }
-    
+
                     .sidebar-header {
                         padding: 0 20px;
                         border-bottom: $light-color;
                         @include flex-align;
-    
+
                         .profile-image {
                             width: 67px;
                             margin-right: 20px;
                             height: 67px;
-    
+
                             .persent {
                                 position: absolute;
                                 top: 50%;
@@ -517,13 +536,13 @@
                                 font-size: 15px;
                             }
                         }
-    
+
                         .fullname {
                             font-weight: 600;
                             font-size: $fs-lg;
                             color: $dark-color-4;
                         }
-    
+
                         .link {
                             font-size: $fs-sm;
                             text-decoration-line: underline;
@@ -531,19 +550,19 @@
                             text-transform: capitalize;
                         }
                     }
-    
+
                     .sidebar-body {
                         padding: $p-20;
-    
+
                         li {
                             a {
-    
+
                                 font-size: $fs-sm;
                                 text-transform: capitalize;
                                 color: $dark-color-4;
                                 @include flex-align;
                                 margin-bottom: 15px;
-    
+
                                 img {
                                     margin-right: 8px;
                                 }
@@ -551,216 +570,230 @@
                         }
                     }
                 }
-    
+
             }
         }
-    
+
         .open-menu {
             color: $secondary-design-color;
             cursor: pointer;
             @include flex-align;
             height: 100%;
-    
+
         }
     }
+
     .popup {
         width: 350px;
-      text-align: center;
+        text-align: center;
+
         .popup-title {
             font-size: 22px;
             margin-bottom: 15px;
         }
-        .btn-xl{
-          width: 270px;
+
+        .btn-xl {
+            width: 270px;
         }
     }
-    .copyright-wrap.mt-45{
+
+    .copyright-wrap.mt-45 {
         margin-top: 0;
     }
-    
-.error-page {
-	img {
-		max-width: 250px;
-	}
-	strong {
-		font-size: $fs-xl;
-	}
-}
-}
-@media screen and (max-width:992px) {
 
-	.applied-jobs {
+    .error-page {
+        img {
+            max-width: 250px;
+        }
 
-		.applied-jobs-container {
-			width: 100%;
-			overflow-y: auto;
+        strong {
+            font-size: $fs-xl;
+        }
+    }
 
-			.applied-jobs-table {
-				min-width: 700px;
-			}
-		}
-	}
+    .subscription {
+        .subscription-info {
 
-	.freelancer-profile {
-		.behance-account-link {
-			margin-bottom: 30px;
-		}
+            .btn-lg {
+                height: auto;
+            }
+        }
+    }
 
-		.copy-link {
-			margin: 20px 0;
-		}
-	}
+    @media screen and (max-width:992px) {
 
-	.conversation-content-wrap {
-		.chat-wrapper {
-			padding: 10px;
-			display: none;
-			overflow-x: hidden;
-			position: absolute;
-			top: 0;
-			width: 100%;
-			left: 0;
-			background-color: $light-color;
-			z-index: 999;
-		}
-	}
+        .applied-jobs {
 
-}
+            .applied-jobs-container {
+                width: 100%;
+                overflow-y: auto;
 
-@media screen and (max-width:768px) {
-	.applied-jobs {
-		.applied-jobs-container {
-			border-radius: 5px !important;
-		}
+                .applied-jobs-table {
+                    min-width: 700px;
+                }
+            }
+        }
 
-		.heading {
-			.bar {
-				height: auto !important;
-			}
-		}
-	}
+        .freelancer-profile {
+            .behance-account-link {
+                margin-bottom: 30px;
+            }
+
+            .copy-link {
+                margin: 20px 0;
+            }
+        }
+
+        .conversation-content-wrap {
+            .chat-wrapper {
+                padding: 10px;
+                display: none;
+                overflow-x: hidden;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                left: 0;
+                background-color: $light-color;
+                z-index: 999;
+            }
+        }
+
+    }
+
+    @media screen and (max-width:768px) {
+        .applied-jobs {
+            .applied-jobs-container {
+                border-radius: 5px !important;
+            }
+
+            .heading {
+                .bar {
+                    height: auto !important;
+                }
+            }
+        }
 
 
 
 
-	.recruiter-profile {
-		.recruiter-main-info {
-			.edit-content {
-				margin: 30px 0 30px;
-			}
-		}
+        .recruiter-profile {
+            .recruiter-main-info {
+                .edit-content {
+                    margin: 30px 0 30px;
+                }
+            }
 
-		.active-jobs-content {
-			.active-job-single {
-				.active-job-single-header {
-					.company-info {
-						.job-title {
-							font-size: 20px;
-						}
-					}
-				}
-			}
-		}
-	}
+            .active-jobs-content {
+                .active-job-single {
+                    .active-job-single-header {
+                        .company-info {
+                            .job-title {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
-	.profile-section {
-		.profile-info {
-			padding: 30px 0 0 30px;
-			height: auto;
-		}
-	}
+        .profile-section {
+            .profile-info {
+                padding: 30px 0 0 30px;
+                height: auto;
+            }
+        }
 
-	.conversation-content-wrap {
-		.chat-wrapper {
-			.chat-header {
-				flex-direction: column;
+        .conversation-content-wrap {
+            .chat-wrapper {
+                .chat-header {
+                    flex-direction: column;
 
-				.chat-header-title {
-					margin-bottom: 10px;
-				}
-			}
+                    .chat-header-title {
+                        margin-bottom: 10px;
+                    }
+                }
 
-			.read-msg-area {
+                .read-msg-area {
 
-				.read-msg-controls {
-					flex-direction: column;
+                    .read-msg-controls {
+                        flex-direction: column;
 
-					.send-file {
-						margin: 0;
-						margin-bottom: 15px;
+                        .send-file {
+                            margin: 0;
+                            margin-bottom: 15px;
 
-					}
+                        }
 
-					button {
-						width: 65px;
-						height: 40px;
-					}
-				}
-			}
-		}
-	}
+                        button {
+                            width: 65px;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
 
-	.employees {
-		.pagination {
-			.page-item {
-				.page-link {
-					width: 35px;
-					font-size: 14px;
-					height: 35px;
-				}
-			}
-		}
-	}
+        .employees {
+            .pagination {
+                .page-item {
+                    .page-link {
+                        width: 35px;
+                        font-size: 14px;
+                        height: 35px;
+                    }
+                }
+            }
+        }
 
-	.job-page {
-		padding: 20px 0;
+        .job-page {
+            padding: 20px 0;
 
-		.card-item {
-			margin-bottom: 50px;
-		}
-	}
+            .card-item {
+                margin-bottom: 50px;
+            }
+        }
 
-}
+    }
 
-@media screen and (max-width:576px) {
-	.profile-section {
-		.profile-info {
-			.column {
-				flex-direction: column;
-			}
-		}
+    @media screen and (max-width:576px) {
+        .profile-section {
+            .profile-info {
+                .column {
+                    flex-direction: column;
+                }
+            }
 
-		.feedback-content {
-			.speeker-job {
-				font-size: 20px;
-			}
+            .feedback-content {
+                .speeker-job {
+                    font-size: 20px;
+                }
 
-			.date {
-				span {
-					right: 0;
-				}
-			}
-		}
-	}
+                .date {
+                    span {
+                        right: 0;
+                    }
+                }
+            }
+        }
 
-	.copyright-wrap {
-		text-align: center;
+        .copyright-wrap {
+            text-align: center;
 
-		.text {
-			font-size: $fs-sm;
-			color: $dark-color-3;
-		}
+            .text {
+                font-size: $fs-sm;
+                color: $dark-color-3;
+            }
 
-		.social-links {
-			margin-top: 20px;
-			justify-content: center;
-		}
-	}
+            .social-links {
+                margin-top: 20px;
+                justify-content: center;
+            }
+        }
 
-	.heading {
-		.bar {
-			flex-direction: column;
-			height: auto;
-		}
-	}
-}
+        .heading {
+            .bar {
+                flex-direction: column;
+                height: auto;
+            }
+        }
+    }}

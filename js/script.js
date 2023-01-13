@@ -226,6 +226,11 @@ $(function () {
             })
         })
     })
+    $(function(){
+        $(".save-job").click(function(){
+           $(this).find("button").stop(true,false,true).toggle()
+        })
+    })
     $(function () {
         $(".confirm-btn").click(() => {
             $(".success-form-popup").addClass("show")
@@ -306,4 +311,7 @@ $(function () {
             rangeS[1].value = number2;
         };
     });
+})
+$(document).ready(function() {
+    $(".subscription-column").matchHeight()
 })

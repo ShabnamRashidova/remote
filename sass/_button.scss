@@ -137,28 +137,13 @@ button{
 			}
 		}
 
-		&:first-child {
+		&:first-child,&:last-child {
 			.page-link {
-				background: $light-color-4;
-				color: #909090;
+				color: $dark-color;
 				transition: $transition;
 
 				&:hover {
-					background-color: $secondary-design-color;
-					color: $light-color;
-				}
-			}
-		}
-
-		&:last-child {
-			.page-link {
-				background: $light-color-4;
-				color: #909090;
-				transition: $transition;
-
-				&:hover {
-					background-color: $secondary-design-color;
-					color: $light-color;
+					color: $secondary-design-color;
 				}
 			}
 		}

@@ -5,6 +5,18 @@
     justify-content: center;
     align-items: center;
 	font-family: $secondary-font;
+	.text {
+		margin-top: 30px;
+		text-align: center;
+
+		h6 {
+			font-size: $fs-lg;
+			color: $secondary-design-color;
+			font-weight: 700;
+			text-transform: uppercase;
+
+		}
+	}
 	.package {
 		.stepform-wrapper {
 			overflow-x: hidden;
@@ -15,128 +27,9 @@
 				padding-top: 100px;
 				position: relative;
 
-				.item {
-					position: relative;
-					background: $secondary-design-color;
-					border-radius: 20px;
-					height: 480px;
-					overflow: hidden;
-					margin-bottom: 30px;
-					transition: $transition;
-				
-					&.active {
-						border:5px solid #fff;
-						transform: scale(1.01);
-						
-					}
+			
 
-					.item-header {
-						padding: 10px;
-						font-weight: 700;
-						font-size: 22px;
-						line-height: 30px;
-						color: #FFFFFF;
-						text-transform: uppercase;
-						text-align: center;
-						border-bottom: 4px solid #fff;
-					}
-
-					.item-content {
-						padding: 10px;
-
-						.preview-btn {
-							font-weight: 600;
-							font-size: 18px;
-							line-height: 22px;
-							text-decoration-line: underline;
-							text-transform: uppercase;
-							color: #FFFFFF;
-						}
-
-						li {
-							font-style: normal;
-							font-weight: 600;
-							font-size: $fs-md;
-							text-transform: uppercase;
-							line-height: 30px;
-							margin-bottom: 24px;
-							color: #FFFFFF;
-							margin-left: 20px;
-							list-style: disc;
-						}
-
-						.item-bottom {
-							background-color: #fff;
-							position: absolute;
-							bottom: 0;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							flex-direction: column;
-							height: 180px;
-							width: 190px;
-							right: 0;
-							border-radius: 150% 0 20px 0;
-							text-align: center;
-
-							.price {
-								font-weight: 700;
-								font-size: 30px;
-								line-height: 45px;
-								display: flex;
-								align-items: center;
-								padding-left: 30px;
-								color: $secondary-design-color;
-
-								span {
-									color: #fff;
-									margin-left: 10px;
-									border-radius: 50%;
-									width: 28px;
-									font-weight: 400;
-									height: 28px;
-									display: flex;
-									align-items: center;
-									justify-content: center;
-									font-size: 14px;
-									background-color: $secondary-design-color;
-								}
-							}
-
-							.choose-btn {
-								width: 143px;
-								height: 32px;
-								border: 1px solid $secondary-design-color;
-								font-size: 13px;
-								color: $secondary-design-color;
-								text-transform: capitalize;
-								border-radius: 20px;
-								margin-top: 20px;
-								transition: $transition;
-
-								&:hover {
-									background-color: $secondary-design-color;
-									color: $light-color;
-								}
-							}
-						}
-					}
-
-
-				}
-
-				.text {
-					margin-bottom: 10px;
-					text-align: center;
-
-					h6 {
-						font-size: $fs-lg;
-						color: $secondary-design-color;
-						font-weight: 700;
-						text-transform: uppercase;
-
-					}
-				}
+		
 
 				.package-wrap-bottom {
 					display: none;
@@ -279,4 +172,111 @@
 		}
 
 	}
+}
+.item {
+	position: relative;
+	background: $light-color;
+	border-radius: 20px;
+	height: 480px;
+	overflow: hidden;
+	margin-bottom: 30px;
+	transition: $transition;
+	border:5px solid transparent;
+	&.active {
+		border-color: $red-color;
+		
+		
+	}
+
+	.item-header {
+		padding: 10px;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 30px;
+		color: $secondary-design-color;
+		text-transform: uppercase;
+		text-align: center;
+		border-bottom: 4px solid $secondary-design-color;
+	}
+
+	.item-content {
+		padding: 10px;
+
+		.preview-btn {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 22px;
+			text-decoration-line: underline;
+			text-transform: capitalize;
+			color: $secondary-design-color;
+		}
+
+		li {
+			font-style: normal;
+			font-weight: 600;
+			font-size: $fs-md;
+			line-height: 30px;
+			margin-bottom: 24px;
+			color: $secondary-design-color;
+			margin-left: 20px;
+			list-style: disc;
+		}
+
+		.item-bottom {
+			background-color: $secondary-design-color;
+			position: absolute;
+			bottom: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			height: 180px;
+			width: 190px;
+			right: 0;
+			border-radius: 150% 0 20px 0;
+			text-align: center;
+
+			.price {
+				font-weight: 700;
+				font-size: 30px;
+				line-height: 45px;
+				display: flex;
+				align-items: center;
+				padding-left: 30px;
+				color: $light-color;
+
+				span {
+					color: $secondary-design-color;
+					margin-left: 10px;
+					border-radius: 50%;
+					width: 28px;
+					font-weight: 400;
+					height: 28px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-size: 14px;
+					background-color: $red-color;
+				}
+			}
+
+			.choose-btn {
+				width: 130px;
+				height: 32px;
+				border: 1px solid $light-color;
+				font-size: 13px;
+				color: $light-color;
+				border-radius: 20px;
+				margin-top: 20px;
+				transition: $transition;
+
+				&:hover {
+					background-color: $secondary-design-color;
+					color: $light-color;
+				}
+			}
+		}
+	}
+
+
 }
