@@ -156,6 +156,13 @@
             display: none;
         }
     }
+    .upload-items {
+        ul{
+            .upload-item{
+                width: 140px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width:992px) {
@@ -255,6 +262,14 @@
     .jobs {
         .sidebar-btn {
             display: block;
+        }
+    }
+    .upload-items {
+        ul{
+            .upload-item{
+                width: 180px;
+                
+            }
         }
     }
 }
@@ -406,7 +421,15 @@
             }
         }
     }
-
+    .upload-items {
+        ul{
+            justify-content: flex-start;
+            .upload-item{
+                margin-right: 10px;
+                
+            }
+        }
+    }
 }
 
 @media screen and (max-width:575px) {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>registration job speeker</title>
+    <title>registration job seeker2</title>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- slick slider -->
@@ -35,13 +35,10 @@
                                 <ul class="nav-list">
                                     <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
                                     <li class="nav-item"><a href="./find-job.html" class="nav-link">Find work</a></li>
-                                    <li class="nav-item"><a href="./employees.html" class="nav-link">Browsee employees</a></li>
-                                </ul>
+                                    </ul>
                             </nav>
                         </div>
                         <div class="header-middle-right">
-                           
-                            <a href="" class="post-job-btn btn-general btn-md ms-2 mt-2">Post a job</a> 
                             <ul class="lang position-relative">
                                 <li class="preview-lang">EN <i class="fas fa-chevron-down"></i>
 
@@ -221,7 +218,7 @@
     </header>
 
     <div class="overlay"></div>
-    <div class="settings bg-pink">
+    <div class="settings">
         <div class="container">
             <form action="" class="form-settings form-field">
                 <div class="sub-title">Settings</div>
@@ -249,29 +246,24 @@
                             <div class="col-xl-10 col-md-9">
                                 <div class="row form-row">
                                     <div class="form-group col-xl-4 col-sm-6">
-                                        <label for="">First Name *</label>
+                                        <label for="">Company Name </label>
                                         <input class="form-control form-col" type="text" placeholder="Job category">
                                     </div>
                                     <div class="form-group col-xl-4 col-sm-6 form-col">
-                                        <label for="">Last Name *</label>
+                                        <label for="">VOEN</label>
                                         <input class="form-control" type="text" placeholder="Job category">
                                     </div>
                                     <div class="form-group col-xl-4 col-sm-6 form-col">
-                                        <label for="">E-mail *</label>
-                                        <input class="form-control" type="text" placeholder="Job category">
+                                        <label for="">E-mail </label>
+                                        <input class="form-control" type="email" placeholder="Job category">
                                     </div>
-                                    <div class="form-group col-xl-4 col-sm-6 form-col">
-                                        <label for="">VOEN *</label>
-                                        <input class="form-control" type="text" placeholder="Job category">
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
 
                     </div>
                 </div>
-
-
                 <div class="my-profile">
                     <div class="my-profile-heading column-heading">
                         <div class="sub-title mb-0">
@@ -279,18 +271,88 @@
                         </div>
                     </div>
                     <div class="column-body my-profile-body">
-                        <div class="row form-row">
-                            <div class="form-group col-xl-4 col-sm-6">
-                                <label for="">Company Name</label>
-                                <input class="form-control form-col" type="text" placeholder="Job category">
+                        <div class="row justify-content-between">
+                            <div class="col-lg-4 col-sm-7">
+                                <div class="item">
+                                    <div class="item-title">Skills *</div>
+                                    <div class="form-row">
+                                        <div class="form-group add-skills">
+                                            <input type="text" placeholder="add more skills"
+                                                class="skills-input form-control">
+                                            <button class="add-btn"><i class="fas fa-plus"></i>
+                                        </div>
+                                        <div class="skills-field">
+                                            <ul class="skill-list">
+                                                <li class="skill-name"><i class="fas fa-times delete-btn"></i>IOS</li>
+                                                <li class="skill-name"><i class="fas fa-times delete-btn"></i>Android
+                                                </li>
+                                                <li class="skill-name"><i class="fas fa-times delete-btn"></i>Graphic
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group col-xl-4 col-sm-6">
-                                <label for="">Position</label>
-                                <input class="form-control form-col" type="text" placeholder="Job category">
+                            <div class="col-lg-4 col-md-7">
+                                <div class="item">
+                                    <div class="item-title">Attachments</div>
+                                    <div class="form-row">
+                                        <div class="upload-items">
+                                            <ul>
+                                                <li class="upload-item mb-2">
+
+                                                    <div class="upload-item-name">
+
+                                                        cover letter
+                                                    </div>
+                                                    <div class="upload-item-type">.PDF</div>
+
+                                                </li>
+                                                <li class="upload-item mb-2">
+
+                                                    <div class="upload-item-name">
+
+                                                        portfolio
+                                                    </div>
+                                                    <div class="upload-item-type">.PDF</div>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-flex align-items-center my-2">
+                                            <button class="upload-btn">
+                                                <span>upload</span>
+                                                <input type="file" class="file-input" type="submit">
+
+                                            </button>
+                                            <span class="file-size-info">Maximum file size:50 MB</span>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
+
+                            <div class="col-lg-4">
+                                <div class="row">
+                                    <div class="col-lg-12 col-sm-6 ">
+                                        <div class="form-group">
+                                            <label for="">Behance URL</label>
+                                            <input type="text" placeholder="add category" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-sm-6 ">
+                                        <div class="form-group">
+                                            <label for="">Github URL</label>
+                                            <input type="text" placeholder="add category" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
+
+                        </div>
                     </div>
-                    <div class="column-footer my-profile-footer pb-50">
+                    <div class="column-footer my-profile-footer">
                         <div class="row form-row">
                             <div class="form-group col-xl-4 col-sm-6">
                                 <label for="">Mobile Phone</label>
@@ -300,18 +362,58 @@
                                 <label for="">Birthday</label>
                                 <input class="form-control" type="text" placeholder="Job category">
                             </div>
+                            <div class="form-group col-xl-4 col-sm-6 form-col">
+                                <label for="">Category *</label>
+                                <input class="form-control" type="text" placeholder="Job category">
+                            </div>
                             <div class="form-group col-12 form-col">
                                 <label for="">Introduce Yourself</label>
                                 <textarea name="" id="" cols="30" rows="3" placeholder="add category"></textarea>
                             </div>
-                            <div class="form-group col-xl-4 col-sm-6 form-col">
-                                <label for="">Linkedin Profile (URL)</label>
-                                <input class="form-control" type="text" placeholder="Job category">
+                        </div>
+                    </div>
+                </div>
+                <div class="password-security">
+                    <div class="password-security-heading column-heading">
+                        <div class="left">
+                            <div class="sub-title mb-0">Password & Security</div>
+                        </div>
+                    </div>
+                    <div class="password-security-body column-body px-3">
+                        <div class="row form-row">
+                            <div class="col-lg-4 col-sm-6 form-col form-group">
+
+                                <label for="">Current password</label>
+                                <input type="password" placeholder="add category" class="form-control password">
+                                <div class="input-toggler">
+                                    <span class="show-password-input"><i class="fas fa-eye"></i></span>
+                                    <span class="hide-password-input"><i class="fa-regular fa-eye-slash"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-6 form-col form-group">
+
+                                <label for="">New password</label>
+                                <input type="password" placeholder="add category" class="form-control password">
+                                <div class="input-toggler">
+                                    <span class="show-password-input"><i class="fas fa-eye"></i></span>
+                                    <span class="hide-password-input"><i class="fa-regular fa-eye-slash"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 form-col form-group">
+
+                                <label for="">Repeat new password</label>
+                                <input type="password" placeholder="add category" class="form-control password">
+                                <div class="input-toggler">
+                                    <span class="show-password-input"><i class="fas fa-eye"></i></span>
+                                    <span class="hide-password-input"><i class="fa-regular fa-eye-slash"></i></span>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
                 </div>
-              
                 <div class="col-12">
                     <button class="submit-btn">Save changes</button>
                 </div>

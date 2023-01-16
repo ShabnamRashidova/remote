@@ -39,25 +39,10 @@ $(function () {
             $(".overlay").removeClass("show");
         })
     })
-    $(".input-toggler").click(() => {
-        if ($(".password").attr("type") === "password") {
-            $(".password").attr("type", "text");
-            $(".show-password-input").hide();
-            $(".hide-password-input").show();
-        } else {
-            $(".password").attr("type", "password");
-            $(".show-password-input").show();
-            $(".hide-password-input").hide();
-        }
-    });
+    
     $(function () {
         $(".lang-dropdown-btn").click(() => {
             $(".lang-dropdown-body").toggleClass("show")
-            // $("body").click(function (e) {
-            //     if (!$(e.target).closest('.lang-dropdown-wrap').length && !$(e.target).is(".lang-dropdown-body")) {
-            //         $(".lang-dropdown-body").hide()
-            //     }
-            // })
         })
     })
     // choose package
@@ -229,6 +214,17 @@ $(function () {
     $(function(){
         $(".save-job").click(function(){
            $(this).find("button").stop(true,false,true).toggle()
+        })
+    })
+    $(function(){
+        $(".input-toggler").click(function(){
+            $(this).find("span").stop(true,false,true).toggle();
+            if($(this).prev(".password").attr("type")==="password"){
+             $(this).prev(".password").attr("type","text")
+
+            }else{
+                $(this).prev(".password").attr("type","password")
+            }
         })
     })
     $(function () {

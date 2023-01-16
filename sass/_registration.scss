@@ -8,8 +8,10 @@
 
     .my-account,
     .my-profile {
+        
         background-color: $light-color;
         border-radius: 5px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
         margin: 15px 0;
     }
 
@@ -103,6 +105,7 @@
         position: relative;
 
         label {
+            font-weight: 600;
             font-size: $fs-sm;
             margin-bottom: 7px;
             color: $dark-color-1;
@@ -135,7 +138,7 @@
             border: 1px solid #E1E1E1;
             border-radius: 4px;
             width: 100%;
-            padding: $p-20;
+            padding: 10px;
             resize: none;
 
             &:focus {
@@ -191,7 +194,7 @@
                     margin-bottom: 10px;
                     padding: 4px 8px;
                     height: 32px;
-                    font-weight: 600;
+                    font-weight: 400;
                     font-size: 14px;
                     line-height: 24px;
                     color: $light-color;
@@ -212,8 +215,6 @@
     }
     .file-size-info {
         font-size: $fs-sm;
-        line-height: 24px;
-        text-align: center;
         color: $dark-color-3;
     }
 
