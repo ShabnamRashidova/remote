@@ -1,0 +1,265 @@
+.profile-section {
+	font-family: $primary-font;
+
+	.profile-info {
+		background-image: radial-gradient(100% 761% at 0% 50%, #FFFFFF 0%, #F8F8F8 32.94%, rgba(255, 255, 255, 0) 100%), url('../images/bg.png');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding: 60px 0 20px 60px;
+		height: 256px;
+		box-shadow: $box-shadow-1;
+
+		.left-info {
+			.image {
+				width: 122px;
+				height: 128px;
+				overflow: hidden;
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+
+		.right-info {
+			.full-name {
+				text-transform: capitalize;
+				font-size: $fs-xl;
+				letter-spacing: 0.18px;
+				color: $dark-color-1;
+			}
+
+			.company-job {
+				font-size: $fs-sm;
+				letter-spacing: 0.15px;
+				color: $dark-color-1;
+				margin: 6px 0 20px;
+				color: $dark-color-1;
+			}
+
+			.location {
+				display: flex;
+				align-items: center;
+
+				span {
+					font-weight: 500;
+					font-size: $fs-sm;
+					letter-spacing: 0.15px;
+					color: rgba(0, 0, 0, 0.7);
+				}
+
+				img {
+					margin-right: 10px;
+				}
+			}
+		}
+
+		.badges {
+			margin: 15px 0;
+			display: flex;
+			align-items: center;
+
+			.logo {
+				margin-right: 10px;
+			}
+
+			span {
+				font-weight: 600;
+				font-size: $fs-lg;
+				letter-spacing: 0.15px;
+				color: $dark-color-1;
+			}
+		}
+
+		.edit-content {
+			.edit {
+				cursor: pointer;
+				border-radius: 20px;
+				border: 3px solid $secondary-design-color;
+				text-transform: capitalize;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				text-align: center;
+				color: $secondary-design-color;
+				width: 57px;
+				height: 59px;
+				background-color: $light-color;
+
+				.edit-image {
+					padding: 5px 0 5px;
+					border-bottom: 2px solid $secondary-design-color;
+				}
+
+				span {
+					display: block;
+					font-size: 13px;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+
+	.about-me-content {
+		background-color: $light-color;
+		border-radius: 20px;
+		padding: 15px 14px;
+		font-weight: 500;
+		font-size: $fs-sm;
+		line-height: $fs-xl;
+		letter-spacing: 0.5px;
+		color: rgba(0, 0, 0, 0.87);
+	}
+
+	.feedback-content {
+		background-color: $light-color;
+		border-radius: 20px;
+		padding: 20px 14px;
+		margin-bottom: 12px;
+		.speeker-job {
+			font-size: $fs-xl;
+			font-weight: 600;
+			color: $dark-color-1;
+		}
+
+		.rated {
+			color: $dark-color-3;
+			display: block;
+		}
+
+		.date {
+			position: relative;
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+
+			span {
+				position: absolute;
+				right: 50%;
+				display: flex;
+				align-items: center;
+				color: $dark-color-3;
+				font-size: $fs-sm;
+
+				img {
+					margin-right: 10px;
+				}
+			}
+		}
+
+		.rate {
+			color: rgba(0, 0, 0, 0.87);
+			font-style: $fs-sm;
+			font-weight: 500;
+		}
+	}
+}
+
+.recruiter-profile {
+	.recruiter-main-info {
+		.edit-content {
+			.edit {
+				border-radius: 20px;
+				border: 3px solid $secondary-design-color;
+				text-transform: capitalize;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				text-align: center;
+				color: $secondary-design-color;
+				width: 57px;
+				height: 59px;
+				background-color: $light-color;
+
+				.edit-image {
+					padding: 5px 0 5px;
+					border-bottom: 2px solid $secondary-design-color;
+				}
+
+				span {
+					display: block;
+					font-size: 13px;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+
+}
+
+.freelancer-profile {
+	.attachments-content {
+
+		ul {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			width: 100%;
+			justify-content: space-between;
+
+			.attachments-item {
+				background-image: url('../images/icon/Attachments.png');
+				text-transform: capitalize;
+				padding: 15px;
+				position: relative;
+				width: 176px;
+				border-radius: 10px;
+				margin-bottom: 20px;
+
+				.attachments-item-name {
+					font-weight: 600;
+					font-size: 14px;
+					line-height: $fs-xl;
+					letter-spacing: 0.1px;
+					color: #666666;
+				}
+
+				.attachments-item-type {
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 20px;
+					letter-spacing: 0.25px;
+					color: #999999;
+				}
+			}
+
+
+		}
+
+	}
+
+	.behance-account-link {
+		font-weight: 700;
+		font-size: $fs-sm;
+		letter-spacing: 0.15px;
+		text-decoration-line: underline;
+		color: $secondary-design-color;
+		display: inline-block;
+		margin-bottom: 120px;
+	}
+
+	.skills-list {
+		flex-wrap: wrap;
+		display: flex;
+		align-items: center;
+
+		li {
+			color: $secondary-design-color;
+			background: rgba(42, 65, 232, 0.07);
+			border-radius: 4px;
+			margin-right: 7px;
+			margin-bottom: 7px;
+			text-transform: capitalize;
+			font-size: $fs-xs;
+			padding: 5px 10px;
+
+			&:hover {
+				background-color: $secondary-design-color;
+				color: $light-color;
+				cursor: pointer;
+			}
+		}
+	}
+}

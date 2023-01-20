@@ -78,6 +78,14 @@
             }
         }
     }
+
+    .item {
+        .item-content {
+            li {
+                margin-left: 10px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width:1200px) {
@@ -156,9 +164,10 @@
             display: none;
         }
     }
+
     .upload-items {
-        ul{
-            .upload-item{
+        ul {
+            .upload-item {
                 width: 140px;
             }
         }
@@ -264,11 +273,12 @@
             display: block;
         }
     }
+
     .upload-items {
-        ul{
-            .upload-item{
+        ul {
+            .upload-item {
                 width: 180px;
-                
+
             }
         }
     }
@@ -421,402 +431,453 @@
             }
         }
     }
+
     .upload-items {
-        ul{
+        ul {
             justify-content: flex-start;
-            .upload-item{
+
+            .upload-item {
                 margin-right: 10px;
-                
+
             }
         }
     }
 }
 
-@media screen and (max-width:575px) {
+// @media screen and (max-width:575px) {
 
-    .banner {
+//     .banner {
 
-        .right {
-            .text {
-                .main-text {
-                    &:after {
-                        content: none;
-                    }
-                }
-            }
+//         .right {
+//             .text {
+//                 .main-text {
+//                     &:after {
+//                         content: none;
+//                     }
+//                 }
+//             }
 
-            .join-btn-group {
-                a {
-                    font-size: 12px;
-                    text-transform: capitalize;
-                    padding: 6px;
+//             .join-btn-group {
+//                 a {
+//                     font-size: 12px;
+//                     text-transform: capitalize;
+//                     padding: 6px;
 
-                }
+//                 }
+//             }
+//         }
+
+//     }
+
+//     .about-us {
+//         padding-top: 30px;
+
+//         .top-text {
+//             p {
+//                 font-size: $fs-lg;
+//                 line-height: 35px;
+//             }
+//         }
+
+//         .bottom-text {
+
+//             &:after {
+//                 width: 80px;
+//                 height: 80px;
+//             }
+
+//             h4 {
+//                 font-size: 42px;
+//                 line-height: 70px;
+
+//             }
+//         }
+
+//         .explore-btn {
+//             font-size: $fs-xl;
+//         }
+//     }
+
+//     #header-global {
+
+//         .header-actions {
+
+//             .notification-btn-group {
+//                 .message-content {
+//                     .drop-message {
+//                         right: -135px;
+
+//                     }
+//                 }
+
+//                 .notification-content {
+//                     .drop-notification {
+//                         right: -90px;
+//                     }
+
+
+//                 }
+//             }
+
+//             .profile-content {
+//                 .profile-image {
+//                     width: 48px;
+//                     height: 48px;
+//                     margin: 20px auto;
+//                     border-radius: 50%;
+//                     background-color: #C4c4c4;
+//                     cursor: pointer;
+//                     background-size: cover;
+//                     background-position: center;
+//                     position: relative;
+//                 }
+
+//                 .profile-sidebar {
+//                     background-color: $light-color;
+//                     width: 320px;
+//                     border-radius: 5px;
+//                     box-shadow: $box-shadow-3;
+//                     position: absolute;
+//                     top: 82px;
+//                     right: 15px;
+//                     z-index: 9;
+//                     transform: translateY(20px);
+//                     opacity: 0;
+//                     visibility: hidden;
+//                     transition: $transition;
+
+//                     &.show {
+//                         opacity: 1;
+//                         visibility: visible;
+//                         transform: translateY(0);
+//                     }
+
+//                     .sidebar-header {
+//                         padding: 0 20px;
+//                         border-bottom: $light-color;
+//                         @include flex-align;
+
+//                         .profile-image {
+//                             width: 67px;
+//                             margin-right: 20px;
+//                             height: 67px;
+
+//                             .persent {
+//                                 position: absolute;
+//                                 top: 50%;
+//                                 left: 50%;
+//                                 transform: translate(-50%, -50%);
+//                                 color: #fff;
+//                                 font-size: 15px;
+//                             }
+//                         }
+
+//                         .fullname {
+//                             font-weight: 600;
+//                             font-size: $fs-lg;
+//                             color: $dark-color-4;
+//                         }
+
+//                         .link {
+//                             font-size: $fs-sm;
+//                             text-decoration-line: underline;
+//                             color: $yellow-1;
+//                             text-transform: capitalize;
+//                         }
+//                     }
+
+//                     .sidebar-body {
+//                         padding: $p-20;
+
+//                         li {
+//                             a {
+
+//                                 font-size: $fs-sm;
+//                                 text-transform: capitalize;
+//                                 color: $dark-color-4;
+//                                 @include flex-align;
+//                                 margin-bottom: 15px;
+
+//                                 img {
+//                                     margin-right: 8px;
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+
+//             }
+//         }
+
+//         .open-menu {
+//             color: $secondary-design-color;
+//             cursor: pointer;
+//             @include flex-align;
+//             height: 100%;
+
+//         }
+//     }
+
+//     .popup {
+//         width: 350px;
+//         text-align: center;
+
+//         .popup-title {
+//             font-size: 22px;
+//             margin-bottom: 15px;
+//         }
+
+//         .btn-xl {
+//             width: 270px;
+//         }
+//     }
+
+//     .copyright-wrap.mt-45 {
+//         margin-top: 0;
+//     }
+
+//     .error-page {
+//         img {
+//             max-width: 250px;
+//         }
+
+//         strong {
+//             font-size: $fs-xl;
+//         }
+//     }
+
+//     .subscription {
+//         .subscription-info {
+
+//             .btn-lg {
+//                 height: auto;
+//             }
+//         }
+//     }
+
+@media screen and (max-width:992px) {
+
+    .applied-jobs {
+
+        .applied-jobs-container {
+            width: 100%;
+            overflow-y: auto;
+
+            .applied-jobs-table {
+                min-width: 700px;
             }
         }
-
     }
 
-    .about-us {
-        padding-top: 30px;
-
-        .top-text {
-            p {
-                font-size: $fs-lg;
-                line-height: 35px;
-            }
+    .freelancer-profile {
+        .behance-account-link {
+            margin-bottom: 30px;
         }
 
-        .bottom-text {
-
-            &:after {
-                width: 80px;
-                height: 80px;
-            }
-
-            h4 {
-                font-size: 42px;
-                line-height: 70px;
-
-            }
-        }
-
-        .explore-btn {
-            font-size: $fs-xl;
+        .copy-link {
+            margin: 20px 0;
         }
     }
 
-    #header-global {
-
-        .header-actions {
-
-            .notification-btn-group {
-                .message-content {
-                    .drop-message {
-                        right: -135px;
-
-                    }
-                }
-
-                .notification-content {
-                    .drop-notification {
-                        right: -90px;
-                    }
-
-
-                }
-            }
-
-            .profile-content {
-                .profile-image {
-                    width: 48px;
-                    height: 48px;
-                    margin: 20px auto;
-                    border-radius: 50%;
-                    background-color: #C4c4c4;
-                    cursor: pointer;
-                    background-size: cover;
-                    background-position: center;
-                    position: relative;
-                }
-
-                .profile-sidebar {
-                    background-color: $light-color;
-                    width: 320px;
-                    border-radius: 5px;
-                    box-shadow: $box-shadow-3;
-                    position: absolute;
-                    top: 82px;
-                    right: 15px;
-                    z-index: 9;
-                    transform: translateY(20px);
-                    opacity: 0;
-                    visibility: hidden;
-                    transition: $transition;
-
-                    &.show {
-                        opacity: 1;
-                        visibility: visible;
-                        transform: translateY(0);
-                    }
-
-                    .sidebar-header {
-                        padding: 0 20px;
-                        border-bottom: $light-color;
-                        @include flex-align;
-
-                        .profile-image {
-                            width: 67px;
-                            margin-right: 20px;
-                            height: 67px;
-
-                            .persent {
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                color: #fff;
-                                font-size: 15px;
-                            }
-                        }
-
-                        .fullname {
-                            font-weight: 600;
-                            font-size: $fs-lg;
-                            color: $dark-color-4;
-                        }
-
-                        .link {
-                            font-size: $fs-sm;
-                            text-decoration-line: underline;
-                            color: $yellow-1;
-                            text-transform: capitalize;
-                        }
-                    }
-
-                    .sidebar-body {
-                        padding: $p-20;
-
-                        li {
-                            a {
-
-                                font-size: $fs-sm;
-                                text-transform: capitalize;
-                                color: $dark-color-4;
-                                @include flex-align;
-                                margin-bottom: 15px;
-
-                                img {
-                                    margin-right: 8px;
-                                }
-                            }
-                        }
-                    }
-                }
-
-            }
-        }
-
-        .open-menu {
-            color: $secondary-design-color;
-            cursor: pointer;
-            @include flex-align;
-            height: 100%;
-
+    .conversation-content-wrap {
+        .chat-wrapper {
+            padding: 10px;
+            display: none;
+            overflow-x: hidden;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            left: 0;
+            background-color: $light-color;
+            z-index: 999;
         }
     }
 
-    .popup {
-        width: 350px;
-        text-align: center;
+}
 
-        .popup-title {
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-
-        .btn-xl {
-            width: 270px;
-        }
-    }
-
-    .copyright-wrap.mt-45 {
-        margin-top: 0;
-    }
-
-    .error-page {
-        img {
-            max-width: 250px;
-        }
-
-        strong {
-            font-size: $fs-xl;
-        }
-    }
-
-    .subscription {
-        .subscription-info {
-
-            .btn-lg {
-                height: auto;
-            }
-        }
-    }
-
-    @media screen and (max-width:992px) {
-
-        .applied-jobs {
-
-            .applied-jobs-container {
-                width: 100%;
-                overflow-y: auto;
-
-                .applied-jobs-table {
-                    min-width: 700px;
-                }
-            }
-        }
-
-        .freelancer-profile {
-            .behance-account-link {
-                margin-bottom: 30px;
-            }
-
-            .copy-link {
-                margin: 20px 0;
-            }
-        }
-
-        .conversation-content-wrap {
-            .chat-wrapper {
-                padding: 10px;
-                display: none;
-                overflow-x: hidden;
-                position: absolute;
-                top: 0;
-                width: 100%;
-                left: 0;
-                background-color: $light-color;
-                z-index: 999;
-            }
-        }
-
-    }
-
-    @media screen and (max-width:768px) {
-        .applied-jobs {
-            .applied-jobs-container {
-                border-radius: 5px !important;
-            }
-
-            .heading {
-                .bar {
-                    height: auto !important;
-                }
-            }
-        }
-
-
-
-
-        .recruiter-profile {
-            .recruiter-main-info {
-                .edit-content {
-                    margin: 30px 0 30px;
-                }
-            }
-
-            .active-jobs-content {
-                .active-job-single {
-                    .active-job-single-header {
-                        .company-info {
-                            .job-title {
-                                font-size: 20px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .profile-section {
-            .profile-info {
-                padding: 30px 0 0 30px;
-                height: auto;
-            }
-        }
-
-        .conversation-content-wrap {
-            .chat-wrapper {
-                .chat-header {
-                    flex-direction: column;
-
-                    .chat-header-title {
-                        margin-bottom: 10px;
-                    }
-                }
-
-                .read-msg-area {
-
-                    .read-msg-controls {
-                        flex-direction: column;
-
-                        .send-file {
-                            margin: 0;
-                            margin-bottom: 15px;
-
-                        }
-
-                        button {
-                            width: 65px;
-                            height: 40px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .employees {
-            .pagination {
-                .page-item {
-                    .page-link {
-                        width: 35px;
-                        font-size: 14px;
-                        height: 35px;
-                    }
-                }
-            }
-        }
-
-        .job-page {
-            padding: 20px 0;
-
-            .card-item {
-                margin-bottom: 50px;
-            }
-        }
-
-    }
-
-    @media screen and (max-width:576px) {
-        .profile-section {
-            .profile-info {
-                .column {
-                    flex-direction: column;
-                }
-            }
-
-            .feedback-content {
-                .speeker-job {
-                    font-size: 20px;
-                }
-
-                .date {
-                    span {
-                        right: 0;
-                    }
-                }
-            }
-        }
-
-        .copyright-wrap {
-            text-align: center;
-
-            .text {
-                font-size: $fs-sm;
-                color: $dark-color-3;
-            }
-
-            .social-links {
-                margin-top: 20px;
-                justify-content: center;
-            }
+@media screen and (max-width:768px) {
+    .applied-jobs {
+        .applied-jobs-container {
+            border-radius: 5px !important;
         }
 
         .heading {
             .bar {
-                flex-direction: column;
-                height: auto;
+                height: auto !important;
             }
         }
-    }}
+    }
+
+    .recruiter-profile {
+        .recruiter-main-info {
+            .edit-content {
+                margin: 30px 0 30px;
+            }
+        }
+
+        .active-jobs-content {
+            .active-job-single {
+                .active-job-single-header {
+                    .company-info {
+                        .job-title {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .profile-section {
+        .profile-info {
+            padding: 30px 0 0 30px;
+            height: auto;
+        }
+    }
+
+    .conversation-content-wrap {
+        .chat-wrapper {
+            .chat-header {
+                flex-direction: column;
+
+                .chat-header-title {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .read-msg-area {
+
+                .read-msg-controls {
+                    .send-file {
+                        margin: 0 20px;
+
+                    }
+
+                    .msg-send {
+                        height: 40px;
+                        width: 55px;
+
+                        span {
+                            display: none !important;
+                        }
+
+                        i {
+                            display: block !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .employees {
+        .pagination {
+            .page-item {
+                .page-link {
+                    width: 35px;
+                    font-size: 14px;
+                    height: 35px;
+                }
+            }
+        }
+    }
+
+    .job-page {
+        padding: 20px 0;
+    }
+
+}
+
+@media screen and (max-width:575px) {
+    .profile-section {
+        .profile-info {
+                .right-info {
+                    .full-name{
+                        font-size: 20px;
+                    }
+                    .company-job{
+                        font-size: 14px;
+                        margin: 10px 0;
+                    }
+                }
+            }
+        .feedback-content {
+            .speeker-job {
+                font-size: 20px;
+            }
+
+            .date {
+                span {
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    .copyright-wrap {
+        text-align: center;
+
+        .text {
+            font-size: $fs-sm;
+            color: $dark-color-3;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            justify-content: center;
+        }
+    }
+
+    .heading {
+        .bar {
+            flex-direction: column;
+            height: auto;
+        }
+    }
+
+    .subscription {
+        .subscription-title {
+            font-size: 25px;
+            margin: 20px 0;
+        }
+
+        .subscription-info {
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .conversation-content-wrap {
+        .chat-wrapper {
+            .chat-header {
+                flex-direction: column;
+
+                .chat-header-title {
+                    margin-bottom: 10px;
+                }
+            }
+            .chat-body {
+                .chat-list{
+                    padding: 10px;
+                }
+            }
+            .read-msg-area {
+                .form-field {
+                    flex-direction: column;
+
+                    textarea {
+                        background-color: #eee;
+                    }
+                }
+            
+
+            .read-msg-controls {
+                justify-content: flex-start;
+                width: 100%;
+                margin-top: 18px;
+            }
+
+            }
+        }
+    }
+}

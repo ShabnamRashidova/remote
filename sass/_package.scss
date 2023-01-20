@@ -26,12 +26,7 @@
 				height: 140%;
 				padding-top: 100px;
 				position: relative;
-
-			
-
-		
-
-				.package-wrap-bottom {
+            .package-wrap-bottom {
 					display: none;
 
 					&.show {
@@ -87,10 +82,8 @@
 					border-radius: 30px;
 					height: 480px;
 					margin-bottom: 30px;
-
 					position: relative;
 					box-shadow: $box-shadow-1;
-
 					.form-content {
 						display: flex;
 						flex-direction: column;
@@ -179,10 +172,8 @@
 		height: 480px;
 		overflow: hidden;
 		margin-bottom: 30px;
-		transition: $transition;
-		border:5px solid transparent;
 		&.active {
-			border-color: $red-color;
+			border:5px solid $red-color;
 			
 			
 		}
@@ -208,13 +199,16 @@
 				text-decoration-line: underline;
 				text-transform: capitalize;
 				color: $secondary-design-color;
+				&:hover{
+					color: $red-color;
+				}
 			}
 	
 			li {
 				font-style: normal;
 				font-weight: 600;
 				font-size: $fs-md;
-				line-height: 30px;
+				line-height: 25px;
 				margin-bottom: 24px;
 				color: $secondary-design-color;
 				margin-left: 20px;

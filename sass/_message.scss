@@ -10,7 +10,6 @@
 
 		.conversation-list {
 			border-right: 1px solid $light-color-4;
-			flex: 1;
 		}
 
 		.conversation-list-search {
@@ -28,9 +27,11 @@
 				background: $light-color;
 				border: 1px solid #E1E1E1;
 				border-radius: 4px;
-&:focus{
-	border-color: $secondary-design-color;
-}
+
+				&:focus {
+					border-color: $secondary-design-color;
+				}
+
 				&::placeholder {
 					font-size: $fs-xs;
 					letter-spacing: 0.15px;
@@ -129,8 +130,6 @@
 	}
 
 	.chat-wrapper {
-		flex: 2;
-
 		.chat-header {
 			padding: 3px 20px;
 			border-bottom: 1px solid $light-color-4;
@@ -157,6 +156,16 @@
 			.popup-btn {
 				margin: 0 auto;
 				display: flex;
+
+				.logo {
+					width: 45px;
+					height: 45px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border-radius: 6px;
+					border: 2px solid $secondary-design-color;
+				}
 
 			}
 		}
@@ -316,6 +325,65 @@
 		.read-msg-area {
 			border-top: 1px solid #f4f4f4;
 
+			.msg-form-attachment {
+				width: 400px;
+				padding: 10px;
+
+				.preview-image {
+					width: 40px;
+					height: 40px;
+					margin-right: 10px;
+					@include flex-align-center;
+
+					img {
+					
+
+						flex: 0 0 auto;
+						height: 100%;
+						width: auto;
+						max-height: 100%;
+						max-width: 100%;
+						object-fit: cover;
+					}
+				}
+				.preview-content{
+					.name{
+						font-size: 15px;
+						font-weight: 500;
+						color: #523a51;
+					}
+					.attachment-bytsize{
+						font-size: 13px;
+						font-weight: 300;
+						position: relative;
+						flex-shrink: 0;
+						&:before{
+							position: absolute;
+						    content: "•";
+                         left: -9px;
+						 font-size: 9px;
+top: 2px;
+
+						}
+					}
+				}
+				.preview-delete-btn{
+					cursor: pointer;
+					i{
+						font-size: 20px;
+					}
+					&:hover{
+						color: $secondary-design-color;
+					}
+				}
+				.attachment-preview-status{
+					font-size: 13px;
+					text-transform: capitalize;
+					font-weight: 300;
+					margin-top: 0px;
+				}
+			}
+
 			.form-field {
 				display: flex;
 				justify-content: space-between;
@@ -359,6 +427,19 @@
 				align-items: center;
 				justify-content: space-between;
 
+				.menu {
+					button {
+						border-radius: 50%;
+						padding: 5px;
+						width: 45px;
+						height: 45px;
+
+						&:hover {
+							background-color: rgba(204, 204, 204, 0.2);
+						}
+					}
+				}
+
 				.send-file {
 					margin: 0 30px;
 
@@ -373,6 +454,15 @@
 
 					label {
 						cursor: pointer;
+						@include flex-align-center;
+						border-radius: 50%;
+						padding: 5px;
+						width: 45px;
+						height: 45px;
+
+						&:hover {
+							background-color: rgba(204, 204, 204, 0.2);
+						}
 					}
 				}
 

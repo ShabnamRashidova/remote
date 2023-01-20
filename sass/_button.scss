@@ -12,13 +12,14 @@ button{
 	color: $light-color;
 	background: $secondary-design-color;
 	border-radius: 4px;
-
 	font-size: $fs-sm;
 	transition: $transition;
-
+a{
+	color: $light-color;
+}
 	&:hover {
 		color: $light-color;
-		background-color:rgba(4, 26, 37, 0.7);
+		background-color:$red-color;
 		transform: scale(1.01);
 	}
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Job page</title>
+    <title>Job Page JOB SEEKER</title>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- slick slider -->
@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <!-- custom css -->
     <link rel="stylesheet" href="./sass/main.css">
-    <!-- favicon -->
-    <link rel="icon" type="image/png" sizes="144x144" href="./images/favicon/ms-icon-144x144.png">
+     <!-- favicon -->
+     <link rel="icon" type="image/png" sizes="144x144" href="./images/favicon/android-icon-144x144.png">
 </head>
 
 
@@ -175,10 +175,20 @@
                             <div class="profile-sidebar">
                                 <div class="sidebar-header">
                                     <a href="">
-                                        <div class="profile-image"
-                                            style="background-image: url('./images/Ellipse\ 1.png');"> <span
-                                                class="persent"> 25%</span>
-                                            <div class="complete-profile"></div>
+                                        <div class="profile-image progress blue"
+                                            style="background-image: url('./images/Ellipse\ 1.png');"> 
+                                                
+                                                
+                                           
+                                                <span class="progress-left">
+                                                  <span class="progress-bar"></span>
+                                                </span>
+                                                <span class="progress-right">
+                                                    <span class="progress-bar"></span>
+                                                </span>
+                                                <div class="progress-value">90%</div>
+                                          
+
                                         </div>
                                     </a>
                                     <div class="info">
@@ -219,17 +229,17 @@
         <div class="header-nav">
             <nav class="nav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="./index.html" class="nav-link">Find work</a></li>
-                    <li class="nav-item"><a href="./index.html" class="nav-link">Browsee employees</a></li>
+                    <li class="nav-item"><a href="./find-job.html" class="nav-link">Find work</a></li>
+                    <li class="nav-item"><a href="./applied-jobs.html" class="nav-link">Applied Jobs</a></li>
+                    <li class="nav-item"><a href="./bookmarks.html" class="nav-link">Bookmarks</a></li>
                 </ul>
             </nav>
-            <a href="" class="post-job-btn btn-general btn-md ms-2 mt-2">Post a job</a>
+          
         </div>
      </header>
      
      <div class="overlay"></div>
-    <div class="job-page bg-pink">
+    <div class="job-page">
         <div class="container">
             <div class="row mt-5 justify-content-between">
                 <div class="col-lg-8 col-md-7 col-sm-12 mb-4">
@@ -272,7 +282,7 @@
                 </div>
                 <div class="col-lg-4 col-md-5 col-sm-10">
                     <div class="job-summary ">
-                        <button class="btn-general w-100 round-20"><a href="./applicants.html" class="text-white">apply now</a></button>
+                        <button class="btn-general w-100 round-20 mt-3"><a href="./applicants.html" class="text-white">apply now</a></button>
                         <div class="content">
                             <div class="title">job summary</div>
                             <ul>
@@ -300,7 +310,7 @@
                             </ul>
                         </div>
                         <div class="copy-link mt-45 mb-30">
-                            <input type="text" class="copy-link-input form-control" value="https://www.youtube.com/" readonly="">
+                            <input type="text" class="copy-link-input form-control" value="http://www.remotique.az/page/Restaurant.." readonly="">
                             <button class="btn-general btn-xs round-50 copy-link-btn"><img src="./images/copy.png" alt=""></button>
                         </div>
                         <a href="./bookmarks.html" class="btn-general round-20 btn-md bookmark-btn mt-30" style="float: right;"><img src="./images/icon/star.png" alt="" class="me-3">bookmark</a>
@@ -316,6 +326,8 @@
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
      <!-- slick slider -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+       <!-- matchheight -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
      <!-- custom js -->
      <script src="./js/script.js"></script>
  </body>
