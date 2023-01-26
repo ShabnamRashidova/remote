@@ -1,673 +1,992 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="az">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Find job</title>
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- slick slider -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <!-- custom css -->
-    <link rel="stylesheet" href="./sass/main.css">
-      <!-- favicon -->
-      <link rel="icon" type="image/png" sizes="144x144" href="./images/favicon/android-icon-144x144.png">
-</head>
+    <link rel="stylesheet" href="./sass/main.css" />
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="120x120" href="./images/favicon/apple-icon-120x120.png">
+      </head>
 
-<body>
-    <!----------------------
+     <body>
+     <!-- Preloader -->
+     <div class="preloader">
+        <div class="preloader-img">
+            <img src="./images/logo.png" alt="">
+        </div>
+      </div>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-img">
+            <img src="./images/logo.png" alt="">
+        </div>
+      </div>
+     <!-------------------
         HEADER GLOBAL 
   ----------------------->
+ 
     <header id="header-global">
-        <div class="container-fluid px-4">
-            <div class="row justify-content-between">
-                <div class="col-md-2 col-6">
-                    <div class="header-logo"><a href=""><img src="./images/logo.png" alt=""></a></div>
-                </div>
-                <div class="col-lg-8 d-lg-block d-none">
-                    <div class="header-middle">
-                        <div class="header-middle-left">
-                            <nav class="nav">
-                                <ul class="nav-list">
-                                    <li class="nav-item"><a href="./find-job.html" class="nav-link active">Find work</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="header-middle-right">
-                            <nav class="nav">
-                                <ul class="nav-list">
-                                    <li class="nav-item"><a href="./applied-jobs.html" class="nav-link">applied jobs</a>
-                                    </li>
-                                    <li class="nav-item"><a href="./bookmarks.html" class="nav-link">bookmarks</a></li>
-                                </ul>
-                            </nav>
-                            <ul class="lang position-relative">
-                                <li class="preview-lang">EN <i class="fas fa-chevron-down"></i>
-
-                                </li>
-                                <ul class="drop-menu">
-                                    <li><a href="">Azerbaijan</a></li>
-                                    <li><a href=" " class="active">English</a></li>
-                                </ul>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-9 col-lg-2 col-5 ">
-                    <div class="header-actions">
-                        <div class="notification-btn-group">
-                            <div class="message-content">
-                                <button class="msg">
-                                    <img src="./images/msg.png" alt="">
-                                </button>
-
-                                <div class="drop-message">
-                                    <div class="drop-header">
-                                        <div class="title">
-                                            Messages
-                                        </div>
-                                        <div class="icon">
-                                            <img src="./images/Container.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="drop-body">
-                                        <ul class="message-list">
-                                            <li>
-                                                <a href="">
-                                                    <div class="img"><img src="./images/Rectangle 65.png" alt=""></div>
-                                                    <div class="inf">
-                                                        <strong class="name">Nigar Huseynova</strong>
-                                                        <div class="msg">
-                                                            Great. If you need any further clarification let me know...
-                                                        </div>
-                                                        <span class="time">
-                                                            4 hours ago
-                                                        </span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="" class="new-message">
-                                                    <div class="img"><img src="./images/Rectangle 65.png" alt=""></div>
-                                                    <div class="inf">
-                                                        <strong class="name">Nigar Huseynova</strong>
-                                                        <div class="msg">
-                                                            Great. If you need any further clarification let me know...
-                                                        </div>
-                                                        <span class="time">
-                                                            4 hours ago
-                                                        </span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="notification-content">
-                                <button ton class="ring">
-                                    <img src="./images/Shape.png" alt="">
-                                </button>
-                                <div class="drop-notification">
-                                    <div class="drop-header">
-                                        <div class="title">
-                                            Notification
-                                        </div>
-                                        <div class="icon">
-                                            <img src="./images/Container.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="drop-body">
-                                        <ul class="notification-list">
-                                            <li>
-                                                <a href="">
-                                                    <div class="img"><img src="./images/users.png" alt=""></div>
-                                                    <div class="inf">
-                                                        <strong class="name">Fuad Huseynov</strong>
-                                                        <span>applied for a job <div class="job">UI/UX Designer</div>
-                                                        </span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="" class="new-notification">
-                                                    <div class="img"><img src="./images/users.png" alt=""></div>
-                                                    <div class="inf">
-                                                        <strong class="name">Fuad Huseynov</strong>
-                                                        <span>applied for a job <div class="job">UI/UX Designer</div>
-                                                        </span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="" class="new-notification">
-                                                    <div class="img"><img src="./images/users.png" alt=""></div>
-                                                    <div class="inf">
-                                                        <strong class="name">Fuad Huseynov</strong>
-                                                        <span>applied for a job <div class="job">UI/UX Designer</div>
-                                                        </span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <div class="profile-content">
-                            <div class="profile-image  toggle-profile-content"
-                                style="background-image: url('./images/Ellipse\ 1.png');">
-
-                            </div>
-
-
-                            <div class="profile-sidebar">
-                                <div class="sidebar-header">
-                                    <a href="">
-                                        <div class="profile-image"
-                                            style="background-image: url('./images/Ellipse\ 1.png');"> <span
-                                                class="persent"> 25%</span>
-                                            <div class="complete-profile"></div>
-                                        </div>
-                                    </a>
-                                    <div class="info">
-                                        <div class="fullname">Nigar Mammadova</div>
-                                        <a href="" class="link">complete profile</a>
-                                    </div>
-                                </div>
-                                <div class="sidebar-body">
-                                    <ul>
-                                        <li><a href="./freelancer-profile.html"><img src="./images/airplay.png" alt=""> my profile</a></li>
-                                        <li><a href="./post-job.html"> <img src="./images/airplay.png" alt="">post a job</a></li>
-                                        <li><a href=""><img src="./images/airplay.png" alt=""> reviews</a></li>
-                                        <li><a href="./my-subscription.html"><img src="./images/airplay.png" alt=""> my subscription</a>
-                                        </li>
-                                        <li><a href=""><img src="./images/airplay.png" alt=""> logout</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-1 d-block d-lg-none">
-                    <div class="open-menu">
-                        <i class="fa-solid fa-ellipsis-vertical fa-2x"></i>
-                    </div>
-                </div>
+      <div class="container-fluid px-4">
+        <div class="row justify-content-between">
+          <div class="col-md-2 col-6">
+            <div class="header-logo">
+              <a href=""><img src="./images/logo.png" alt="" /></a>
             </div>
+          </div>
+          <div class="col-lg-8 d-lg-block d-none">
+            <div class="header-middle">
+              <div class="header-middle-left">
+                <nav class="nav">
+                  <ul class="nav-list">
+                    <li class="nav-item">
+                      <a href="./find-job.html" class="nav-link active"
+                        >Find work</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="header-middle-right">
+                <nav class="nav">
+                  <ul class="nav-list">
+                    <li class="nav-item">
+                      <a href="./applied-jobs.html" class="nav-link"
+                        >applied jobs</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="./bookmarks.html" class="nav-link">bookmarks</a>
+                    </li>
+                  </ul>
+                </nav>
+                <ul class="lang position-relative">
+                  <li class="preview-lang">
+                    EN <i class="fas fa-chevron-down"></i>
+                  </li>
+                  <ul class="drop-menu">
+                    <li><a href="">Azerbaijan</a></li>
+                    <li><a href=" " class="active">English</a></li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9 col-lg-2 col-5">
+            <div class="header-actions">
+              <div class="notification-btn-group">
+                <div class="message-content">
+                  <button class="msg">
+                    <img src="./images/msg.png" alt="" />
+                  </button>
+
+                  <div class="drop-message">
+                    <div class="drop-header">
+                      <div class="title">Messages</div>
+                      <div class="icon">
+                        <img src="./images/Container.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="drop-body">
+                      <ul class="message-list">
+                        <li>
+                          <a href="">
+                            <div class="img">
+                              <img src="./images/Rectangle 65.png" alt="" />
+                            </div>
+                            <div class="inf">
+                              <strong class="name">Nigar Huseynova</strong>
+                              <div class="msg">
+                                Great. If you need any further clarification let
+                                me know...
+                              </div>
+                              <span class="time"> 4 hours ago </span>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="" class="new-message">
+                            <div class="img">
+                              <img src="./images/Rectangle 65.png" alt="" />
+                            </div>
+                            <div class="inf">
+                              <strong class="name">Nigar Huseynova</strong>
+                              <div class="msg">
+                                Great. If you need any further clarification let
+                                me know...
+                              </div>
+                              <span class="time"> 4 hours ago </span>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="notification-content">
+                  <button ton class="ring">
+                    <img src="./images/Shape.png" alt="" />
+                  </button>
+                  <div class="drop-notification">
+                    <div class="drop-header">
+                      <div class="title">Notification</div>
+                      <div class="icon">
+                        <img src="./images/Container.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="drop-body">
+                      <ul class="notification-list">
+                        <li>
+                          <a href="">
+                            <div class="img">
+                              <img src="./images/users.png" alt="" />
+                            </div>
+                            <div class="inf">
+                              <strong class="name">Fuad Huseynov</strong>
+                              <span
+                                >applied for a job
+                                <div class="job">UI/UX Designer</div>
+                              </span>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="" class="new-notification">
+                            <div class="img">
+                              <img src="./images/users.png" alt="" />
+                            </div>
+                            <div class="inf">
+                              <strong class="name">Fuad Huseynov</strong>
+                              <span
+                                >applied for a job
+                                <div class="job">UI/UX Designer</div>
+                              </span>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="" class="new-notification">
+                            <div class="img">
+                              <img src="./images/users.png" alt="" />
+                            </div>
+                            <div class="inf">
+                              <strong class="name">Fuad Huseynov</strong>
+                              <span
+                                >applied for a job
+                                <div class="job">UI/UX Designer</div>
+                              </span>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="profile-content">
+                <div
+                  class="profile-image toggle-profile-content"
+                  style="background-image: url('./images/Ellipse\ 1.png')"
+                ></div>
+
+                <div class="profile-sidebar">
+                  <div class="sidebar-header">
+                    <a href="">
+                      <div
+                        class="profile-image"
+                        style="background-image: url('./images/Ellipse\ 1.png')"
+                      >
+                        <span class="persent"> 25%</span>
+                        <div class="complete-profile"></div>
+                      </div>
+                    </a>
+                    <div class="info">
+                      <div class="fullname">Nigar Mammadova</div>
+                      <a href="" class="link">complete profile</a>
+                    </div>
+                  </div>
+                  <div class="sidebar-body">
+                    <ul>
+                      <li>
+                        <a href="./freelancer-profile.html"
+                          ><img src="./images/airplay.png" alt="" /> my
+                          profile</a
+                        >
+                      </li>
+                      <li>
+                        <a href="./post-job.html">
+                          <img src="./images/airplay.png" alt="" />post a job</a
+                        >
+                      </li>
+                      <li>
+                        <a href=""
+                          ><img src="./images/airplay.png" alt="" /> reviews</a
+                        >
+                      </li>
+                      <li>
+                        <a href="./my-subscription.html"
+                          ><img src="./images/airplay.png" alt="" /> my
+                          subscription</a
+                        >
+                      </li>
+                      <li>
+                        <a href=""
+                          ><img src="./images/airplay.png" alt="" /> logout</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1 d-block d-lg-none">
+            <div class="open-menu">
+              <i class="fa-solid fa-ellipsis-vertical fa-2x"></i>
+            </div>
+          </div>
         </div>
+      </div>
     </header>
     <header id="header-mobile">
-        <div class="header-top">
-            <div class="logo">
-                <a href="./index.html"><img src="./images/logo.png" alt=""></a>
-            </div>
-
+      <div class="header-top">
+        <div class="logo">
+          <a href="./index.html"><img src="./images/logo.png" alt="" /></a>
         </div>
-        <div class="header-nav">
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="./find-job.html" class="nav-link">Find work</a></li>
-                    <li class="nav-item"><a href="./index.html" class="nav-link">applied jobs</a></li>
-                    <li class="nav-item"><a href="./bookmarks.html" class="nav-link">bookmarks</a></li>
-                </ul>
-            </nav>
-        </div>
+      </div>
+      <div class="header-nav">
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./find-job.html" class="nav-link">Find work</a>
+            </li>
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">applied jobs</a>
+            </li>
+            <li class="nav-item">
+              <a href="./bookmarks.html" class="nav-link">bookmarks</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <div class="overlay"></div>
 
     <div class="jobs">
-        <div class="container-fluid px-4">
-            <div class="row justify-content-between ">
-                <div class="col-xl-3 col-lg-3 mt-45 d-none d-lg-block pe-5">
-                    <form action="" class="form-field">
-                        <div class="form-group add-skills mb-50">
-                            <div class="sub-title">Keywords</div>
-                            <input type="text" placeholder="e.g.job, skills" class="round-20 form-control skills-input">
-                            <button class="btn-xs btn-general round-50"><i class="fas fa-plus"></i></button>
-                        </div>
-                        <div class="form-group job-category">
-                            <div class="sub-title">Job category</div>
-                            <div class="job-category-dropdown mb-30">
-                                <button class="job-category-dropdown-btn round-20" type="button"> Job category <i
-                                        class="fas fa-chevron-down"></i></button>
-                                        <div class="drop-down">
-                                           
-                        <div class="form-group mb-15">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                            <span>
-                                Freelance
-                            </span>
-                        </div>
-                        <div class="form-group mb-15">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                            <span>
-                                Freelance
-                            </span>
-                        </div>
-                        <div class="form-group mb-15">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                            <span>
-                                Freelance
-                            </span>
-                        </div>
-
-                                        </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="job-category-dropdown-menu mb-30">
-
-                                <div class="sub-title mb-15">Job category</div>
-
-                                <div class="form-group mb-15">
-                                    <label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label>
-                                    <span>
-                                        Freelance
-                                    </span>
-                                </div>
-                                <div class="form-group mb-15">
-                                    <label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label>
-                                    <span>
-                                        Freelance
-                                    </span>
-                                </div>
-                                <div class="form-group mb-15">
-                                    <label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label>
-                                    <span>
-                                        Freelance
-                                    </span>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="sub-title">Budget /Salary</div>
-                            <div class="range-slider">
-
-                                <div class="result-container">
-                                    <div class="min-num">
-
-                                        <input type="number" readonly value="0" min="0" max="115" id="result-min"
-                                            name="min">
-
-                                    </div>
-                                    <div class="max-num"><input readonly type="number" value="115" min="0" max="115"
-                                            id="result-max" name="max"> </div>
-                                </div>
-                                <div class="range-container">
-                                    <input max="115" type="range" value="0">
-
-                                    <input type="range" min="0" max="115" value="115">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group mt-5">
-                            <button class="btn-lg btn-general round-20">Search</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-xl-9 col-lg-8">
-                    <div class="heading">
-                        <h5 class="sub-title">
-                            Active jobs
-                        </h5>
-                        <button class="sidebar-btn">
-                            <span> <i class="fa-solid fa-bars-staggered"></i>Filter</span>
-                        </button>
-                        <form action="" class="form-field">
-                            <div class="bar">
-                                <div class="turn-field">
-                                    <label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label>
-                                    <span>Turn on email alerts for this search</span>
-                                </div>
-
-                                <ul class="sort-field">
-                                    <li class="has-child">Sort by: <span>Newest <i
-                                                class="fas fa-chevron-down"></i></span>
-                                    </li>
-                                    <ul class="drop-menu">
-                                        <li><a href="">Newest</a></li>
-                                        <li><a href="">Earliest</a></li>
-                                    </ul>
-
-                                </ul>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="job-list">
-                        <div class="row">
-                            <div class="col-xl-4 col-sm-6">
-                                <div class="job-single  mb-30 lazy">
-                              <a href="./job-page.html">
-                                <div class="job-single-header">
-                                    <div class="company-image"><img src="./images/c-img.png" alt=""></div>
-                                    <div class="company-info">
-                                        <div class="company-name">Company name</div>
-                                        <div class="job-title">job title</div>
-                                    </div>
-                                </div>
-                            </a>
-                                <div class="job-single-footer">
-                                    <div class="location"><img src="./images/airplay.png"
-                                            alt=""><span>Azerbaijan</span></div>
-                                    <div class="job-type"><img src="./images/airplay.png"
-                                            alt=""><span>freelance</span></div>
-                                    <div class="salary"><img src="./images/airplay.png" alt=""><span>200 azn</span>
-                                    </div>
-                                    <div class="date"><img src="./images/airplay.png" alt=""><span>2 Days ago</span>
-                                    </div>
-                                    <div class="save-job">
-                                       <button> <img src="./images/save.png" alt="" class="save-img"></button>
-                                        <button class="hidden"><img src="./images/save2.png" class="save-img1" alt=""></button>
-                                    </div>
-                                </div>
-                              
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-sm-6">
-                                <div class="job-single premium mb-30">
-                              <a href="./job-page.html">
-                                <div class="job-single-header">
-                                    <div class="company-image"><img src="./images/c-img.png" alt=""></div>
-                                    <div class="company-info">
-                                        <div class="company-name">Company name</div>
-                                        <div class="job-title">job title</div>
-                                    </div>
-                                </div>
-                            </a>
-                                <div class="job-single-footer">
-                                    <div class="location"><img src="./images/airplay.png"
-                                            alt=""><span>Azerbaijan</span></div>
-                                    <div class="job-type"><img src="./images/airplay.png"
-                                            alt=""><span>freelance</span></div>
-                                    <div class="salary"><img src="./images/airplay.png" alt=""><span>200 azn</span>
-                                    </div>
-                                    <div class="date"><img src="./images/airplay.png" alt=""><span>2 Days ago</span>
-                                    </div>
-                                    <div class="save-job">
-                                       <button> <img src="./images/save.png" alt="" class="save-img"></button>
-                                        <button class="hidden"><img src="./images/save2.png" class="save-img1" alt=""></button>
-                                    </div>
-                                </div>
-                              
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-sm-6">
-                                <div class="job-single  mb-30">
-                              <a href="./job-page.html">
-                                <div class="job-single-header">
-                                    <div class="company-image"><img src="./images/c-img.png" alt=""></div>
-                                    <div class="company-info">
-                                        <div class="company-name">Company name</div>
-                                        <div class="job-title">job title</div>
-                                    </div>
-                                </div>
-                            </a>
-                                <div class="job-single-footer">
-                                    <div class="location"><img src="./images/airplay.png"
-                                            alt=""><span>
-
-
-
-                                            </span></div>
-                                    <div class="job-type"><img src="./images/airplay.png"
-                                            alt=""><span>freelance</span></div>
-                                    <div class="salary"><img src="./images/airplay.png" alt=""><span>200 azn</span>
-                                    </div>
-                                    <div class="date"><img src="./images/airplay.png" alt=""><span>2 Days ago</span>
-                                    </div>
-                                    <div class="save-job">
-                                       <button> <img src="./images/save.png" alt="" class="save-img"></button>
-                                        <button class="hidden"><img src="./images/save2.png" class="save-img1" alt=""></button>
-                                    </div>
-                                </div>
-                              
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-sm-6">
-                                <div class="job-single mb-30">
-                              <a href="./job-page.html">
-                                <div class="job-single-header">
-                                    <div class="company-image"><img src="./images/c-img.png" alt=""></div>
-                                    <div class="company-info">
-                                        <div class="company-name">Company name</div>
-                                        <div class="job-title">job title</div>
-                                    </div>
-                                </div>
-                            </a>
-                                <div class="job-single-footer">
-                                    <div class="location"><img src="./images/airplay.png"
-                                            alt=""><span>Azerbaijan</span></div>
-                                    <div class="job-type"><img src="./images/airplay.png"
-                                            alt=""><span>freelance</span></div>
-                                    <div class="salary"><img src="./images/airplay.png" alt=""><span>200 azn</span>
-                                    </div>
-                                    <div class="date"><img src="./images/airplay.png" alt=""><span>2 Days ago</span>
-                                    </div>
-                                    <div class="save-job">
-                                       <button> <img src="./images/save.png" alt="" class="save-img"></button>
-                                        <button class="hidden"><img src="./images/save2.png" class="save-img1" alt=""></button>
-                                    </div>
-                                </div>
-                              
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-sm-6">
-                                <div class="job-single premium mb-30">
-                              <a href="./job-page.html">
-                                <div class="job-single-header">
-                                    <div class="company-image"><img src="./images/c-img.png" alt=""></div>
-                                    <div class="company-info">
-                                        <div class="company-name">Company name</div>
-                                        <div class="job-title">job title</div>
-                                    </div>
-                                </div>
-                            </a>
-                                <div class="job-single-footer">
-                                    <div class="location"><img src="./images/airplay.png"
-                                            alt=""><span>Azerbaijan</span></div>
-                                    <div class="job-type"><img src="./images/airplay.png"
-                                            alt=""><span>freelance</span></div>
-                                    <div class="salary"><img src="./images/airplay.png" alt=""><span>200 azn</span>
-                                    </div>
-                                    <div class="date"><img src="./images/airplay.png" alt=""><span>2 Days ago</span>
-                                    </div>
-                                    <div class="save-job">
-                                       <button> <img src="./images/save.png" alt="" class="save-img"></button>
-                                        <button class="hidden"><img src="./images/save2.png" class="save-img1" alt=""></button>
-                                    </div>
-                                </div>
-                              
-                                </div>
-                            </div>
-                           
-                            
-                            <div class="col-lg-12">
-                                <nav>
-                                    <ul class="pagination">
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Previous">
-                                                <i class="fas fa-arrow-left-long"></i>
-                                            </a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item active round-20" aria-current="page"><a
-                                                class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Next">
-                                                <i class="fas fa-arrow-right-long"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="d-flex justify-content-between">
+        <div class="d-none d-lg-block filter-form-wrapper">
+          <form action="" class="form-field">
+            <div class="form-group mb-30">
+              <div class="sub-title">Keywords</div>
+              <div class="input-group add-skills">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="e.g.job, skills"
+                  aria-label="e.g.job, skills"
+                  aria-describedby="basic-addon2"
+                />
+                <span class="input-group-text" id="basic-addon2"
+                  ><button class="btn-xs btn-green btn-general round-50">
+                    <i class="fas fa-plus"></i></button
+                ></span>
+              </div>
             </div>
-            <div class="copyright-wrap mt-45">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="text">© 2022 Remotique. All Rights Reserved.</div>
-                    </div>
-                    <div class="col-sm-6">
-                        <ul class="social-links">
-                            <li><a href="" target="_blank" class="social-link"><i
-                                        class="fa-brands fa-facebook-f"></i></a>
-                            </li>
-                            <li><a href="" target="_blank" class="social-link"><i
-                                        class="fa-brands fa-linkedin-in"></i></a>
-                            </li>
-                            <li><a href="" target="_blank" class="social-link"><i
-                                        class="fa-brands fa-facebook-messenger"></i></a></li>
-                            <li><a href="" target="_blank" class="social-link"><i class="fa-brands fa-twitter"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="form-group job-category mb-30">
+              <div class="sub-title">Job category</div>
+              <div class="job-category-dropdown">
+                <button
+                  class="job-category-dropdown-btn round-20"
+                  type="button"
+                >
+                  Job category <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="drop-down">
+                  <div class="form-group mb-15">
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <span class="slider"></span>
+                    </label>
+                    <span> Freelance </span>
+                  </div>
+                  <div class="form-group mb-15">
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <span class="slider"></span>
+                    </label>
+                    <span> Freelance </span>
+                  </div>
+                  <div class="form-group mb-15">
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <span class="slider"></span>
+                    </label>
+                    <span> Freelance </span>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="form-group mb-30">
+              <div class="job-category-dropdown-menu">
+                <div class="sub-title mb-15">Job category</div>
+
+                <div class="form-group mb-15">
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider"></span>
+                  </label>
+                  <span> Freelance </span>
+                </div>
+                <div class="form-group mb-15">
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider"></span>
+                  </label>
+                  <span> Full time </span>
+                </div>
+                <div class="form-group mb-15">
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider"></span>
+                  </label>
+                  <span> Part time </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="sub-title">Budget /Salary</div>
+              <div class="range-slider">
+                <div class="result-container">
+                  <div class="min-num">
+                    <input
+                      type="number"
+                      readonly
+                      value="0"
+                      min="0"
+                      max="115"
+                      id="result-min"
+                      name="min"
+                    />
+                  </div>
+                  <div class="max-num">
+                    <input
+                      readonly
+                      type="number"
+                      value="115"
+                      min="0"
+                      max="115"
+                      id="result-max"
+                      name="max"
+                    />
+                  </div>
+                </div>
+                <div class="range-container">
+                  <input max="115" type="range" value="0" />
+
+                  <input type="range" min="0" max="115" value="115" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group mt-5">
+              <button class="btn-lg btn-general round-20">Search</button>
+            </div>
+          </form>
         </div>
 
+        <div class="job-list-wrapper">
+          <div class="heading">
+            <h5 class="sub-title">Active jobs</h5>
+            <button class="sidebar-btn">
+              <span><i class="fa-solid fa-filter"></i> Filter</span>
+            </button>
+            <form action="" class="form-field">
+              <div class="bar">
+                <div class="turn-field">
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider"></span>
+                  </label>
+                  <span>Turn on email alerts for this search</span>
+                </div>
+
+                <ul class="sort-field">
+                  <li class="has-child">
+                    Sort by:
+                    <span>Newest <i class="fas fa-chevron-down"></i></span>
+                  </li>
+                  <ul class="drop-menu">
+                    <li><a href="">Newest</a></li>
+                    <li><a href="">Earliest</a></li>
+                  </ul>
+                </ul>
+              </div>
+            </form>
+          </div>
+          <div class="job-list">
+            <div class="row">
+              <div class="col-xl-4 col-lg-6 col-sm-6">
+                <div class="job-single mb-30">
+                  <a href="./job-page.html">
+                    <div class="job-single-header">
+                      <div class="company-image"></div>
+                      <div class="company-info">
+                        <div class="company-name">Company name</div>
+                        <div class="job-title">job title</div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="job-single-footer d-flex justify-content-between">
+                    <ul>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >Azerbaijan</span
+                        >
+                      </li>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >freelance</span
+                        >
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >200 azn</span
+                        >
+                      </li>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >2 Days ago</span
+                        >
+                      </li>
+                    </ul>
+                    <div class="save-job">
+                      <button>
+                        <img src="./images/save.png" alt="" class="save-img" />
+                      </button>
+                      <button class="hidden">
+                        <img
+                          src="./images/save2.png"
+                          class="save-img1"
+                          alt=""
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-sm-6">
+                <div class="job-single premium mb-30">
+                  <div class="job-single-header">
+                    <div class="company-image"></div>
+                    <div class="company-info">
+                      <a href="./job-page.html">
+                        <div class="company-name">Company name</div>
+                        <div class="job-title">job title</div>
+                      </a>
+                    </div>
+                    <span class="bdg">premium</span>
+                  </div>
+
+                  <div class="job-single-footer d-flex justify-content-between">
+                    <ul>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >Azerbaijan</span
+                        >
+                      </li>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >freelance</span
+                        >
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >200 azn</span
+                        >
+                      </li>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >2 Days ago</span
+                        >
+                      </li>
+                    </ul>
+                    <div class="save-job">
+                      <button>
+                        <img src="./images/save.png" alt="" class="save-img" />
+                      </button>
+                      <button class="hidden">
+                        <img
+                          src="./images/save2.png"
+                          class="save-img1"
+                          alt=""
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-sm-6">
+                <div class="job-single mb-30">
+                  <a href="./job-page.html">
+                    <div class="job-single-header">
+                      <div class="company-image"></div>
+                      <div class="company-info">
+                        <div class="company-name">Company name</div>
+                        <div class="job-title">job title</div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="job-single-footer d-flex justify-content-between">
+                    <ul>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >Azerbaijan</span
+                        >
+                      </li>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >freelance</span
+                        >
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >200 azn</span
+                        >
+                      </li>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >2 Days ago</span
+                        >
+                      </li>
+                    </ul>
+                    <div class="save-job">
+                      <button>
+                        <img src="./images/save.png" alt="" class="save-img" />
+                      </button>
+                      <button class="hidden">
+                        <img
+                          src="./images/save2.png"
+                          class="save-img1"
+                          alt=""
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-sm-6">
+                <div class="job-single mb-30">
+                  <a href="./job-page.html">
+                    <div class="job-single-header">
+                      <div class="company-image"></div>
+                      <div class="company-info">
+                        <div class="company-name">Company name</div>
+                        <div class="job-title">job title</div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="job-single-footer d-flex justify-content-between">
+                    <ul>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >Azerbaijan</span
+                        >
+                      </li>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >freelance</span
+                        >
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >200 azn</span
+                        >
+                      </li>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >2 Days ago</span
+                        >
+                      </li>
+                    </ul>
+                    <div class="save-job">
+                      <button>
+                        <img src="./images/save.png" alt="" class="save-img" />
+                      </button>
+                      <button class="hidden">
+                        <img
+                          src="./images/save2.png"
+                          class="save-img1"
+                          alt=""
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-sm-6">
+                <div class="job-single mb-30">
+                  <a href="./job-page.html">
+                    <div class="job-single-header">
+                      <div class="company-image"></div>
+                      <div class="company-info">
+                        <div class="company-name">Company name</div>
+                        <div class="job-title">job title</div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="job-single-footer d-flex justify-content-between">
+                    <ul>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >Azerbaijan</span
+                        >
+                      </li>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >freelance</span
+                        >
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >200 azn</span
+                        >
+                      </li>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >2 Days ago</span
+                        >
+                      </li>
+                    </ul>
+                    <div class="save-job">
+                      <button>
+                        <img src="./images/save.png" alt="" class="save-img" />
+                      </button>
+                      <button class="hidden">
+                        <img
+                          src="./images/save2.png"
+                          class="save-img1"
+                          alt=""
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-sm-6">
+                <div class="job-single mb-30">
+                  <a href="./job-page.html">
+                    <div class="job-single-header">
+                      <div class="company-image"></div>
+                      <div class="company-info">
+                        <div class="company-name">Company name</div>
+                        <div class="job-title">job title</div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="job-single-footer d-flex justify-content-between">
+                    <ul>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >Azerbaijan</span
+                        >
+                      </li>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >freelance</span
+                        >
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >200 azn</span
+                        >
+                      </li>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >2 Days ago</span
+                        >
+                      </li>
+                    </ul>
+                    <div class="save-job">
+                      <button>
+                        <img src="./images/save.png" alt="" class="save-img" />
+                      </button>
+                      <button class="hidden">
+                        <img
+                          src="./images/save2.png"
+                          class="save-img1"
+                          alt=""
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-sm-6">
+                <div class="job-single mb-30">
+                  <a href="./job-page.html">
+                    <div class="job-single-header">
+                      <div class="company-image"></div>
+                      <div class="company-info">
+                        <div class="company-name">Company name</div>
+                        <div class="job-title">job title</div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="job-single-footer d-flex justify-content-between">
+                    <ul>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >Azerbaijan</span
+                        >
+                      </li>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >freelance</span
+                        >
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >200 azn</span
+                        >
+                      </li>
+                      <li>
+                        <img src="./images/airplay.png" alt="" /><span
+                          >2 Days ago</span
+                        >
+                      </li>
+                    </ul>
+                    <div class="save-job">
+                      <button>
+                        <img src="./images/save.png" alt="" class="save-img" />
+                      </button>
+                      <button class="hidden">
+                        <img
+                          src="./images/save2.png"
+                          class="save-img1"
+                          alt=""
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-12">
+                <nav>
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <i class="fas fa-arrow-left-long"></i>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item active round-20" aria-current="page">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">4</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <i class="fas fa-arrow-right-long"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="copyright-wrap mt-45">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="text">© 2022 Remotique. All Rights Reserved.</div>
+              </div>
+              <div class="col-sm-6">
+                <ul class="social-links social-links-dark">
+                  <li>
+                    <a href="" target="_blank" class="social-link"
+                      ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank" class="social-link"
+                      ><i class="fa-brands fa-linkedin-in"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank" class="social-link"
+                      ><i class="fa-brands fa-facebook-messenger"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank" class="social-link"
+                      ><i class="fa-brands fa-twitter"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  
+
     <div class="filter-sidebar2 sidebar">
         <div class="sidebar-content">
+        <div class="filter-form-wrapper">
             <form action="" class="form-field">
-                <div class="form-group add-skills mb-50">
-                    <div class="sub-title">Keywords</div>
-                    <input type="text" placeholder="e.g.job, skills" class="round-20 form-control skills-input">
-                    <button class="btn-xs btn-general round-50"><i class="fas fa-plus"></i></button>
+                <div class="form-group mb-30">
+                  <div class="sub-title">Keywords</div>
+                  <div class="input-group add-skills">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="e.g.job, skills"
+                      aria-label="e.g.job, skills"
+                      aria-describedby="basic-addon2"
+                    />
+                    <span class="input-group-text" id="basic-addon2"
+                      ><button class="btn-xs btn-green btn-general round-50">
+                        <i class="fas fa-plus"></i></button
+                    ></span>
+                  </div>
                 </div>
-                <div class="form-group job-category">
-                    <div class="sub-title">Job category</div>
-                    <div class="job-category-dropdown mb-30">
-                        <button class="job-category-dropdown-btn round-20" type="button"> Job category <i
-                                class="fas fa-chevron-down"></i></button>
-                                <div class="drop-down">
-                                   
-                        <div class="form-group mb-15">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                            <span>
-                                Freelance
-                            </span>
-                        </div>
-                        <div class="form-group mb-15">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                            <span>
-                                Freelance
-                            </span>
-                        </div>
-                        <div class="form-group mb-15">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                            <span>
-                                Freelance
-                            </span>
-                        </div>
-
-                                </div>
+                <div class="form-group job-category mb-30">
+                  <div class="sub-title">Job category</div>
+                  <div class="job-category-dropdown">
+                    <button
+                      class="job-category-dropdown-btn round-20"
+                      type="button"
+                    >
+                      Job category <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="drop-down">
+                      <div class="form-group mb-15">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider"></span>
+                        </label>
+                        <span> Freelance </span>
+                      </div>
+                      <div class="form-group mb-15">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider"></span>
+                        </label>
+                        <span> Freelance </span>
+                      </div>
+                      <div class="form-group mb-15">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider"></span>
+                        </label>
+                        <span> Freelance </span>
+                      </div>
                     </div>
+                  </div>
                 </div>
+                <div class="form-group mb-30">
+                  <div class="job-category-dropdown-menu">
+                    <div class="sub-title mb-15">Job category</div>
+    
+                    <div class="form-group mb-15">
+                      <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider"></span>
+                      </label>
+                      <span> Freelance </span>
+                    </div>
+                    <div class="form-group mb-15">
+                      <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider"></span>
+                      </label>
+                      <span> Full time </span>
+                    </div>
+                    <div class="form-group mb-15">
+                      <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider"></span>
+                      </label>
+                      <span> Part time </span>
+                    </div>
+                  </div>
+                </div>
+    
                 <div class="form-group">
-                    <div class="job-category-dropdown-menu mb-30">
-
-                        <div class="sub-title mb-15">Job category</div>
-
-                        <div class="form-group mb-15">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                            <span>
-                                Freelance
-                            </span>
-                        </div>
-                        <div class="form-group mb-15">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                            <span>
-                                Freelance
-                            </span>
-                        </div>
-                        <div class="form-group mb-15">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                            <span>
-                                Freelance
-                            </span>
-                        </div>
-
+                  <div class="sub-title">Budget /Salary</div>
+                  <div class="range-slider">
+                    <div class="result-container">
+                      <div class="min-num">
+                        <input
+                          type="number"
+                          readonly
+                          value="0"
+                          min="0"
+                          max="115"
+                          id="result-min"
+                          name="min"
+                        />
+                      </div>
+                      <div class="max-num">
+                        <input
+                          readonly
+                          type="number"
+                          value="115"
+                          min="0"
+                          max="115"
+                          id="result-max"
+                          name="max"
+                        />
+                      </div>
                     </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="sub-title">Budget /Salary</div>
-                    <div class="range-slider">
-
-                        <div class="result-container">
-                            <div class="min-num">
-
-                                <input type="number" readonly value="0" min="0" max="115" id="result-min"
-                                    name="min">
-
-                            </div>
-                            <div class="max-num"><input readonly type="number" value="115" min="0" max="115"
-                                    id="result-max" name="max"> </div>
-                        </div>
-                        <div class="range-container">
-                            <input max="115" type="range" value="0">
-
-                            <input type="range" min="0" max="115" value="115">
-                        </div>
+                    <div class="range-container">
+                      <input max="115" type="range" value="0" />
+    
+                      <input type="range" min="0" max="115" value="115" />
                     </div>
+                  </div>
                 </div>
                 <div class="form-group mt-5">
-                    <button class="btn-lg btn-general round-20">Search</button>
+                  <button class="btn-lg btn-general round-20">Search</button>
                 </div>
-            </form>
+              </form>
+        </div>
         </div>
     </div>
     <!-- jquery -->
@@ -676,10 +995,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- slick slider -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-      <!-- matchheight -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+    <!-- matchheight -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
     <!-- custom js -->
     <script src="./js/script.js"></script>
-</body>
-
+  </body>
 </html>

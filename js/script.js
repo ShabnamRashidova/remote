@@ -2,10 +2,15 @@ $(function () {
   $(window).on("scroll", () => {
     if ($(this).scrollTop() >= 120) {
       $(".sitetoolbar").addClass("fixed");
+      $("#header-global").addClass("fixed")
     } else {
       $(".sitetoolbar").removeClass("fixed");
+      $("#header-global").removeClass("fixed")
     }
   });
+  $(window).on("load",()=>{
+    $(".preloader").hide()
+  })
   $(".preview-lang").click(function () {
     $(this).next().addClass("show");
     $(".overlay").addClass("show");
