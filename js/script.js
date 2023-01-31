@@ -347,4 +347,5 @@ $(function () {
 $(document).ready(function () {
   $(".subscription-column").matchHeight();
   $(".job-single").matchHeight();
+  $(".single-item").matchHeight();
 });
