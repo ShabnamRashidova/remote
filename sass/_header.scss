@@ -15,9 +15,13 @@
 		height: 100%;
 
 		a {
-			width: 50px;
-			height: 50px;
-			display: block;
+			width: 60px;
+			color: $secondary-design-color;
+		@include flex-align-center;
+		flex-direction: column;
+
+			font-family: $primary-font;
+			font-size: 18px;
 
 			img {
 				width: 100%;
@@ -99,8 +103,7 @@
 				border-radius: 50%;
 
 				&:hover {
-					// background-color: rgba(0, 102, 153,0.1);
-					animation:  pulse-primary-2 1.3s;
+					background-color: rgba(0, 102, 153,0.1);
 				}
 
 				&:first-child {
@@ -372,9 +375,11 @@
 				}
 
 				.sidebar-header {
-					padding: 0 20px;
+					padding:  20px;
 					border-bottom: $light-color;
-					@include flex-align;
+					display: flex;
+					align-items: center;
+					justify-content: space-around;
 
 					.profile-image {
 						width: 67px;

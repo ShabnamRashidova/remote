@@ -156,11 +156,13 @@ a {
 .social-links {
 	display: flex;
 	align-items: center;
-&.social-links-dark{
-i{
-	color: $dark-color;
-}
-}
+
+	&.social-links-dark {
+		i {
+			color: $dark-color;
+		}
+	}
+
 	i {
 		color: #989898;
 		margin-right: 13px;
@@ -187,7 +189,7 @@ i{
 		display: none;
 
 		&:checked+.slider {
-			background: #E2E3E2;
+			background: #BFD5DF;
 
 			&:before {
 				transform: translateX(15px);
@@ -225,22 +227,32 @@ i{
 }
 
 .rate-list {
-	@include flex-align;
-
+	@include flex-align-between;
+flex-wrap: wrap;
 	li {
+		margin-bottom: 10px;
 		label {
-			@include flex-align-center;
-			width: 46px;
-			height: 26px;
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			width: 55px;
+			height: 30px;
 			background: $light-color;
 			cursor: pointer;
-			margin-right: 10px;
 			border: 2px solid #F2F2FF;
 			border-radius: 4px;
-			transition: $transition;
+
+			img {
+				width: 14px;
+				height: 14px;
+
+				&.hidden {
+					display: none;
+				}
+			}
 
 			span {
-				font-size: 13px;
+				font-size: 15px;
 			}
 
 
@@ -249,6 +261,12 @@ i{
 				background-color: $secondary-design-color;
 				color: $light-color;
 				border-color: $secondary-design-color;
+				.hidden{
+					display: block;
+				}
+				.f-img{
+					display: none;
+				}
 			}
 		}
 
@@ -1085,7 +1103,8 @@ input::-webkit-inner-spin-button {
 
 
 }
-.preloader{
+
+.preloader {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -1094,13 +1113,49 @@ input::-webkit-inner-spin-button {
 	@include flex-align-center;
 	background-color: $light-color;
 	z-index: 9999;
-	.preloader-img{
+
+	.preloader-img {
 		@include flex-align-center;
 		width: 100px;
 		height: 100px;
-		img{
+
+		img {
 			width: 100%;
 			height: 100%;
+		}
+	}
+}
+
+
+
+
+.progress-bar {
+	.circular-progress {
+		position: relative;
+		height: 80px;
+		width: 80px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+
+		.value {
+			position: relative;
+			font-size: 15px;
+			color: #fff;
+
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			height: 94%;
+			width: 94%;
+			background-image: url('../images/Ellipse\ 1.png');
+			background-position: center;
+			background-size: cover;
+			border: 1px solid #ECA400;
+			border-radius: 50%;
 		}
 	}
 }

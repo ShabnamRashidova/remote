@@ -43,6 +43,27 @@
 	}
 }
 
+.applicants {
+	font-family: $primary-font;
+	position: relative;
+	background-color: #EDEDED;
+
+	.filter-form-wrapper {
+		width: 21%;
+		padding: 50px 30px 60px 30px;
+		min-height: 100vh;
+		background-color: #FAFAFA;
+		.rate{
+			margin-top: 80px;
+		}
+	}
+	.applicants-wrapper{
+		width: 79%;
+		padding: 40px 30px 60px 30px;
+		background-color: #EDEDED;
+	}
+}
+
 .jobs {
 	font-family: $primary-font;
 	position: relative;
@@ -54,7 +75,7 @@
 
 	.filter-form-wrapper {
 		width: 21%;
-		padding: 130px 40px 60px 40px;
+		padding: 130px 30px 60px 30px;
 		min-height: 100vh;
 
 		background-color: #FAFAFA;

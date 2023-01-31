@@ -183,7 +183,7 @@ a {
   display: none;
 }
 .switch input:checked + .slider {
-  background: #E2E3E2;
+  background: #BFD5DF;
 }
 .switch input:checked + .slider:before {
   transform: translateX(15px);
@@ -217,27 +217,43 @@ a {
 .rate-list {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.rate-list li {
+  margin-bottom: 10px;
 }
 .rate-list li label {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 46px;
-  height: 26px;
+  justify-content: space-evenly;
+  width: 55px;
+  height: 30px;
   background: #FFFFFF;
   cursor: pointer;
-  margin-right: 10px;
   border: 2px solid #F2F2FF;
   border-radius: 4px;
-  transition: all 0.4s ease;
+}
+.rate-list li label img {
+  width: 14px;
+  height: 14px;
+}
+.rate-list li label img.hidden {
+  display: none;
 }
 .rate-list li label span {
-  font-size: 13px;
+  font-size: 15px;
 }
 .rate-list li label:hover, .rate-list li label.active {
   background-color: #006699;
   color: #FFFFFF;
   border-color: #006699;
+}
+.rate-list li label:hover .hidden, .rate-list li label.active .hidden {
+  display: block;
+}
+.rate-list li label:hover .f-img, .rate-list li label.active .f-img {
+  display: none;
 }
 .rate-list li input {
   display: none;
@@ -1002,6 +1018,32 @@ input::-webkit-inner-spin-button {
   height: 100%;
 }
 
+.progress-bar .circular-progress {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.progress-bar .circular-progress .value {
+  position: relative;
+  font-size: 15px;
+  color: #fff;
+}
+.progress-bar .circular-progress:before {
+  content: "";
+  position: absolute;
+  height: 94%;
+  width: 94%;
+  background-image: url("../images/Ellipse 1.png");
+  background-position: center;
+  background-size: cover;
+  border: 1px solid #ECA400;
+  border-radius: 50%;
+}
+
 /*==============================
         Sitetoolbar
 ===============================*/
@@ -1509,9 +1551,14 @@ input::-webkit-inner-spin-button {
   height: 100%;
 }
 #header-global .header-logo a {
-  width: 50px;
-  height: 50px;
-  display: block;
+  width: 60px;
+  color: #006699;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Nunito";
+  font-size: 18px;
 }
 #header-global .header-logo a img {
   width: 100%;
@@ -1589,8 +1636,7 @@ input::-webkit-inner-spin-button {
   border-radius: 50%;
 }
 #header-global .header-actions .notification-btn-group button:hover {
-  -webkit-animation: pulse-primary-2 1.3s;
-          animation: pulse-primary-2 1.3s;
+  background-color: rgba(0, 102, 153, 0.1);
 }
 #header-global .header-actions .notification-btn-group button:first-child {
   margin-right: 10px;
@@ -1821,10 +1867,11 @@ input::-webkit-inner-spin-button {
   transform: translateY(0);
 }
 #header-global .header-actions .profile-content .profile-sidebar .sidebar-header {
-  padding: 0 20px;
+  padding: 20px;
   border-bottom: #FFFFFF;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 #header-global .header-actions .profile-content .profile-sidebar .sidebar-header .profile-image {
   width: 67px;
@@ -2726,6 +2773,26 @@ input::-webkit-inner-spin-button {
   transform: rotate(180deg);
 }
 
+.applicants {
+  font-family: "Nunito";
+  position: relative;
+  background-color: #EDEDED;
+}
+.applicants .filter-form-wrapper {
+  width: 21%;
+  padding: 50px 30px 60px 30px;
+  min-height: 100vh;
+  background-color: #FAFAFA;
+}
+.applicants .filter-form-wrapper .rate {
+  margin-top: 80px;
+}
+.applicants .applicants-wrapper {
+  width: 79%;
+  padding: 40px 30px 60px 30px;
+  background-color: #EDEDED;
+}
+
 .jobs {
   font-family: "Nunito";
   position: relative;
@@ -2736,7 +2803,7 @@ input::-webkit-inner-spin-button {
 }
 .jobs .filter-form-wrapper {
   width: 21%;
-  padding: 130px 40px 60px 40px;
+  padding: 130px 30px 60px 30px;
   min-height: 100vh;
   background-color: #FAFAFA;
 }
@@ -2987,61 +3054,61 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 
-.filter-section {
-  padding: 50px 0 20px;
+.applicants {
   font-family: "Nunito";
 }
-.filter-section .left {
-  padding: 40px 20px;
-}
-.filter-section .left .skills .skills-name-list {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.filter-section .left .skills .skill {
-  background: rgba(42, 65, 232, 0.07);
-  color: #006699;
-  border-radius: 4px;
-  display: flex;
-  margin-right: 4px;
-  margin-bottom: 4px;
-  padding: 5px 10px;
-  font-weight: 500;
-}
-.filter-section .left .add-skill-input {
+.applicants .filter-form-wrapper .add-skill-input {
   height: 48px;
   padding-right: 44px;
   background-color: #FFFFFF;
   border: 1px solid #E1E1E1;
+  padding-right: 50px;
+  font-size: 16px;
 }
-.filter-section .left .add-skill-input::-moz-placeholder {
+.applicants .filter-form-wrapper .add-skill-input::-moz-placeholder {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.15px;
   color: rgba(0, 0, 0, 0.38);
 }
-.filter-section .left .add-skill-input:-ms-input-placeholder {
+.applicants .filter-form-wrapper .add-skill-input:-ms-input-placeholder {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.15px;
   color: rgba(0, 0, 0, 0.38);
 }
-.filter-section .left .add-skill-input::placeholder {
+.applicants .filter-form-wrapper .add-skill-input::placeholder {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.15px;
   color: rgba(0, 0, 0, 0.38);
 }
-.filter-section .left .add-skill-input:focus {
+.applicants .filter-form-wrapper .add-skill-input:focus {
   border-color: #006699;
 }
-.filter-section .left .form-group {
-  margin-top: 40px;
+.applicants .filter-form-wrapper .form-group {
+  margin-top: 20px;
   position: relative;
 }
-.filter-section .right {
+.applicants .right {
   padding: 0 20px;
+}
+
+.skills .skills-name-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.skills .skill {
+  background: rgba(0, 102, 153, 0.11);
+  color: #006699;
+  border-radius: 4px;
+  display: flex;
+  margin-right: 4px;
+  text-transform: capitalize;
+  margin-bottom: 4px;
+  padding: 5px 10px;
+  font-weight: 500;
 }
 
 .profile-section {
@@ -3513,7 +3580,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 0;
+  padding: 30px 0;
   background-color: #FAFAFA;
 }
 .employees .single-item .button-group button {
@@ -4596,7 +4663,7 @@ button {
   position: absolute;
   content: "";
   top: -18px;
-  right: -14px;
+  right: -27px;
   background-repeat: no-repeat;
   background-image: url("../images/game-icons_crown.png");
   width: 100%;
@@ -4790,9 +4857,7 @@ button {
     line-height: 130px;
   }
   .jobs .filter-form-wrapper {
-    padding: 60px 20px 0 20px;
-    height: 100vh;
-    background-color: #FAFAFA;
+    padding: 60px 15px 0 15px;
   }
   .jobs .job-list-wrapper {
     padding: 40px 15px 60px 15px;
@@ -4831,6 +4896,13 @@ button {
   }
   .item .item-content li {
     margin-left: 10px;
+  }
+  .applicants .filter-form-wrapper {
+    padding: 50px 15px 60px 15px;
+  }
+  .applicants .applicants-wrapper {
+    padding: 40px 15px 60px 15px;
+    background-color: #EDEDED;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -4874,19 +4946,22 @@ button {
   .advantages .col-lg-4 .single-item .image img {
     width: 150px;
   }
-  .sidebar-btn {
-    display: block;
+  .upload-items ul .upload-item {
+    width: 140px;
   }
   .jobs .sidebar-btn {
     display: none;
-  }
-  .upload-items ul .upload-item {
-    width: 140px;
   }
   .jobs .filter-form-wrapper {
     width: 28%;
   }
   .jobs .job-list-wrapper {
+    width: 65%;
+  }
+  .applicants .filter-form-wrapper {
+    width: 28%;
+  }
+  .applicants .job-list-wrapper {
     width: 65%;
   }
 }
@@ -4955,8 +5030,46 @@ button {
   .about-us .explore-btn {
     font-size: 24px;
   }
+  .applied-jobs .applied-jobs-container {
+    width: 100%;
+    overflow-y: auto;
+  }
+  .applied-jobs .applied-jobs-container::-webkit-scrollbar {
+    height: 4px;
+  }
+  .applied-jobs .applied-jobs-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #00CC00;
+  }
+  .applied-jobs .applied-jobs-container .applied-jobs-table {
+    min-width: 700px;
+  }
+  .freelancer-profile .behance-account-link {
+    margin-bottom: 30px;
+  }
+  .freelancer-profile .copy-link {
+    margin: 20px 0;
+  }
+  .conversation-content-wrap .chat-wrapper {
+    padding: 10px;
+    display: none;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background-color: #FFFFFF;
+    z-index: 999;
+  }
   #header-global .header-actions {
     justify-content: flex-end;
+  }
+  .applicants .sidebar-btn {
+    display: block;
+  }
+  .applicants .applicants-wrapper {
+    width: 90%;
+    margin: 0 auto;
   }
   .jobs .sidebar-btn {
     display: block;
@@ -5016,6 +5129,7 @@ button {
   #header-global .header-logo a {
     width: 42px;
     height: 42px;
+    font-size: 14px;
   }
   #header-global .header-actions .profile-content .profile-image {
     width: 40px;
@@ -5062,34 +5176,9 @@ button {
   .jobs .job-list-wrapper {
     width: 100%;
   }
-}
-@media screen and (max-width: 992px) {
-  .applied-jobs .applied-jobs-container {
+  .applicants .applicants-wrapper {
     width: 100%;
-    overflow-y: auto;
   }
-  .applied-jobs .applied-jobs-container .applied-jobs-table {
-    min-width: 700px;
-  }
-  .freelancer-profile .behance-account-link {
-    margin-bottom: 30px;
-  }
-  .freelancer-profile .copy-link {
-    margin: 20px 0;
-  }
-  .conversation-content-wrap .chat-wrapper {
-    padding: 10px;
-    display: none;
-    overflow-x: hidden;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    left: 0;
-    background-color: #FFFFFF;
-    z-index: 999;
-  }
-}
-@media screen and (max-width: 768px) {
   .applied-jobs .applied-jobs-container {
     border-radius: 5px !important;
   }
@@ -5189,5 +5278,11 @@ button {
     justify-content: flex-start;
     width: 100%;
     margin-top: 18px;
+  }
+  #header-global .header-actions .notification-btn-group .message-content .drop-message {
+    right: -130px;
+  }
+  #header-global .header-actions .notification-btn-group .notification-content .drop-notification {
+    right: -90px;
   }
 }/*# sourceMappingURL=main.css.map */

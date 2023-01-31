@@ -16,12 +16,9 @@
      <!-- favicon -->
      <link rel="icon" type="image/png" sizes="120x120" href="./images/favicon/apple-icon-120x120.png">
 </head>
-
 <body>
-
-    <body>
          <!-- Preloader -->
-    <div class="preloader">
+     <div class="preloader">
         <div class="preloader-img">
             <img src="./images/logo.png" alt="">
         </div>
@@ -33,7 +30,12 @@
             <div class="container-fluid px-4">
                 <div class="row justify-content-between">
                     <div class="col-md-2 col-6">
-                        <div class="header-logo"><a href=""><img src="./images/logo.png" alt=""></a></div>
+                        <div class="header-logo"><a href="./index.html">
+                            <img src="./images/logo.png" alt="logo-image">
+                            <div class="logo-txt">ITOPIX</div>
+                        </a>
+                 
+                    </div>
                     </div>
                     <div class="col-lg-8 d-lg-block d-none">
                         <div class="header-middle">
@@ -174,17 +176,14 @@
                                 </div>
                             </div>
                             <div class="profile-content">
-                                <div class="profile-image  toggle-profile-content"
-                                    style="background-image: url('./images/Ellipse\ 1.png');">
+                                <div class="profile-image  toggle-profile-content" style="background-image: url('');">
                                 </div>
                                 <div class="profile-sidebar">
                                     <div class="sidebar-header">
                                         <a href="">
-                                            <div class="profile-image"
-                                                style="background-image: url('./images/Ellipse\ 1.png');"> <span
-                                                    class="persent"> 25%</span>
-                                                <div class="complete-profile"></div>
-                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="circular-progress"><div class="value">0%</div></div>
+                                              </div>
                                         </a>
                                         <div class="info">
                                             <div class="fullname">Nigar Mammadova</div>
@@ -239,304 +238,305 @@
         FILTER SECTION
       ----------------------->
         <div class="overlay"></div>
-        <div class="applicants-wrap filter-section">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xl-3 col-6 d-xl-block d-none">
-                        <div class="heading">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-lg-3">
-                                        <h5 class="sub-title">
-                                            Filters
-                                        </h5>
-                                    </div>
+        <div class="applicants">
+            <div class="d-flex justify-content-between">
+                <div class="d-none d-lg-block filter-form-wrapper">
+                    <div class="sub-title">Filters</div>
+                    <formw class="form-field">
+                        
+                        <div class="rate mb-50">
+                            <h5 class="sub-title">
+                                Rate
+                            </h5>
+                            <ul class="rate-list">
+                                <li>
+                                    <label class="rate-label active " for="1"> <span>1+</span>
+                                       <img src="./images/logo-md.png" alt="" class="f-img">
+                                    <img src="./images/i2.png" alt="" class="hidden">
+                                    </label>
+                                    <input type="radio" id="1" name="rate1">
 
-                                </div>
+                                </li>
+                                <li>
+                                    <label class="rate-label" for="2"> <span>3+</span>
+                                       <img src="./images/logo-md.png" alt="" class="f-img">
+                                     <img src="./images/i2.png" alt="" class="hidden">
+                                    </label>
+                                    <input id="2" type="radio" name="rate1">
+                                </li>
+                                <li>
+                                    <label class="rate-label" for="3"> <span>5+</span>
+                                       <img src="./images/logo-md.png" alt="" class="f-img">
+                                    <img src="./images/i2.png" alt="" class="hidden">
+                                    </label>
+                                    <input id="3" type="radio" name="rate1">
+                                </li>
+                                <li>
+                                    <label class="rate-label" for="4"> <span>10+</span>
+                                       <img src="./images/logo-md.png" alt="" class="f-img">
+                                    <img src="./images/i2.png" alt="" class="hidden">
+                                    </label>
+                                    <input id="4" type="radio" name="rate1">
+                                </li>
+                                <li>
+                                    <label class="rate-label" for="4"> <span>20+</span>
+                                       <img src="./images/logo-md.png" alt="" class="f-img">
+                                    <img src="./images/i2.png" alt="" class="hidden">
+                                    </label>
+                                    <input id="4" type="radio" name="rate1">
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="skills mb-30">
+                            <h5 class="sub-title">
+                                Skills
+                            </h5>
+                            <ul class="skills-name-list">
+                                <li class="skill">IOS</li>
+                                <li class="skill">Android</li>
+                                <li class="skill">Mobile apps</li>
+                                <li class="skill">Flash</li>
+                                <li class="skill">Wordpress</li>
+                            </ul>
+                            <div class="form-group">
+                                <input type="text" placeholder="add more skills"
+                                    class="form-control add-skill-input">
+                                <button class="add-skill-btn btn-general btn-xs"><i
+                                        class="fas fa-plus"></i></button>
                             </div>
+
                         </div>
-                        <div class="left">
-                            <form class="form-field">
-                                <div class="rate mb-50">
-                                    <h5 class="sub-title">
-                                        Rate
-                                    </h5>
-                                    <ul class="rate-list">
-                                        <li>
-                                            <label class="rate-label active " for="1"> <span>1+</span>
-                                                <img src="./images/star.png" alt="star"></label>
-                                            <input type="radio" id="1" name="rate1">
-
-                                        </li>
-                                        <li>
-                                            <label class="rate-label" for="2"> <span>2+</span>
-                                                <img src="./images/star.png" alt="star"></label>
-                                            <input id="2" type="radio" name="rate1">
-                                        </li>
-                                        <li>
-                                            <label class="rate-label" for="3"> <span>3+</span>
-                                                <img src="./images/star.png" alt="star"></label>
-                                            <input id="3" type="radio" name="rate1">
-                                        </li>
-                                        <li>
-                                            <label class="rate-label" for="4"> <span>4+</span>
-                                                <img src="./images/star.png" alt="star"></label>
-                                            <input id="4" type="radio" name="rate1">
-                                        </li>
-
-                                    </ul>
-                                </div>
-                                <div class="skills mb-50">
-                                    <h5 class="sub-title">
-                                        Skills
-                                    </h5>
-                                    <ul class="skills-name-list">
-                                        <li class="skill">IOS</li>
-                                        <li class="skill">Android</li>
-                                        <li class="skill">IOS</li>
-                                        <li class="skill">IOS</li>
-                                    </ul>
-                                    <div class="form-group">
-                                        <input type="text" placeholder="add more skills"
-                                            class="form-control add-skill-input">
-                                        <button class="add-skill-btn btn-general btn-xs"><i
-                                                class="fas fa-plus"></i></button>
-                                    </div>
-
-                                </div>
-                                <button class="btn-general w-100">Search</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-xl-9 col-lg-12">
-                        <div class="heading">
+                        <button class="btn-general w-100">Search</button>
+                    </form>
+                </div>
+                <div class="applicants-wrapper">
+                    <div class="heading">
+                        <h5 class="sub-title">applicants</h5>
+                        <button class="sidebar-btn">
+                          <span><i class="fa-solid fa-filter"></i> Filter</span>
+                        </button>
+                        <form action="" class="form-field">
+                          <div class="bar">
+                            <div class="turn-field">
+                              <label class="switch">
+                                <input type="checkbox" />
+                                <span class="slider"></span>
+                              </label>
+                              <span>Turn on email alerts for this search</span>
+                            </div>
+            
+                            <ul class="sort-field">
+                              <li class="has-child">
+                                Sort by:
+                                <span>Newest <i class="fas fa-chevron-down"></i></span>
+                              </li>
+                              <ul class="drop-menu">
+                                <li><a href="">Newest</a></li>
+                                <li><a href="">Earliest</a></li>
+                              </ul>
+                            </ul>
+                          </div>
+                        </form>
+                      </div>
+                
+                        <div class="employees">
                             <div class="row">
+                                <div class="col-xl-4 col-lg-6 col-sm-6 mb-4">
+                                    <div class="single-item">
+                                        <div class="single-item-header">
+                                            <div class="profile-image"
+                                                style="background-image:url('./images/Ellipse\ 1.png') ;"> </div>
+                                        </div>
+                                        <div class="profile-info">
+                                            <h5 class="fullname">Nigar Mammadova</h5>
+                                            <div class="job">
+                                                UI/UX designer
+                                            </div>
+                                            <img src="./images/logo-md.png" alt="logo">
+                                            <span class="badges">14 badges</span>
+                                        </div>
+                                        <div class="button-group">
+                                           <a href="./freelancer-profile.html" class="btn-general btn-lg mb-2">view profile</a>
+                                            <a href="./message.html" class="btn-general btn-lg">chat</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-sm-6 mb-4">
+                                    <div class="single-item">
+                                        <div class="single-item-header">
+                                            <div class="profile-image"
+                                                style="background-image:url('./images/Ellipse\ 1.png') ;"> </div>
+                                        </div>
+                                        <div class="profile-info">
+                                            <h5 class="fullname">Nigar Mammadova</h5>
+                                            <div class="job">
+                                                UI/UX designer
+                                            </div>
+                                            <img src="./images/logo-md.png" alt="logo">
+                                            <span class="badges">14 badges</span>
+                                        </div>
+                                        <div class="button-group">
+                                            <a href="./freelancer-profile.html" class="mb-2 btn-general btn-lg">view profile</a>
+                                            <a href="./message.html" class="btn-general btn-lg">chat</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-sm-6 mb-4">
+                                    <div class="single-item">
+                                        <div class="single-item-header">
+                                            <div class="profile-image"
+                                                style="background-image:url('./images/Ellipse\ 1.png') ;"> </div>
+                                        </div>
+                                        <div class="profile-info">
+                                            <h5 class="fullname">Nigar Mammadova</h5>
+                                            <div class="job">
+                                                UI/UX designer
+                                            </div>
+                                            <img src="./images/logo-md.png" alt="logo">
+                                            <span class="badges">14 badges</span>
+                                        </div>
+                                        <div class="button-group">
+                                           <a href="./freelancer-profile.html" class="mb-2 btn-general btn-lg">view profile</a>
+                                            <a href="./message.html" class="btn-general btn-lg">chat</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-sm-6 mb-4">
+                                    <div class="single-item">
+                                        <div class="single-item-header">
+                                            <div class="profile-image"
+                                                style="background-image:url('./images/Ellipse\ 1.png') ;"> </div>
+                                        </div>
+                                        <div class="profile-info">
+                                            <h5 class="fullname">Nigar Mammadova</h5>
+                                            <div class="job">
+                                                UI/UX designer
+                                            </div>
+                                            <img src="./images/logo-md.png" alt="logo">
+                                            <span class="badges">14 badges</span>
+                                        </div>
+                                        <div class="button-group">
+                                           <a href="./freelancer-profile.html" class="mb-2 btn-general btn-lg">view profile</a>
+                                            <a href="./message.html" class="btn-general btn-lg">chat</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-4 col-lg-6 col-sm-6 mb-4">
+                                    <div class="single-item premium-single-item">
+                                        <div class="single-item-header">
+                                            <span class="pr">Premium</span>
+                                            <div class="profile-image"
+                                                style="background-image: url('./images/Ellipse\ 1.png');">
+
+                                            </div>
+                                        </div>
+                                        <div class="profile-info">
+                                            <h5 class="fullname">Nigar Mammadova</h5>
+                                            <div class="job">
+                                                UI/UX designer
+                                            </div>
+                                            <img src="./images/logo-md.png" alt="logo">
+                                            <span class="badges">14 badges</span>
+                                        </div>
+                                        <div class="button-group">
+                                           <a href="./freelancer-profile.html" class="mb-2 btn-general btn-lg">view profile</a>
+                                            <a href="./message.html" class="btn-general btn-lg">chat</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6 col-sm-6 mb-4">
+                                    <div class="single-item premium-single-item">
+                                        <div class="single-item-header">
+                                            <span class="pr">Premium</span>
+                                            <div class="profile-image"
+                                                style="background-image: url('./images/Ellipse\ 1.png');">
+
+                                            </div>
+                                        </div>
+                                        <div class="profile-info">
+                                            <h5 class="fullname">Nigar Mammadova</h5>
+                                            <div class="job">
+                                                UI/UX designer
+                                            </div>
+                                            <img src="./images/logo-md.png" alt="logo">
+                                            <span class="badges">14 badges</span>
+                                        </div>
+                                        <div class="button-group">
+                                           <a href="./freelancer-profile.html" class="mb-2 btn-general btn-lg">view profile</a>
+                                            <a href="./message.html" class="btn-general btn-lg">chat</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row justify-content-center">
                                 <div class="col-lg-12">
-                                    <h5 class="sub-title">
-                                        Applicants
-                                    </h5>
-                                    <form action="" class="form-field">
-                                        <div class="bar">
-                                            <div class="turn-field">
-                                                <label class="switch">
-                                                    <input type="checkbox">
-                                                    <span class="slider"></span>
-                                                </label>
-                                                <span>Turn on email alerts for this search</span>
-                                            </div>
-
-                                            <ul class="sort-field">
-                                                <li class="has-child">Sort by: <span>Newest <i
-                                                            class="fas fa-chevron-down"></i></span>
-                                                </li>
-                                                <ul class="drop-menu">
-                                                    <li><a href="">Newest</a></li>
-                                                    <li><a href="">Earliest</a></li>
-                                                </ul>
-                                            </ul>
-                                        </div>
-                                    </form>
-                                    <button class="sidebar-btn">
-                                        <span> <i class="fa-solid fa-bars-staggered"></i>Filter</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="employees">
-                                <div class="row">
-                                    <div class="col-lg-4 col-sm-6 mb-4">
-                                        <div class="single-item">
-                                            <div class="single-item-header">
-                                                <div class="profile-image"
-                                                    style="background-image:url('./images/Ellipse\ 1.png') ;"> </div>
-                                            </div>
-                                            <div class="profile-info">
-                                                <h5 class="fullname">Nigar Mammadova</h5>
-                                                <div class="job">
-                                                    UI/UX designer
-                                                </div>
-                                                <img src="./images/logo-md.png" alt="logo">
-                                                <span class="badges">14 badges</span>
-                                            </div>
-                                            <div class="button-group">
-                                               <a href="./freelancer-profile.html" class="btn-general btn-lg mb-2">view profile</a>
-                                                <a href="./message.html" class="btn-general btn-lg">chat</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-sm-6 mb-4">
-                                        <div class="single-item">
-                                            <div class="single-item-header">
-                                                <div class="profile-image"
-                                                    style="background-image:url('./images/Ellipse\ 1.png') ;"> </div>
-                                            </div>
-                                            <div class="profile-info">
-                                                <h5 class="fullname">Nigar Mammadova</h5>
-                                                <div class="job">
-                                                    UI/UX designer
-                                                </div>
-                                                <img src="./images/logo-md.png" alt="logo">
-                                                <span class="badges">14 badges</span>
-                                            </div>
-                                            <div class="button-group">
-                                                <a href="./freelancer-profile.html" class="mb-2 btn-general btn-lg">view profile</a>
-                                                <a href="./message.html" class="btn-general btn-lg">chat</a>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-sm-6 mb-4">
-                                        <div class="single-item">
-                                            <div class="single-item-header">
-                                                <div class="profile-image"
-                                                    style="background-image:url('./images/Ellipse\ 1.png') ;"> </div>
-                                            </div>
-                                            <div class="profile-info">
-                                                <h5 class="fullname">Nigar Mammadova</h5>
-                                                <div class="job">
-                                                    UI/UX designer
-                                                </div>
-                                                <img src="./images/logo-md.png" alt="logo">
-                                                <span class="badges">14 badges</span>
-                                            </div>
-                                            <div class="button-group">
-                                               <a href="./freelancer-profile.html" class="mb-2 btn-general btn-lg">view profile</a>
-                                                <a href="./message.html" class="btn-general btn-lg">chat</a>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-sm-6 mb-4">
-                                        <div class="single-item">
-                                            <div class="single-item-header">
-                                                <div class="profile-image"
-                                                    style="background-image:url('./images/Ellipse\ 1.png') ;"> </div>
-                                            </div>
-                                            <div class="profile-info">
-                                                <h5 class="fullname">Nigar Mammadova</h5>
-                                                <div class="job">
-                                                    UI/UX designer
-                                                </div>
-                                                <img src="./images/logo-md.png" alt="logo">
-                                                <span class="badges">14 badges</span>
-                                            </div>
-                                            <div class="button-group">
-                                               <a href="./freelancer-profile.html" class="mb-2 btn-general btn-lg">view profile</a>
-                                                <a href="./message.html" class="btn-general btn-lg">chat</a>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-sm-6 mb-4">
-                                        <div class="single-item premium-single-item">
-                                            <div class="single-item-header">
-                                                <span class="pr">Premium</span>
-                                                <div class="profile-image"
-                                                    style="background-image: url('./images/Ellipse\ 1.png');">
-
-                                                </div>
-                                            </div>
-                                            <div class="profile-info">
-                                                <h5 class="fullname">Nigar Mammadova</h5>
-                                                <div class="job">
-                                                    UI/UX designer
-                                                </div>
-                                                <img src="./images/logo-md.png" alt="logo">
-                                                <span class="badges">14 badges</span>
-                                            </div>
-                                            <div class="button-group">
-                                               <a href="./freelancer-profile.html" class="mb-2 btn-general btn-lg">view profile</a>
-                                                <a href="./message.html" class="btn-general btn-lg">chat</a>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-sm-6 mb-4">
-                                        <div class="single-item premium-single-item">
-                                            <div class="single-item-header">
-                                                <span class="pr">Premium</span>
-                                                <div class="profile-image"
-                                                    style="background-image: url('./images/Ellipse\ 1.png');">
-
-                                                </div>
-                                            </div>
-                                            <div class="profile-info">
-                                                <h5 class="fullname">Nigar Mammadova</h5>
-                                                <div class="job">
-                                                    UI/UX designer
-                                                </div>
-                                                <img src="./images/logo-md.png" alt="logo">
-                                                <span class="badges">14 badges</span>
-                                            </div>
-                                            <div class="button-group">
-                                               <a href="./freelancer-profile.html" class="mb-2 btn-general btn-lg">view profile</a>
-                                                <a href="./message.html" class="btn-general btn-lg">chat</a>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-12">
-                                        <nav>
-                                            <ul class="pagination">
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="Previous">
-                                                        <i class="fas fa-arrow-left-long"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item active" aria-current="page"><a class="page-link"
-                                                        href="#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="Next">
-                                                        <i class="fas fa-arrow-right-long"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="copyright-wrap mt-45">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="text">© 2022 Remotique. All Rights Reserved.</div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <ul class="social-links">
-                                            <li><a href="" target="_blank" class="social-link"><i
-                                                        class="fa-brands fa-facebook"></i></a>
+                                    <nav>
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <i class="fas fa-arrow-left-long"></i>
+                                                </a>
                                             </li>
-                                            <li><a href="" target="_blank" class="social-link"><i
-                                                        class="fa-brands fa-linkedin-in"></i></a>
-                                            </li>
-                                            <li><a href="" target="_blank" class="social-link"><i
-                                                        class="fa-brands fa-facebook-messenger"></i></a></li>
-                                            <li><a href="" target="_blank" class="social-link"><i
-                                                        class="fa-brands fa-twitter"></i></a>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item active" aria-current="page"><a class="page-link"
+                                                    href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <i class="fas fa-arrow-right-long"></i>
+                                                </a>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </nav>
                                 </div>
                             </div>
-
                         </div>
+                 
+                    <div class="row mt-5">
+                    
+                      <div class="col-sm-12 d-flex justify-content-sm-end justify-content-center">
+                        <ul class="social-links">
+                          <li>
+                            <a href="" target="_blank" class="social-link"
+                              ><i class="fa-brands fa-facebook-f"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="" target="_blank" class="social-link"
+                              ><i class="fa-brands fa-linkedin-in"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="" target="_blank" class="social-link"
+                              ><i class="fa-brands fa-facebook-messenger"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="" target="_blank" class="social-link"
+                              ><i class="fa-brands fa-twitter"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                </div>
-                </form>
-            </div>
-        </div>
+                  </div>
+              </div>
+              </div>
+        <div class="filter-sidebar2 sidebar">
 
-        <div class="filter-sidebar sidebar">
-
-            <div class="sidebar-body">
-                <form action="" class="form-field">
+          <div class="sidebar-content">
+            <div class="filter-form-wrapper">
+                <div class="sub-title">Filters</div>
+                <form class="form-field">
+                    
                     <div class="rate mb-50">
                         <h5 class="sub-title">
                             Rate
@@ -544,50 +544,60 @@
                         <ul class="rate-list">
                             <li>
                                 <label class="rate-label active " for="1"> <span>1+</span>
-                                    <img src="./images/star.png" alt="star"></label>
+                                   <img src="./images/logo-md.png" alt="" class="f-img">
+                                <img src="./images/i2.png" alt="" class="hidden">
+                                </label>
                                 <input type="radio" id="1" name="rate1">
 
                             </li>
                             <li>
                                 <label class="rate-label" for="2"> <span>2+</span>
-                                    <img src="./images/star.png" alt="star"></label>
+                                   <img src="./images/logo-md.png" alt="" class="f-img">
+                                 <img src="./images/i2.png" alt="" class="hidden">
+                                </label>
                                 <input id="2" type="radio" name="rate1">
                             </li>
                             <li>
                                 <label class="rate-label" for="3"> <span>3+</span>
-                                    <img src="./images/star.png" alt="star"></label>
+                                   <img src="./images/logo-md.png" alt="" class="f-img">
+                                <img src="./images/i2.png" alt="" class="hidden">
+                                </label>
                                 <input id="3" type="radio" name="rate1">
                             </li>
                             <li>
                                 <label class="rate-label" for="4"> <span>4+</span>
-                                    <img src="./images/star.png" alt="star"></label>
+                                   <img src="./images/logo-md.png" alt="" class="f-img">
+                                <img src="./images/i2.png" alt="" class="hidden">
+                                </label>
                                 <input id="4" type="radio" name="rate1">
                             </li>
 
                         </ul>
                     </div>
-                    <div class="skills mb-50">
+                    <div class="skills mb-30">
                         <h5 class="sub-title">
                             Skills
                         </h5>
                         <ul class="skills-name-list">
                             <li class="skill">IOS</li>
                             <li class="skill">Android</li>
-                            <li class="skill">IOS</li>
-                            <li class="skill">IOS</li>
+                            <li class="skill">Mobile apps</li>
+                            <li class="skill">Flash</li>
+                            <li class="skill">Wordpress</li>
                         </ul>
-                        <div class="form-group">
-                            <input type="text" placeholder="add more skills" class="form-control add-skill-input">
-                            <button class="add-skill-btn btn-general btn-xs"><i class="fas fa-plus"></i></button>
+                        <div class="form-group mt-5">
+                            <input type="text" placeholder="add more skills"
+                                class="form-control add-skill-input">
+                            <button class="add-skill-btn btn-general btn-xs"><i
+                                    class="fas fa-plus"></i></button>
                         </div>
 
                     </div>
                     <button class="btn-general w-100">Search</button>
                 </form>
             </div>
+          </div>
         </div>
-
-
         <!-- jquery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <!-- bootstrap -->
@@ -598,6 +608,25 @@
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
         <!-- custom js -->
         <script src="./js/script.js"></script>
+        <script>
+            $(function(){
+                let progressValue=0;
+                let progressEndValue=25;
+               let speed=50;
+
+                let progress=setInterval(()=>{
+    progressValue++;
+   $(".value").html(`${progressValue}%`);
+   $(".circular-progress").css('background',`conic-gradient(#ECA400 ${progressValue*3.6}deg, #fff ${progressValue*3.6}deg)`);
+    if(progressValue==progressEndValue){
+        clearInterval(progress);
+    }
+})
+            })
+          
+          
+
+        </script>
     </body>
 
 </html>
