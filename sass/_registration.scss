@@ -262,6 +262,7 @@
 
         &:hover {
             color: $light-color;
+            background-color: $red-color;
         }
     }
     .registration-title{
@@ -491,6 +492,7 @@
             border-radius: 4px;
             height: 48px;
             width: 100%;
+            padding-right: 50px;
             transition: $transition;
 
             &:focus {
@@ -521,6 +523,9 @@
                 width: 40px;
                 height: 40px;
                 @include flex-align-center;
+                &:hover{
+                    background-color: $red-color;
+                }
             }
         }
     

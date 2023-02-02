@@ -12,19 +12,19 @@
 			}
 		}
 
-		&:after {
-			background: rgba(255, 255, 255, 0.01);
-			backdrop-filter: blur(2px);
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			content: '';
-			bottom: 0;
-			width: 100%;
-			z-index: 9;
-			height: 100%;
-		}
+		// &:after {
+		// 	background: rgba(255, 255, 255, 0.01);
+		// 	backdrop-filter: blur(2px);
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	right: 0;
+		// 	content: '';
+		// 	bottom: 0;
+		// 	width: 100%;
+		// 	z-index: 9;
+		// 	height: 100%;
+		// }
 	}
 
 	.single-item {

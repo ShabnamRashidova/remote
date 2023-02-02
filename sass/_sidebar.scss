@@ -122,7 +122,7 @@
 }
 
 .filter-sidebar2 {
-	width: 300px;
+	width: 330px;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -139,10 +139,40 @@
 		transform: none;
 	}
 
+	.close-sidebar {
+		width: 32px;
+		height: 32px;
+		opacity: 0.3;
+          position: relative;
+		&:hover {
+			opacity: 1;
+		}
+
+		&:before,
+		&:after {
+			position: absolute;
+			left: 15px;
+			content: ' ';
+			height: 33px;
+			width: 2px;
+			top: 0;
+			background-color: #333;
+		}
+
+		&:before {
+			transform: rotate(45deg);
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+
 	.form-control {
 		height: 48px;
 
 	}
+
 	.add-skills {
 		input {
 			height: 48px;
@@ -167,6 +197,7 @@
 			padding: 0 .30rem;
 		}
 	}
+
 	.job-category-dropdown {
 		position: relative;
 

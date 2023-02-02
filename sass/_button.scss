@@ -17,7 +17,7 @@ button{
 	&.btn-green{
 		background-color: $red-color;
 		&:hover{
-			background-color: #318e31;
+			background-color: $secondary-design-color;
 		}
 	}
 a{
@@ -64,20 +64,23 @@ a{
 .sidebar-btn {
 	display: none;
 	font-size: $fs-md;
-	margin-top: 20px;
 	font-weight: 600;
 	padding: 10px;
+	margin-left: 20px;
 
 	span {
-		background-color: $secondary-design-color;
-		color: $light-color;
-		border-radius: 20px;
+		background-color:#F2F2F2;
+		color: $secondary-design-color;
+		border-radius: 5px;
 		padding: 10px 20px;
+		font-weight: 500;
 		display: inline-block;
 		transition: $transition;
 
 		&:hover {
-			background-color: $red-color;
+			background-color: $secondary-design-color;
+			color: $light-color;
+			animation: pulse-primary 1.3s;
 		}
 
 		i {

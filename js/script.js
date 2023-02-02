@@ -40,12 +40,12 @@ $(function () {
     let li = $("<li class='skill'></li>");
     li.text(val);
     $(".skills-name-list").append(li);
-    $(".add-skill-input").val('')
+    $(".add-skill-input").val("");
   });
   $("#header-global .open-menu").click(function () {
     $("#header-mobile").addClass("show");
     $(".overlay").addClass("show");
-    $(".overlay").click(function () {
+    $(".overlay,.close-header").click(function () {
       $("#header-mobile").removeClass("show");
       $(".overlay").removeClass("show");
     });
@@ -111,50 +111,59 @@ $(function () {
         }
       );
   });
+ $(function(){
   $(".toggle-profile-content").click(function () {
-    $(this).next().addClass("show");
-    $("body").click(function (e) {
-      if (
-        !$(e.target).closest(".profile-content").length &&
-        !$(e.target).is(".profile-content")
-      ) {
-        $(".profile-sidebar").removeClass("show");
-      }
-    });
+    $(this).next().toggleClass("show");
   });
+  $("body").click(function (e) {
+    if (
+      !$(e.target).closest(".profile-content").length &&
+      !$(e.target).is(".profile-content")
+    ) {
+      $(".profile-sidebar").removeClass("show");
+    }
+  });
+ })
+$(function(){
   $(".ring").click(function () {
-    $(this).next().addClass("show");
-    $("body").click(function (e) {
-      if (
-        !$(e.target).closest(".notification-content").length &&
-        !$(e.target).is(".drop-notification")
-      ) {
-        $(".drop-notification").removeClass("show");
-      }
-    });
+    $(this).next().toggleClass("show");
   });
+  $("body").click(function (e) {
+    if (
+      !$(e.target).closest(".notification-content").length &&
+      !$(e.target).is(".drop-notification")
+    ) {
+      $(".drop-notification").removeClass("show");
+    }
+  });
+})
+$(function(){
   $(".msg").click(function () {
-    $(this).next().addClass("show");
-    $("body").click(function (e) {
-      if (
-        !$(e.target).closest(".message-content").length &&
-        !$(e.target).is(".drop-message")
-      ) {
-        $(".drop-message").removeClass("show");
-      }
-    });
+    $(this).next().toggleClass("show");
   });
+  $("body").click(function (e) {
+    if (
+      !$(e.target).closest(".message-content").length &&
+      !$(e.target).is(".drop-message")
+    ) {
+      $(".drop-message").removeClass("show");
+    }
+  });
+});
+$(function(){
   $(".popup-btn").click(function () {
-    $(".comment-popup").addClass("show");
-    $("body").click(function (e) {
-      if (
-        !$(e.target).closest(".review-content").length &&
-        !$(e.target).is(".comment-popup")
-      ) {
-        $(".comment-popup").removeClass("show");
-      }
-    });
+    $(".comment-popup").toggleClass("show");
   });
+  $("body").click(function (e) {
+    if (
+      !$(e.target).closest(".review-content").length &&
+      !$(e.target).is(".comment-popup")
+    ) {
+      $(".comment-popup").removeClass("show");
+    }
+  });
+})
+
   $("label input[type=radio]").click(function () {
     $("label:has(input:checked)").addClass("active");
     $("label:has(input:not(:checked))").removeClass("active");
@@ -258,7 +267,7 @@ $(function () {
     $(".sidebar-btn").click(() => {
       $(".sidebar").addClass("show");
       $(".overlay").addClass("show");
-      $(".overlay").click(() => {
+      $(".overlay, .close-sidebar").click(() => {
         $(".sidebar").removeClass("show");
         $(".overlay").removeClass("show");
       });
@@ -347,5 +356,24 @@ $(function () {
 $(document).ready(function () {
   $(".subscription-column").matchHeight();
   $(".job-single").matchHeight();
-  $(".single-item").matchHeight();
+  // $(".single-item").matchHeight();
+});
+$(function () {
+  let progressValue = 0;
+  let progressEndValue = 25;
+  let speed = 50;
+
+  let progress = setInterval(() => {
+    progressValue++;
+    $(".value").html(`${progressValue}%`);
+    $(".circular-progress").css(
+      "background",
+      `conic-gradient(#ECA400 ${progressValue * 3.6}deg, #fff ${
+        progressValue * 3.6
+      }deg)`
+    );
+    if (progressValue == progressEndValue) {
+      clearInterval(progress);
+    }
+  });
 });

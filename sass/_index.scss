@@ -492,12 +492,13 @@ transition: $transition;
             display: block;
             font-size: 13px;
             text-align: right;
-            color: #E43122;
+            color: $secondary-design-color;
             margin-bottom: 10px;
             transition: $transition;
 
             &:hover {
                 text-decoration: underline;
+                color: $red-color;
             }
 
         }
@@ -553,7 +554,7 @@ transition: $transition;
             color: $light-color;
             padding: 10px;
             border-radius: 3px;
-            background-color: #4DB4FF;
+            background-color: $secondary-design-color   ;
             transition: $transition;
             position: relative;
 
@@ -579,9 +580,7 @@ transition: $transition;
 
             }
 
-            &:hover {
-                background-color: $secondary-design-color;
-            }
+           
         }
     }
 }

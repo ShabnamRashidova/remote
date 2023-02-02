@@ -157,11 +157,6 @@ a {
 	display: flex;
 	align-items: center;
 
-	&.social-links-dark {
-		i {
-			color: $dark-color;
-		}
-	}
 
 	i {
 		color: #989898;
@@ -170,7 +165,7 @@ a {
 		transition: $transition;
 
 		&:hover {
-			color: $secondary-design-color;
+			color: $red-color;
 		}
 	}
 }
@@ -299,6 +294,15 @@ input::-webkit-inner-spin-button {
 	letter-spacing: 0.15px;
 	color: $dark-color-4;
 	margin-bottom: 10px;
+}
+.title {
+	font-weight: 600;
+	text-transform: capitalize;
+	font-size: 28px;
+	letter-spacing: 0.15px;
+	font-weight: 400;
+	color: #333;
+	margin-bottom: 15px;
 }
 
 
@@ -479,7 +483,7 @@ input::-webkit-inner-spin-button {
 		font-weight: 600;
 		font-size: 32px;
 		line-height: 40px;
-		color: #000000;
+		color: #777777;
 		margin: 40px 0 70px;
 		text-transform: capitalize;
 	}
@@ -967,7 +971,11 @@ input::-webkit-inner-spin-button {
 
 	}
 }
-
+.job-name{
+	text-transform: capitalize;
+	color: $secondary-design-color;
+	font-weight: 600;
+}
 /**************************************************
                  KEYFRAMES
 **************************************************/

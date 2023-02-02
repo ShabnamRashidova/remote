@@ -2,26 +2,33 @@
 	background: $light-color;
 	box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.12);
 	font-family: $primary-font;
-&.fixed{
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-	z-index: 99;
-}
+
+	&.fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 99;
+	}
+
 	.header-logo {
 		@include flex-align-center;
 		height: 100%;
 
 		a {
-			width: 60px;
+			width: 50px;
+
 			color: $secondary-design-color;
-		@include flex-align-center;
-		flex-direction: column;
+			@include flex-align-center;
+			flex-direction: column;
 
 			font-family: $primary-font;
 			font-size: 18px;
+
+			div {
+				font-size: 15px;
+			}
 
 			img {
 				width: 100%;
@@ -49,12 +56,16 @@
 						font-size: $fs-sm;
 						transition: $transition;
 						text-transform: capitalize;
+						border-radius: 5px;
 
-						&:hover,&.active{
+						&:hover,
+						&.active {
+							background-color: #F4F6FA;
 							color: $secondary-design-color;
-							
+
 						}
-						&.active{
+
+						&.active {
 							font-weight: 600;
 						}
 					}
@@ -103,7 +114,7 @@
 				border-radius: 50%;
 
 				&:hover {
-					background-color: rgba(0, 102, 153,0.1);
+					background-color: rgba(0, 102, 153, 0.1);
 				}
 
 				&:first-child {
@@ -240,7 +251,7 @@
 					padding: 0 0 8px;
 					background-color: $light-color;
 					width: 320px;
-					border-radius: 15px;
+					border-radius: 5px;
 					box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.12);
 					position: absolute;
 					top: 50px;
@@ -357,12 +368,12 @@
 			.profile-sidebar {
 				background-color: $light-color;
 				width: 320px;
-				border-radius: 15px;
+				border-radius: 5px;
 				box-shadow: $box-shadow-3;
 				position: absolute;
 				top: 82px;
 				right: 15px;
-				z-index:200;
+				z-index: 200;
 				transform: translateY(20px);
 				opacity: 0;
 				visibility: hidden;
@@ -375,8 +386,8 @@
 				}
 
 				.sidebar-header {
-					padding:  20px;
-					border-bottom: $light-color;
+					padding: 15px;
+					border-bottom: 1px solid #ddd;
 					display: flex;
 					align-items: center;
 					justify-content: space-around;
@@ -407,24 +418,39 @@
 						text-decoration-line: underline;
 						color: $yellow-1;
 						text-transform: capitalize;
+
+						&:hover {
+							color: $secondary-design-color;
+						}
 					}
 				}
 
 				.sidebar-body {
-					padding: $p-20;
+					padding: 15px 20px;
 
 					li {
 						a {
 
-							font-size: $fs-sm;
+							font-size: $fs-md;
 							text-transform: capitalize;
 							color: $dark-color-4;
 							@include flex-align;
-							margin-bottom: 15px;
 							transition: $transition;
+							border-radius: 10px;
+							padding: 10px;
+
+							i {
+								color: #555;
+							}
 
 							&:hover {
-								color: $secondary-design-color;
+								color: #00CC00;
+
+								background-color: #ECF9F2;
+
+								i {
+									color: $red-color;
+								}
 							}
 
 							img {
@@ -453,7 +479,7 @@
 	box-shadow: $box-shadow-1;
 	width: 300px;
 	height: 100vh;
-	position: fixed	;
+	position: fixed;
 	left: 0;
 	top: 0;
 	z-index: 999;
@@ -462,6 +488,36 @@
 
 	&.show {
 		transform: translate(0);
+	}
+
+	.close-header {
+		width: 32px;
+		height: 32px;
+		opacity: 0.3;
+		position: relative;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&:before,
+		&:after {
+			position: absolute;
+			left: 15px;
+			content: ' ';
+			height: 33px;
+			width: 2px;
+			top: 0;
+			background-color: #333;
+		}
+
+		&:before {
+			transform: rotate(45deg);
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+		}
 	}
 
 	.header-top {
@@ -488,19 +544,31 @@
 	.header-nav {
 		margin-top: 10px;
 
-		.nav-link {
-			font-size: $fs-sm;
-			text-transform: capitalize;
-			color: $dark-color-3;
-			display: block;
-			margin-bottom: 10px;
-			&:hover,&.active{
-				color: $secondary-design-color;
-			}
-			&.active{
-				font-weight: 600;
+	.nav-list{
+		width: 100%;
+		.nav-item {
+			margin:0 10px;
+
+			.nav-link {
+				font-size: $fs-sm;
+				text-transform: capitalize;
+				color: $dark-color-3;
+				display: block;
+				border-radius: 5px;
+				margin-bottom: 10px;
+
+				&:hover,
+				&.active {
+					background-color: #F4F6FA;
+					color: $secondary-design-color;
+				}
+
+				&.active {
+					font-weight: 600;
+				}
 			}
 		}
+	}
 
 		.btn-md {
 			height: 45px;
@@ -508,4 +576,30 @@
 			color: $light-color;
 		}
 	}
+}
+
+.header-logo {
+	@include flex-align-center;
+	height: 100%;
+
+	a {
+		width: 50px;
+
+		color: $secondary-design-color;
+		@include flex-align-center;
+		flex-direction: column;
+
+		font-family: $primary-font;
+		font-size: 18px;
+
+		div {
+			font-size: 15px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
 }
